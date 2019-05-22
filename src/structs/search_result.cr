@@ -33,7 +33,3 @@ module XIVAPI
     end
   end
 end
-
-test = %({"ID":8631,"Icon":"\/i\/045000\/045492.png","Name":"Ironwork Breeches of Casting","Url":"\/Item\/8631","UrlType":"Item","_":"item","_Score":1})
-str = XIVAPI::Structs::SearchResult.from_json test
-puts str.score

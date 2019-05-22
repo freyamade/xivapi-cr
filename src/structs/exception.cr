@@ -30,16 +30,3 @@ module XIVAPI
     end
   end
 end
-
-test = %({
-    "Error": true,
-    "Subject": "XIVAPI Service Error",
-    "Message": "The details of the error message",
-    "Hash": "A sha1 trackable hash of the error message",
-    "Ex": "The name of the exception thrown",
-    "Debug": {
-        
-    }
-})
-str = XIVAPI::Structs::Exception.from_json test
-puts str
