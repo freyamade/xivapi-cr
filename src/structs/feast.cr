@@ -1,26 +1,8 @@
 require "json"
+require "./lodestone"
 
 module XIVAPI
   module Structs
-    # Struct for Character Details specifically for feast data
-    struct FeastCharacter
-      # define a JSON mapping to create instances of this struct
-      JSON.mapping(
-        avatar: {type: String, key: "Avatar"},
-        id: {type: Int32, key: "ID"},
-        name: {type: String, key: "Name"},
-        server: {type: String, key: "Server"},
-      )
-      # The URL of the Character's Avatar
-      getter avatar
-      # The Lodestone ID of the Character
-      getter id
-      # The Character's Name
-      getter name
-      # The Server that the Character plays on
-      getter server
-    end
-
     # Struct for Leaderboard details from the feasts endpoint
     struct FeastLeaderboard
       # define a JSON mapping to create instances of this struct
@@ -52,7 +34,7 @@ module XIVAPI
     # Struct that makes up the elements in the array returned by the feasts endpoint
     struct Feast
       JSON.mapping(
-        character: {type: FeastCharacter, key: "Character"},
+        character: {type: LodestoneCharacter, key: "Character"},
         leaderboard: {type: FeastLeaderboard, key: "Leaderboard"},
       )
       # Information about the Character
