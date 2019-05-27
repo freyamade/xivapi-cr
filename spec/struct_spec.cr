@@ -29,6 +29,35 @@ describe XIVAPI::Structs do
     end
   end
 
+  describe XIVAPI::Structs::Devblog do
+    it "is properly constructed from JSON from the API" do
+      test = %({
+        "author": {
+          "name":"FINAL FANTASY XIV Blog (English_US)"
+        },
+        "content": "Hello, Ridrina here reporting live from ...",
+        "id": "tag:na.finalfantasyxiv.com,2019:\/pr\/blog\/\/6.2749",
+        "link": {
+          "@attributes": {
+            "href": "https:\/\/na.finalfantasyxiv.com\/pr\/blog\/002749.html",
+            "rel": "alternate",
+            "type": "text\/html"
+          }
+        },
+        "published": "2019-05-18T00:31:36Z",
+        "summary": "Hello, Ridrina here reporting live from ...",
+        "title": "Can't Read Mah Mahjong Face",
+        "updated": "2019-05-17T17:43:22Z"
+      })
+      begin
+        data = XIVAPI::Structs::Devblog.from_json test
+        data.author.name.should eq "FINAL FANTASY XIV Blog (English_US)"
+      rescue e
+        fail "Error occurred when mapping struct from JSON: #{e}"
+      end
+    end
+  end
+
   describe XIVAPI::Structs::Devpost do
     it "is properly constructed from JSON from the API" do
       test = %({
