@@ -56,26 +56,6 @@ describe XIVAPI::Structs do
     end
   end
 
-  describe XIVAPI::Structs::SearchResult do
-    it "is properly constructed from JSON from the API" do
-      test = %({
-        "ID": 8631,
-        "Icon": "\/i\/045000\/045492.png",
-        "Name": "Ironwork Breeches of Casting",
-        "Url": "\/Item\/8631",
-        "UrlType": "Item",
-        "_": "item",
-        "_Score": 1
-      })
-      begin
-        data = XIVAPI::Structs::SearchResult.from_json test
-        data.name.should eq "Ironwork Breeches of Casting"
-      rescue e
-        fail "Error occurred when mapping struct from JSON: #{e}"
-      end
-    end
-  end
-
   describe XIVAPI::Structs::Pagination do
     it "is properly constructed from JSON from the API" do
       test = %({
@@ -90,6 +70,51 @@ describe XIVAPI::Structs do
       begin
         data = XIVAPI::Structs::Pagination.from_json test
         data.next_page.should be_nil
+      rescue e
+        fail "Error occurred when mapping struct from JSON: #{e}"
+      end
+    end
+  end
+
+  describe XIVAPI::Structs::Patch do
+    it "is properly constructed from JSON from the API" do
+      test = %({
+        "Banner": "https:\/\/i.imgur.com\/ZUUtGzH.png",
+        "ExVersion": 0,
+        "ID": 0,
+        "Name": "Patch 2.0: A Realm Reborn",
+        "Name_cn": "Patch 2.0: A Realm Reborn",
+        "Name_de": "Patch 2.0: A Realm Reborn",
+        "Name_en": "Patch 2.0: A Realm Reborn",
+        "Name_fr": "Patch 2.0: A Realm Reborn",
+        "Name_ja": "\u65b0\u751f\u30a8\u30aa\u30eb\u30bc\u30a2 2.0",
+        "Name_kr": "Patch 2.0: A Realm Reborn",
+        "ReleaseDate": 1376611200,
+        "Version":"2.0"
+      })
+      begin
+        data = XIVAPI::Structs::Patch.from_json test
+        data.name.should eq "Patch 2.0: A Realm Reborn"
+      rescue e
+        fail "Error occurred when mapping struct from JSON: #{e}"
+      end
+    end
+  end
+
+  describe XIVAPI::Structs::SearchResult do
+    it "is properly constructed from JSON from the API" do
+      test = %({
+        "ID": 8631,
+        "Icon": "\/i\/045000\/045492.png",
+        "Name": "Ironwork Breeches of Casting",
+        "Url": "\/Item\/8631",
+        "UrlType": "Item",
+        "_": "item",
+        "_Score": 1
+      })
+      begin
+        data = XIVAPI::Structs::SearchResult.from_json test
+        data.name.should eq "Ironwork Breeches of Casting"
       rescue e
         fail "Error occurred when mapping struct from JSON: #{e}"
       end
