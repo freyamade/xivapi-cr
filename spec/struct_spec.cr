@@ -230,6 +230,23 @@ describe XIVAPI::Structs do
     end
   end
 
+  describe XIVAPI::Structs::Status do
+    it "is properly constructed from JSON from the API" do
+      test = %({
+        "Tag": "[Recovery]",
+        "Time": 1558775404,
+        "Title": "Recovery from Mog Station Technical Difficulties (May 25)",
+        "Url": "https:\/\/na.finalfantasyxiv.com\/\/lodestone\/news\/detail\/859d7337460b13d4a416a6939714859f8fc5fe02"
+      })
+      begin
+        data = XIVAPI::Structs::Status.from_json test
+        data.tag.should eq "[Recovery]"
+      rescue e
+        fail "Error occurred when mapping struct from JSON: #{e}"
+      end
+    end
+  end
+
   describe XIVAPI::Structs::WorldStatus do
     it "is properly constructed from JSON from the API" do
       test = %({
