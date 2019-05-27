@@ -33,35 +33,6 @@ Unlike Ruby, Crystal does not have an OpenStruct type, so structs have been defi
 Similar to the Ruby lib, there will be an `XIVAPI::Paginator` object, that will be used for requests that return multiple results.
 This paginator will be `Enumerable` and will have the methods that are associated with being `Enumerable` like `first`, `each`, `map`, `to_a`, etc.
 
-#### Structs to Make (by endpoint)
-- [x] `/search`
-- [x] `/lore`
-- [ ] `/market/{server}/item/{id}`
-- [ ] `/market/item/{id}?servers`
-- [ ] `/market/items?servers&items`
-- [ ] `/character/search`
-- [ ] `/character/{id}`
-- [ ] `/character/{id}/verification`
-- [ ] `/freecompany/search`
-- [ ] `/freecompany/{id}`
-- [ ] `/linkshell/search`
-- [ ] `/linkshell/{id}`
-- [ ] `/pvpteam/search`
-- [ ] `/pvpteam/{id}`
-- [ ] `/lodestone/news`
-- [ ] `/lodestone/notices`
-- [ ] `/lodestone/maintenance`
-- [ ] `/lodestone/updates`
-- [ ] `/lodestone/status`
-- [ ] `/lodestone/worldstatus`
-- [ ] `/lodestone/devblog`
-- [ ] `/lodestone/devposts`
-- [ ] `/lodestone/deepdungeon`
-- [ ] `/lodestone/HeavenOnHigh`
-- [ ] `/lodestone/feasts`
-- [ ] `/patchlist`
-
-
 ## Development
 
 TODO: Write development instructions here
