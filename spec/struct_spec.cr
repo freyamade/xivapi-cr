@@ -1,6 +1,34 @@
 # Spec file testing that the different structs are properly constructed from JSON data
 require "./spec_helper"
 describe XIVAPI::Structs do
+  describe XIVAPI::Structs::DeepDungeon do
+    it "is properly constructed from JSON from the API" do
+      test = %({
+        "Character": {
+          "Avatar": "https:\/\/img2.finalfantasyxiv.com\/f\/43322997b23010639d565bee229c9570_ba22853447012a24cee115315d6a5bebfc0_96x96.jpg",
+          "ID": 17092863,
+          "Name": "Kana Vara",
+          "Server": "Sargatanas"
+        },
+        "ClassJob": {
+          "Name": ""
+        },
+        "Leaderboard": {
+          "Floor": 100,
+          "Rank": 1,
+          "Score": 1597474,
+          "Time": 1534295180
+        }
+      })
+      begin
+        data = XIVAPI::Structs::DeepDungeon.from_json test
+        data.character.name.should eq "Kana Vara"
+      rescue e
+        fail "Error occurred when mapping struct from JSON: #{e}"
+      end
+    end
+  end
+
   describe XIVAPI::Structs::Exception do
     it "is properly constructed from JSON from the API" do
       test = %({
