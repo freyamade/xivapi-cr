@@ -24,8 +24,6 @@ module XIVAPI
       getter icon
       # name in the api language
       getter name
-      # url of the page of the item in the lore
-      getter url
       # name of the item in chinese
       getter name_cn
       # name of the item in german
@@ -38,6 +36,8 @@ module XIVAPI
       getter name_ja
       # name of the item in korean
       getter name_kr
+      # url of the page of the item in the lore
+      getter url
     end
   end
 end
