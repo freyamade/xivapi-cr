@@ -247,6 +247,22 @@ describe XIVAPI::Structs do
     end
   end
 
+  describe XIVAPI::Structs::UpdatePost do
+    it "is properly constructed from JSON from the API" do
+      test = %({
+        "Time": 1557823085,
+        "Title": "FINAL FANTASY XIV Updated (May 13)",
+        "Url": "https:\/\/na.finalfantasyxiv.com\/\/lodestone\/news\/detail\/aa7eae53676256068d298dac577459e9621b5f46"
+      })
+      begin
+        data = XIVAPI::Structs::UpdatePost.from_json test
+        data.title.should eq "FINAL FANTASY XIV Updated (May 13)"
+      rescue e
+        fail "Error occurred when mapping struct from JSON: #{e}"
+      end
+    end
+  end
+
   describe XIVAPI::Structs::WorldStatus do
     it "is properly constructed from JSON from the API" do
       test = %({

@@ -25,7 +25,7 @@ module XIVAPI
     "/lodestone/news"                                 => Arrah(HashMap(String, String)),
     "/lodestone/notices"                              => Arrah(HashMap(String, String)),
     "/lodestone/maintenance"                          => Arrah(HashMap(String, String)),
-    "/lodestone/updates"                              => Arrah(HashMap(String, String)),
+    "/lodestone/updates"                              => Arrah(Structs::UpdatePost),
     "/lodestone/status"                               => Arrah(Structs::Status),
     "/lodestone/worldstatus"                          => Arrah(Structs::WorldStatus),
     "/lodestone/devblog"                              => Arrah(Structs::Devblog),
