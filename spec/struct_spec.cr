@@ -229,4 +229,19 @@ describe XIVAPI::Structs do
       end
     end
   end
+
+  describe XIVAPI::Structs::WorldStatus do
+    it "is properly constructed from JSON from the API" do
+      test = %({
+        "Status": "Online",
+        "Title": "Aegis"
+      })
+      begin
+        data = XIVAPI::Structs::WorldStatus.from_json test
+        data.title.should eq "Aegis"
+      rescue e
+        fail "Error occurred when mapping struct from JSON: #{e}"
+      end
+    end
+  end
 end
