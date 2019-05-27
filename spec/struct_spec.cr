@@ -20,6 +20,34 @@ describe XIVAPI::Structs do
     end
   end
 
+  describe XIVAPI::Structs::Feast do
+    it "is properly constructed from JSON from the API" do
+      test = %({
+        "Character": {
+          "Avatar": "https:\/\/img2.finalfantasyxiv.com\/f\/06474f472310d759766363e8e8f53b3f_96ab1df8877c1f8ba6a89a39cccfd437fc0_96x96.jpg",
+          "ID": 12424525,
+          "Name": "Air Weaver",
+          "Server": "Cactuar"
+        },
+        "Leaderboard": {
+          "Matches": "",
+          "Rank": 1,
+          "RankImage": "https:\/\/img.finalfantasyxiv.com\/lds\/h\/j\/pFl1xCbi1zFuh0zRjxVPLwBoL0.png",
+          "RankPrevious": "",
+          "Rating": 2682,
+          "WinCount": "",
+          "WinRate": ""
+        }
+      })
+      begin
+        data = XIVAPI::Structs::Feast.from_json test
+        data.character.name.should eq "Air Weaver"
+      rescue e
+        fail "Error occurred when mapping struct from JSON: #{e}"
+      end
+    end
+  end
+
   describe XIVAPI::Structs::Lore do
     it "is properly constructed from JSON from the API" do
       test = %({
