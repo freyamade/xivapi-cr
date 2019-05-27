@@ -29,6 +29,30 @@ describe XIVAPI::Structs do
     end
   end
 
+  describe XIVAPI::Structs::Devpost do
+    it "is properly constructed from JSON from the API" do
+      test = %({
+        "Content": "<article><p>I'm most excited for Shadowbringers to see everyone brought together! The beginning of an expansion is always the most exciting for me, seeing a friend wander around just about everywhere I go. So many adventures to be had, so many memories to cherish! It's nice to see what everyone is excited about<img src=\\"https:\/\/forum.square-enix.com\/ffxiv\/images\/smilies\/redface.png\\" border=\\"0\\" alt=\\"\\" title=\\"Embarrassment\\" class=\\"inlineimg\\"\/><\/p><\/article>",
+        "PostCount": 224,
+        "Time": 1557257760,
+        "Title": "What are you most excited for in Shadowbringers?",
+        "Url": "https:\/\/forum.square-enix.com\/ffxiv\/threads\/389437-What-are-you-most-excited-for-in-Shadowbringers?p=4972998#post4972998",
+        "UserAvatar": "https:\/\/forum.square-enix.com\/ffxiv\/images\/avatars\/Leviathan.png",
+        "UserColour": "#cc2929",
+        "UserName": "Ridrina",
+        "UserSignature": "Neha \\"Ridrina\\" Nair - Community Team",
+        "UserTitle": "Community Rep",
+        "id": 4972998
+      })
+      begin
+        data = XIVAPI::Structs::Devpost.from_json test
+        data.user_name.should eq "Ridrina"
+      rescue e
+        fail "Error occurred when mapping struct from JSON: #{e}"
+      end
+    end
+  end
+
   describe XIVAPI::Structs::Exception do
     it "is properly constructed from JSON from the API" do
       test = %({
