@@ -2,8 +2,8 @@ require "json"
 
 module XIVAPI
   module Structs
-    # Struct for update post data
-    struct UpdatePost
+    # Struct for notices and update posts
+    struct Notice
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
         time: {type: Time, key: "Time", converter: Time::EpochConverter},

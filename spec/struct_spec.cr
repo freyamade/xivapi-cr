@@ -147,21 +147,19 @@ describe XIVAPI::Structs do
     end
   end
 
-  describe XIVAPI::Structs::LoreData do
+  describe XIVAPI::Structs::Notice do
     it "is properly constructed from JSON from the API" do
       test = %({
-        "GamePatchID": null,
-        "ID": 290,
-        "Icon": "\/c\/Leve.png",
-        "Name": "Food Fight",
-        "Name_cn": null,
-        "Name_de": "Der Geheimauftrag",
-        "Name_en": "Food Fight",
-        "Name_fr": "Cuisine: un hachis pacificateur",
-        "Name_ja": "\u88fd\u4f5c\u4f9d\u983c\uff1a\u30a2\u30f3\u30c6\u30ed\u30fc\u30d7\u8089\u306e\u30d1\u30a4",
-        "Name_kr": null,
-        "Url": "\/Leve\/290"
+        "Time": 1557823085,
+        "Title": "FINAL FANTASY XIV Updated (May 13)",
+        "Url": "https:\/\/na.finalfantasyxiv.com\/\/lodestone\/news\/detail\/aa7eae53676256068d298dac577459e9621b5f46"
       })
+      begin
+        data = XIVAPI::Structs::Notice.from_json test
+        data.title.should eq "FINAL FANTASY XIV Updated (May 13)"
+      rescue e
+        fail "Error occurred when mapping struct from JSON: #{e}"
+      end
     end
   end
 
@@ -241,22 +239,6 @@ describe XIVAPI::Structs do
       begin
         data = XIVAPI::Structs::Status.from_json test
         data.tag.should eq "[Recovery]"
-      rescue e
-        fail "Error occurred when mapping struct from JSON: #{e}"
-      end
-    end
-  end
-
-  describe XIVAPI::Structs::UpdatePost do
-    it "is properly constructed from JSON from the API" do
-      test = %({
-        "Time": 1557823085,
-        "Title": "FINAL FANTASY XIV Updated (May 13)",
-        "Url": "https:\/\/na.finalfantasyxiv.com\/\/lodestone\/news\/detail\/aa7eae53676256068d298dac577459e9621b5f46"
-      })
-      begin
-        data = XIVAPI::Structs::UpdatePost.from_json test
-        data.title.should eq "FINAL FANTASY XIV Updated (May 13)"
       rescue e
         fail "Error occurred when mapping struct from JSON: #{e}"
       end
