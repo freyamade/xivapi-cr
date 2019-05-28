@@ -147,6 +147,24 @@ describe XIVAPI::Structs do
     end
   end
 
+  describe XIVAPI::Structs::News do
+    it "is properly constructed from JSON from the API" do
+      test = %({
+        "Banner": "https://img.finalfantasyxiv.com/t/454a0b1de48637517e66661ca795634122b0a7c0.png?1558944047",
+        "Html": "<p>The Callback Campaign Ends on June 3!</p>",
+        "Time": 1558944000,
+        "Title": "The Callback Campaign Ends on June 3!",
+        "Url": "/lodestone/topics/detail/454a0b1de48637517e66661ca795634122b0a7c"
+      })
+      begin
+        data = XIVAPI::Structs::News.from_json test
+        data.title.should eq "The Callback Campaign Ends on June 3!"
+      rescue e
+        fail "Error occurred when mapping struct from JSON: #{e}"
+      end
+    end
+  end
+
   describe XIVAPI::Structs::Notice do
     it "is properly constructed from JSON from the API" do
       test = %({

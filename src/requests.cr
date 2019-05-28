@@ -22,7 +22,7 @@ module XIVAPI
     "/linkshell/{id}"                                 => HashMap(String, String),
     "/pvpteam/search"                                 => Array(HashMap(String, String)),
     "/pvpteam/{id}"                                   => HashMap(String, String),
-    "/lodestone/news"                                 => Arrah(HashMap(String, String)),
+    "/lodestone/news"                                 => Arrah(Structs::News),
     "/lodestone/notices"                              => Arrah(Structs::Notice),
     "/lodestone/maintenance"                          => Arrah(Structs::Status),
     "/lodestone/updates"                              => Arrah(Structs::Notice),
