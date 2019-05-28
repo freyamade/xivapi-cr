@@ -14,7 +14,7 @@ module XIVAPI
         user_avatar: {type: String, key: "UserAvatar"},
         user_colour: {type: String, key: "UserColour"},
         user_name: {type: String, key: "UserName"},
-        user_signature: {type: String, key: "UserSignature"},
+        user_signature: {type: String, key: "UserSignature", converter: String::RawConverter},
         user_title: {type: String, key: "UserTitle"},
       )
       # The content of the initial post

@@ -1,5 +1,7 @@
 # Spec file testing that the different structs are properly constructed from JSON data
+require "http/client"
 require "./spec_helper"
+
 describe XIVAPI::Structs do
   describe XIVAPI::Structs::DeepDungeon do
     it "is properly constructed from JSON from the API" do
@@ -123,6 +125,17 @@ describe XIVAPI::Structs do
       begin
         data = XIVAPI::Structs::Feast.from_json test
         data.character.name.should eq "Air Weaver"
+      rescue e
+        fail "Error occurred when mapping struct from JSON: #{e}"
+      end
+    end
+  end
+
+  describe XIVAPI::Structs::Lodestone do
+    it "is properly constructed from JSON from the API" do
+      test = HTTP::Client.get("https://xivapi.com/lodestone").body
+      begin
+        XIVAPI::Structs::Lodestone.from_json test
       rescue e
         fail "Error occurred when mapping struct from JSON: #{e}"
       end
