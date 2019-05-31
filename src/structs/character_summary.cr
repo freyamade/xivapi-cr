@@ -2,7 +2,7 @@ require "json"
 
 module XIVAPI
   module Structs
-    # Struct for summar of character data
+    # Struct for summary of character data
     struct CharacterSummary
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
