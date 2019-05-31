@@ -2,7 +2,7 @@ require "json"
 
 module XIVAPI
   module Structs
-    # Struct for all character data structs
+    # Struct for an id, name combination
     struct IDName
       # define a JSON mapping to create instances of this struct
       JSON.mapping(

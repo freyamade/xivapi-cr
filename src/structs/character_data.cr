@@ -2,7 +2,7 @@ require "json"
 
 module XIVAPI
   module Structs
-    # Struct for all character data structs
+    # Struct for all data about the character
     struct CharacterData
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
@@ -30,11 +30,11 @@ module XIVAPI
         parse_date: {type: Time?, key: "ParseDate", converter: Time::EpochConverter},
         portrait: {type: String?, key: "Portrait"},
         pvp_team_id: {type: Int32?, key: "PvPTeamId"},
-        race: {type: Structs::Race?, key: "Race"},
+        race: {type: Structs::IDNameUrl?, key: "Race"},
         server: {type: String?, key: "Server"},
-        title: {type: Structs::TitleTownTribe?, key: "Title"},
-        town: {type: Structs::TitleTownTribe?, key: "Town"},
-        tribe: {type: Structs::TitleTownTribe?, key: "Tribe"},
+        title: {type: Structs::IDIconNameUrl?, key: "Title"},
+        town: {type: Structs::IDIconNameUrl?, key: "Town"},
+        tribe: {type: Structs::IDIconNameUrl?, key: "Tribe"},
       )
       # the class job that the character currently is
       getter active_class_job

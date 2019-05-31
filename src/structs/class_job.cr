@@ -2,7 +2,7 @@ require "json"
 
 module XIVAPI
   module Structs
-    # Struct for all character data structs
+    # Struct for a job with experience
     struct ClassJob
       # define a JSON mapping to create instances of this struct
       JSON.mapping(

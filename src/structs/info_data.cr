@@ -2,7 +2,7 @@ require "json"
 
 module XIVAPI
   module Structs
-    # Struct for all character data structs
+    # Struct for the availability of a certain piece of data
     struct InfoData
       # define a JSON mapping to create instances of this struct
       JSON.mapping(

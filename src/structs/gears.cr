@@ -2,7 +2,7 @@ require "json"
 
 module XIVAPI
   module Structs
-    # Struct for all character data structs
+    # Struct for a gear in each character slot
     struct Gears
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
@@ -18,7 +18,7 @@ module XIVAPI
         off_hand: {type: Structs::Gear?, key: "OffHand"},
         ring1: {type: Structs::Gear?, key: "Ring1"},
         ring2: {type: Structs::Gear?, key: "Ring2"},
-        soul_crystal: {type: Structs::Gear?, key: "SoulCrystal"}
+        soul_crystal: {type: Structs::Gear?, key: "SoulCrystal"},
         waist: {type: Structs::Gear?, key: "Waist"},
       )
       # the body

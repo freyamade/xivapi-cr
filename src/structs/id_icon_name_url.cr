@@ -2,20 +2,23 @@ require "json"
 
 module XIVAPI
   module Structs
-    # Struct for focus or seeking info
-    struct FocusSeeking
+    # Struct for a id, icon, name, url combination
+    struct IDIconNameUrl
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
+        id: {type: Int32?, key: "ID"},
         icon: {type: String?, key: "Icon"},
         name: {type: String?, key: "Name"},
-        status: {type: Bool?, key: "Status"}
+        url: {type: String?, key: "Url"},
       )
-      # the url of the icon for the focus
+      # the ID
+      getter id
+      # the Icon
       getter icon
-      # the name of the focus
+      # the Name
       getter name
-      # the status of the focus
-      getter status
+      # the Url
+      getter url
     end
   end
 end

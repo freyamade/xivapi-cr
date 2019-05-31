@@ -2,12 +2,13 @@ require "json"
 
 module XIVAPI
   module Structs
-    # Struct for an attribute
-    struct Attribute
+    # Struct for all achievements of a character
+    struct Achievements
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
-        attribute: {type: Structs::IDName?, key: "Attribute"},
-        value: {type: Int32?, key: "Value"},
+        list: {type: Array(Structs::Achievement)?, key: "List"},
+        parse_date: {type: Time?, key: "ParseDate", converter: Time::EpochConverter},
+        points: {type: Int32?, key: "Points"}
       )
       # the info about the attribute
       getter attribute
