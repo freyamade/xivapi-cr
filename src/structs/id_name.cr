@@ -1,0 +1,18 @@
+require "json"
+
+module XIVAPI
+  module Structs
+    # Struct for all character data structs
+    struct IDName
+      # define a JSON mapping to create instances of this struct
+      JSON.mapping(
+        id: {type: Int32?, key: "ID"},
+        name: {type: String?, key: "Name"},
+      )
+      # the ID
+      getter id
+      # the Name
+      getter name
+    end
+  end
+end
