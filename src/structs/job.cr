@@ -3,7 +3,7 @@ require "json"
 module XIVAPI
   module Structs
     # Struct for any job or class
-    struct ClassJob
+    struct Job
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
         abbreviation: {type: String?, key: "Abbreviation"},

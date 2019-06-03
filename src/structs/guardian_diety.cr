@@ -6,7 +6,7 @@ module XIVAPI
     struct GuardianDiety
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
-        guardian_deity: {type: String?, key: "GuardianDeity", converter: String::RawConverter}
+        guardian_deity: {type: String?, key: "GuardianDeity", converter: String::RawConverter},
         id: {type: Int32?, key: "ID"},
         icon: {type: String?, key: "Icon"},
         name: {type: String?, key: "Name"},

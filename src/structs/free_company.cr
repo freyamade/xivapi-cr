@@ -16,10 +16,10 @@ module XIVAPI
         id: {type: String?, key: "ID"},
         name: {type: String?, key: "Name"},
         parse_date: {type: Time?, key: "ParseDate", converter: Time::EpochConverter},
-        rank: {type: Int32?, key: "Rank"}
-        ranking: {type: Structs::Ranking?, key: "Ranking"}
-        recruitment: {type: String?, key: "Recruitment"}
-        reputation: {type: Array(Structs::Reputation)?, key: "Reputation"}
+        rank: {type: Int32?, key: "Rank"},
+        ranking: {type: Structs::Ranking?, key: "Ranking"},
+        recruitment: {type: String?, key: "Recruitment"},
+        reputation: {type: Array(Structs::Reputation)?, key: "Reputation"},
         seeking: {type: Array(Structs::FocusSeeking)?, key: "Seeking"},
         server: {type: String?, key: "Server"},
         slogan: {type: String?, key: "Slogan"},

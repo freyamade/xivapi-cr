@@ -3,6 +3,17 @@ require "http/client"
 require "./spec_helper"
 
 describe XIVAPI::Structs do
+  describe XIVAPI::Structs::Character do
+    it "is properly constructed from JSON from the API" do
+      test = HTTP::Client.get("https://xivapi.com/character/9811984?data=AC,FR,FC,FCM,PVP&extended=1").body
+      begin
+        XIVAPI::Structs::Character.from_json test
+      rescue e
+        fail "Error occurred when mapping struct from JSON: #{e}"
+      end
+    end
+  end
+
   describe XIVAPI::Structs::DeepDungeon do
     it "is properly constructed from JSON from the API" do
       test = %({

@@ -3,7 +3,7 @@ require "json"
 module XIVAPI
   module Structs
     # Struct for an id, name combination
-    struct IDName
+    struct IDIconName
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
         id: {type: Int32?, key: "ID"},

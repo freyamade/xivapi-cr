@@ -3,7 +3,7 @@ require "json"
 module XIVAPI
   module Structs
     # Struct for a set of gears
-    struct ClassJob
+    struct GearSet
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
         attributes: {type: Array(Structs::Attribute)?, key: "Attributes"},

@@ -10,7 +10,7 @@ module XIVAPI
         dye: {type: Structs::IDIconName?, key: "Dye"},
         item: {type: Structs::Item?, key: "Item"},
         materia: {type: Array(Structs::IDIconNameUrl)?, key: "Materia"},
-        mirage: {type: Int32?, key: "Mirage"},
+        mirage: {type: IDIconName?, key: "Mirage"},
       )
       # the creator of the gear
       getter creator
