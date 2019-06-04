@@ -47,6 +47,17 @@ describe XIVAPI::Structs do
     end
   end
 
+  describe XIVAPI::Structs::NameServer do
+    it "is properly constructed from JSON from the API" do
+      test = HTTP::Client.get("https://xivapi.com/character/search?name=Terrance+Rihker&server=Lich").body
+      begin
+        XIVAPI::Structs::NameServer.from_json test
+      rescue e
+        fail "Error occurred when mapping struct from JSON: #{e}"
+      end
+    end
+  end
+
   describe XIVAPI::Structs::DeepDungeon do
     it "is properly constructed from JSON from the API" do
       test = %({
