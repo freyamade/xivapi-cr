@@ -8,12 +8,13 @@ module XIVAPI
     "/servers"    => Array(String),
     "/servers/dc" => HashMap(String, Array(String)),
 
-    # Begin not done block
-    "/market/{server}/item/{item_id}"                 => HashMap(String, String),
-    "/market/item/{item_id}?servers=[]"               => HashMap(String, String),
-    "/market/item?servers=[]&items=[]"                => HashMap(String, String),
+    
+    "/market/{server}/item/{item_id}"                 => Structs::MarketItem,
+    "/market/item/{item_id}?servers=[]"               => Hash(String, Structs::MarketItem),
+    "/market/items?servers=[]&ids=[]"                 => Array(Hash(String, Structs::MarketItem)),
     "/market/ids"                                     => Array(Int32),
-    "/market/categories"                              => Array(String),                  # Some kind of ItemSearchCategory struct? Might be also used elsewhere
+    "/market/categories"                              => Array(Structs::Category),                  # Some kind of ItemSearchCategory struct? Might be also used elsewhere
+    # Begin not done block
     "/character/search?name=First+Last&server=Server" => Array(HashMap(String, String)), # Character data
     "/character/{id}"                                 => HashMap(String, String),
     "/character/{id}/verification"                    => HashMap(String, String),

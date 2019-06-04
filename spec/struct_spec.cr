@@ -14,6 +14,39 @@ describe XIVAPI::Structs do
     end
   end
 
+  describe XIVAPI::Structs::MarketItem do
+    it "is properly constructed from JSON from the API" do
+      test = HTTP::Client.get("https://xivapi.com/market/Lich/item/25058?extended=1").body
+      begin
+        XIVAPI::Structs::MarketItem.from_json test
+      rescue e
+        fail "Error occurred when mapping struct from JSON: #{e}"
+      end
+    end
+  end
+
+  describe XIVAPI::Structs::Category do
+    it "is properly constructed from JSON from the API" do
+      test = HTTP::Client.get("https://xivapi.com/market/categories").body
+      begin
+        Array(XIVAPI::Structs::Category).from_json test
+      rescue e
+        fail "Error occurred when mapping struct from JSON: #{e}"
+      end
+    end
+  end
+
+  describe XIVAPI::Structs::MarketItem do
+    it "is properly constructed from JSON from the API" do
+      test = HTTP::Client.get("https://xivapi.com/market/items?servers=Lich&ids=25058").body
+      begin
+        Array(Hash(String, XIVAPI::Structs::MarketItem)).from_json test
+      rescue e
+        fail "Error occurred when mapping struct from JSON: #{e}"
+      end
+    end
+  end
+
   describe XIVAPI::Structs::DeepDungeon do
     it "is properly constructed from JSON from the API" do
       test = %({

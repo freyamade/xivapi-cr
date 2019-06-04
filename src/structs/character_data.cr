@@ -6,7 +6,7 @@ module XIVAPI
     struct CharacterData
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
-        active_class_job: {type: Structs::ClassJob, key: "ActiveClassJob"},
+        active_class_job: {type: Structs::ClassJob?, key: "ActiveClassJob"},
         avatar: {type: String?, key: "Avatar"},
         bio: {type: String?, key: "Bio"},
         class_jobs: {type: Hash(String, Structs::ClassJob)?, key: "ClassJobs"},

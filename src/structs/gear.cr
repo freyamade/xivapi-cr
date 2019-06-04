@@ -8,7 +8,7 @@ module XIVAPI
       JSON.mapping(
         creator: {type: Int32?, key: "Creator"},
         dye: {type: Structs::IDIconName?, key: "Dye"},
-        item: {type: Structs::Item?, key: "Item"},
+        item: {type: Structs::ArmourItem?, key: "Item"},
         materia: {type: Array(Structs::IDIconNameUrl)?, key: "Materia"},
         mirage: {type: IDIconName?, key: "Mirage"},
       )
