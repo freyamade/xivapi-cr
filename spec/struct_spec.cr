@@ -58,6 +58,72 @@ describe XIVAPI::Structs do
     end
   end
 
+  describe XIVAPI::Structs::Verification do
+    it "is properly constructed from JSON from the API" do
+      test = HTTP::Client.get("https://xivapi.com/character/9811984/verification").body
+      begin
+        XIVAPI::Structs::Verification.from_json test
+      rescue e
+        fail "Error occurred when mapping struct from JSON: #{e}"
+      end
+    end
+  end
+
+  describe Int32 do
+    it "is properly constructed from JSON from the API" do
+      test = HTTP::Client.get("https://xivapi.com/character/9811984/update").body
+      begin
+        Int32.from_json test
+      rescue e
+        fail "Error occurred when mapping struct from JSON: #{e}"
+      end
+    end
+  end
+
+  describe XIVAPI::Structs::FreeCompanySearch do
+    it "is properly constructed from JSON from the API" do
+      test = HTTP::Client.get("https://xivapi.com/freecompany/search?name=Blobs").body
+      begin
+        XIVAPI::Structs::FreeCompanySearch.from_json test
+      rescue e
+        fail "Error occurred when mapping struct from JSON: #{e}"
+      end
+    end
+  end
+
+  describe XIVAPI::Structs::FC do
+    it "is properly constructed from JSON from the API" do
+      test = HTTP::Client.get("https://xivapi.com/freecompany/9228438586435675634?data=FCM&extended=1").body
+      begin
+        XIVAPI::Structs::FC.from_json test
+      rescue e
+        fail "Error occurred when mapping struct from JSON: #{e}"
+      end
+    end
+  end
+
+  describe XIVAPI::Structs::LinkshellSearch do
+    it "is properly constructed from JSON from the API" do
+      test = HTTP::Client.get("https://xivapi.com/linkshell/search?name=a").body
+      begin
+        XIVAPI::Structs::LinkshellSearch.from_json test
+      rescue e
+        fail "Error occurred when mapping struct from JSON: #{e}"
+      end
+    end
+  end
+
+  describe XIVAPI::Structs::LS do
+    it "is properly constructed from JSON from the API" do
+      test = HTTP::Client.get("https://xivapi.com/linkshell/12947848928791712").body
+      begin
+        XIVAPI::Structs::FC.from_json test
+      rescue e
+        fail "Error occurred when mapping struct from JSON: #{e}"
+      end
+    end
+  end
+
   describe XIVAPI::Structs::DeepDungeon do
     it "is properly constructed from JSON from the API" do
       test = %({

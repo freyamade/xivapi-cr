@@ -15,14 +15,14 @@ module XIVAPI
     "/market/ids"                                     => Array(Int32),
     "/market/categories"                              => Array(Structs::Category),                  # Some kind of ItemSearchCategory struct? Might be also used elsewhere
     "/character/search?name=First+Last&server=Server" => Structs::NameServer, # Character data
-    "/character/{id}"                                 => HashMap(String, String),
-    # Begin not done block
-    "/character/{id}/verification"                    => HashMap(String, String),
+    "/character/{id}"                                 => Structs::Character,
+    "/character/{id}/verification"                    => Structs::Verification,
     "/character/{id}/update"                          => Int32,
-    "/freecompany/search"                             => Array(HashMap(String, String)),
-    "/freecompany/{id}"                               => HashMap(String, String),
-    "/linkshell/search"                               => Array(HashMap(String, String)),
-    "/linkshell/{id}"                                 => HashMap(String, String),
+    "/freecompany/search"                             => Structs::FreeCompanySearch,
+    "/freecompany/{id}"                               => Structs::FC,
+    "/linkshell/search"                               => Structs::LinkshellSearch,
+    "/linkshell/{id}"                                 => Structs::LS,
+    # Begin not done block
     "/pvpteam/search"                                 => Array(HashMap(String, String)),
     "/pvpteam/{id}"                                   => HashMap(String, String),
     # End not done block
