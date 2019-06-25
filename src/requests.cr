@@ -2,19 +2,18 @@ require "./structs/*"
 
 module XIVAPI
   ENDPOINT_MAP = {
-    "/search"     => Array(Structs::SearchResult),
-    "/lore"       => Array(Structs::Lore),
-    "/content"    => Array(String),
-    "/servers"    => Array(String),
-    "/servers/dc" => HashMap(String, Array(String)),
-
-    
+    # TODO - Replace the Arrays with Paginators of a type
+    "/search"                                         => Array(Structs::SearchResult),
+    "/lore"                                           => Array(Structs::Lore),
+    "/content"                                        => Array(String),
+    "/servers"                                        => Array(String),
+    "/servers/dc"                                     => HashMap(String, Array(String)),
     "/market/{server}/item/{item_id}"                 => Structs::MarketItem,
     "/market/item/{item_id}?servers=[]"               => Hash(String, Structs::MarketItem),
     "/market/items?servers=[]&ids=[]"                 => Array(Hash(String, Structs::MarketItem)),
     "/market/ids"                                     => Array(Int32),
-    "/market/categories"                              => Array(Structs::Category),                  # Some kind of ItemSearchCategory struct? Might be also used elsewhere
-    "/character/search?name=First+Last&server=Server" => Structs::NameServer, # Character data
+    "/market/categories"                              => Array(Structs::Category), # Some kind of ItemSearchCategory struct? Might be also used elsewhere
+    "/character/search?name=First+Last&server=Server" => Structs::NameServer,      # Character data
     "/character/{id}"                                 => Structs::Character,
     "/character/{id}/verification"                    => Structs::Verification,
     "/character/{id}/update"                          => Int32,
@@ -22,9 +21,10 @@ module XIVAPI
     "/freecompany/{id}"                               => Structs::FC,
     "/linkshell/search"                               => Structs::LinkshellSearch,
     "/linkshell/{id}"                                 => Structs::LS,
+
     # Begin not done block
-    "/pvpteam/search"                                 => Array(HashMap(String, String)),
-    "/pvpteam/{id}"                                   => HashMap(String, String),
+    "/pvpteam/search" => Array(HashMap(String, String)),
+    "/pvpteam/{id}"   => HashMap(String, String),
     # End not done block
 
     "/lodestone"              => Structs::Lodestone,
