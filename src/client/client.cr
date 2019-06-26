@@ -1,3 +1,5 @@
+require "http/client"
+
 module XIVAPI
   # Top level API client to interact with the API
   class Client
@@ -16,6 +18,12 @@ module XIVAPI
       language = language.downcase
       raise ArgumentError, "Unsupported language: #{language}. Allowed choices are #{LANGUAGE_OPTIONS}." unless LANGUAGE_OPTIONS.includes? language
       @language = language
+    end
+
+    # Make a request to a specific endpoint and return the HTTP body of the response, to be parsed in other methods
+    # TODO - Overload to take in extra parameters
+    private def request(endpoint : String) : String
+      return HTTP::Client.get(endpoint).body
     end
 
     # The api key for the client, can be changed while in use
