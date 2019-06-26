@@ -1,10 +1,11 @@
 require "./structs/*"
+require "./paginator"
 
 module XIVAPI
   ENDPOINT_MAP = {
     # TODO - Replace the Arrays with Paginators of a type
-    "/search"                                         => Array(Structs::SearchResult),
-    "/lore"                                           => Array(Structs::Lore),
+    "/search"                                         => Paginator(Structs::SearchResult),
+    "/lore"                                           => Paginator(Structs::Lore),
     "/content"                                        => Array(String),
     "/servers"                                        => Array(String),
     "/servers/dc"                                     => HashMap(String, Array(String)),
