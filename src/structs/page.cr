@@ -5,8 +5,8 @@ module XIVAPI
   # The Page struct is a generic, so that we can use it for all kinds of endpoints.
   struct Page(T)
     JSON.mapping(
-      results : Array(T),
-      pagination : Struct::Pagination
+      results: Array(T),
+      pagination: Structs::Pagination
     )
 
     # The results contained in the page
