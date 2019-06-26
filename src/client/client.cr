@@ -18,14 +18,6 @@ module XIVAPI
       @language = language
     end
 
-    # Get a hash map of default parameters for requests
-    def default_params
-      return {
-        private_key: @api_key,
-        language:    @language,
-      }
-    end
-
     # The api key for the client, can be changed while in use
     property api_key
     # A flag stating whether or not requests should use the stage version of the API
