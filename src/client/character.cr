@@ -14,7 +14,7 @@ module XIVAPI
 
     # Search the lodestone API for characters with a given name.
     # Optionally, search specific servers and
-    def character_search(name : String, server : String = "", page : UInt32 = 0) : Structs::Page(Structs::CharacterSearch)
+    def character_search(name : String, server : String = "", page : UInt32 = 1) : Structs::Page(Structs::CharacterSearch)
       # Send a request to the API for character data, sending the passed parameters along with it
       params = {
         "name"   => name,
@@ -26,7 +26,3 @@ module XIVAPI
     end
   end
 end
-
-client = XIVAPI::Client.new staging: true
-page = client.character_search "Erika Vaincannet"
-puts page.results[0].id
