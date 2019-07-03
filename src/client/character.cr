@@ -4,14 +4,6 @@ module XIVAPI
   class Client
     # In this file, add methods for polling Character data
 
-    # Subset of ENDPOINT MAP in requests.cr pertaining to Character requests
-    ENDPOINT_MAP = {
-      "/character/search?name=First+Last&server=Server" => Structs::CharacterSummary, # Character data
-      "/character/{id}"                                 => Structs::Character,
-      "/character/{id}/verification"                    => Structs::CharacterVerification,
-      "/character/{id}/update"                          => Int32,
-    }
-
     # Search the lodestone API for characters with a given name.
     # Optionally, search specific servers.
     def character_search(name : String, server : String = "", page : UInt32 = 1) : Structs::Page(Structs::CharacterSummary)
