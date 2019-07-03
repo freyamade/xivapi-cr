@@ -40,5 +40,13 @@ module XIVAPI
       response = request endpoint, {"token" => token}
       return Structs::CharacterVerification.from_json response
     end
+
+    # Send a request to update the Character with the given ID.
+    # A response of 0 indicates that the Character cannot be updated at this time, and a response of 1 indicates a successful request.
+    def character_update(id : UInt64) : Int32
+      endpoint = "/character/#{id}/update"
+      response = request endpoint
+      return response.to_i
+    end
   end
 end
