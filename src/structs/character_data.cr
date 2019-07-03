@@ -13,10 +13,9 @@ module XIVAPI
         free_compay_id: {type: String?, key: "FreeCompanyId"},
         gear_set: {type: Structs::GearSet?, key: "GearSet"},
         gender: {type: Int32?, key: "Gender"},
-        gender_id: {type: Int32?, key: "GenderID"},
         grand_company: {type: Structs::GrandCompany?, key: "GrandCompany"},
         guardian_diety: {type: Structs::GuardianDiety?, key: "GuardianDiety"},
-        id: {type: Int32?, key: "ID"},
+        id: {type: UInt64?, key: "ID"},
         minions: {type: Array(Structs::MinionMount)?, key: "Minions"},
         minions_count: {type: Int32?, key: "MinionsCount"},
         minions_progress: {type: String?, key: "MinionsProgress", converter: String::RawConverter},
@@ -29,7 +28,7 @@ module XIVAPI
         nameday: {type: String?, key: "Nameday"},
         parse_date: {type: Time?, key: "ParseDate", converter: Time::EpochConverter},
         portrait: {type: String?, key: "Portrait"},
-        pvp_team_id: {type: Int32?, key: "PvPTeamId"},
+        pvp_team_id: {type: UInt64?, key: "PvPTeamId"},
         race: {type: Structs::IDNameUrl?, key: "Race"},
         server: {type: String?, key: "Server"},
         title: {type: Structs::IDIconNameUrl?, key: "Title"},
@@ -45,13 +44,11 @@ module XIVAPI
       # all class jobs of the character
       getter class_jobs
       # the id of the character's free company
-      getter free_compay_id
+      getter free_company_id
       # the gear set of the character
       getter gear_set
       # the gender of the character (0 for female, 1 for male)
       getter gender
-      # the genderID of the character (0 for female, 1 for male)
-      getter gender_id
       # the grand company info of the character
       getter grand_company
       # the guardian diety info of the character

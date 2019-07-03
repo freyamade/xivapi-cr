@@ -11,11 +11,11 @@ module XIVAPI
         character_name: {type: String?, key: "CharacterName"},
         id: {type: String?, key: "ID"},
         is_hq: {type: Bool?, key: "IsHQ"},
-        price_per_unit: {type: Int32?, key: "PricePerUnit"},
-        price_total: {type: Int32?, key: "PriceTotal"},
+        price_per_unit: {type: UInt64?, key: "PricePerUnit"},
+        price_total: {type: UInt64?, key: "PriceTotal"},
         purchase_date: {type: Time?, key: "PurchaseDate", converter: Time::EpochConverter},
         purchase_date_ms: {type: String?, key: "PurchaseDateMS"},
-        quantity: {type: Int32?, key: "Quantity"},
+        quantity: {type: UInt64?, key: "Quantity"},
       )
       # the time when the item was added to the market board
       getter added

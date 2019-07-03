@@ -7,9 +7,9 @@ module XIVAPI
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
         class_job_category: {type: Structs::IDName?, key: "ClassJobCategory"},
-        id: {type: Int32?, key: "ID"},
+        id: {type: UInt64?, key: "ID"},
         icon: {type: String?, key: "Icon"},
-        item_ui_category: {type: IDName?, key: "ItemUICategory"},
+        item_ui_category: {type: Structs::IDName?, key: "ItemUICategory"},
         level_equip: {type: Int32?, key: "LevelEquip"},
         level_item: {type: Int32?, key: "LevelItem"},
         name: {type: String?, key: "Name"},

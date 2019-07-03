@@ -12,7 +12,7 @@ module XIVAPI
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
         avatar: {type: String, key: "Avatar"},
-        id: {type: Int32, key: "ID"},
+        id: {type: UInt64, key: "ID"},
         name: {type: String, key: "Name"},
         server: {type: String, key: "Server"},
       )

@@ -7,8 +7,8 @@ module XIVAPI
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
         banner: {type: String, key: "Banner"},
-        ex_version: {type: Int32, key: "ExVersion"},
-        id: {type: Int32, key: "ID"},
+        ex_version: {type: UInt64, key: "ExVersion"},
+        id: {type: UInt64, key: "ID"},
         name: {type: String, key: "Name"},
         name_cn: {type: String?, key: "Name_cn"},
         name_de: {type: String?, key: "Name_de"},

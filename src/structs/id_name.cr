@@ -6,7 +6,7 @@ module XIVAPI
     struct IDName
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
-        id: {type: Int32?, key: "ID"},
+        id: {type: UInt64?, key: "ID"},
         name: {type: String?, key: "Name"},
       )
       # the ID

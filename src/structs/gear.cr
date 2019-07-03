@@ -6,7 +6,7 @@ module XIVAPI
     struct Gear
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
-        creator: {type: Int32?, key: "Creator"},
+        creator: {type: UInt64?, key: "Creator"},
         dye: {type: Structs::IDIconName?, key: "Dye"},
         item: {type: Structs::ArmourItem?, key: "Item"},
         materia: {type: Array(Structs::IDIconNameUrl)?, key: "Materia"},

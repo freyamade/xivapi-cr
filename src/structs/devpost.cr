@@ -7,8 +7,8 @@ module XIVAPI
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
         content: {type: String, key: "Content"},
-        id: Int32,
-        post_count: {type: Int32, key: "PostCount"},
+        id: UInt64,
+        post_count: {type: UInt64, key: "PostCount"},
         time: {type: Time, key: "Time", converter: Time::EpochConverter},
         url: {type: String, key: "Url"},
         user_avatar: {type: String, key: "UserAvatar"},

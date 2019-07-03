@@ -8,10 +8,10 @@ module XIVAPI
       JSON.mapping(
         category: {type: Int32?, key: "Category"},
         class_job_target: {type: String?, key: "ClassJobTarget"},
-        class_job_target_id: {type: Int32?, key: "ClassJobTargetID"},
-        id: {type: Int32?, key: "ID"},
+        class_job_target_id: {type: UInt64?, key: "ClassJobTargetID"},
+        id: {type: UInt64?, key: "ID"},
         icon: {type: String?, key: "Icon"},
-        icon_id: {type: Int32?, key: "IconID"},
+        icon_id: {type: UInt64?, key: "IconID"},
         name: {type: String?, key: "Name"},
         name_de: {type: String?, key: "Name_de"},
         name_en: {type: String?, key: "Name_en"},

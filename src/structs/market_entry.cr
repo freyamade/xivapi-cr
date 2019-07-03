@@ -13,13 +13,13 @@ module XIVAPI
         is_crafted: {type: Bool?, key: "IsCrafted"},
         is_hq: {type: Bool?, key: "IsHQ"},
         materia: {type: Array(Structs::IDIconNameUrl)?, key: "Materia"},
-        price_per_unit: {type: Int32?, key: "PricePerUnit"},
-        price_total: {type: Int32?, key: "PriceTotal"},
-        quantity: {type: Int32?, key: "Quantity"},
+        price_per_unit: {type: UInt64?, key: "PricePerUnit"},
+        price_total: {type: UInt64?, key: "PriceTotal"},
+        quantity: {type: UInt64?, key: "Quantity"},
         retainer_id: {type: String?, key: "RetainerID"},
         retainer_name: {type: String?, key: "RetainerName"},
-        stain_id: {type: Int32?, key: "StainID"},
-        town_id: {type: Int32?, key: "TownID"},
+        stain_id: {type: UInt64?, key: "StainID"},
+        town_id: {type: UInt64?, key: "TownID"},
       )
       # the ID
       getter id

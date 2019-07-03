@@ -6,7 +6,7 @@ module XIVAPI
     struct LoreData
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
-        id: {type: Int32, key: "ID"},
+        id: {type: UInt64, key: "ID"},
         icon: {type: String, key: "Icon"},
         name: {type: String, key: "Name"},
         name_cn: {type: String?, key: "Name_cn"},
@@ -47,7 +47,7 @@ module XIVAPI
         context: {type: String, key: "Context"},
         data: {type: LoreData?, key: "Data"},
         source: {type: String, key: "Source"},
-        source_id: {type: Int32, key: "SourceID"},
+        source_id: {type: UInt64, key: "SourceID"},
         text: {type: String, key: "Text"},
       )
       # a string identifying the context that the piece of text was found in

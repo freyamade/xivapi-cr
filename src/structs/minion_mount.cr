@@ -6,7 +6,7 @@ module XIVAPI
     struct MinionMount
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
-        id: {type: Int32?, key: "ID"},
+        id: {type: UInt64?, key: "ID"},
         icon: {type: String?, key: "Icon"},
         icon_small: {type: String?, key: "IconSmall"},
         name: {type: String?, key: "Name"},

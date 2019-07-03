@@ -8,7 +8,7 @@ module XIVAPI
       JSON.mapping(
         avatar: {type: String, key: "Avatar"},
         feast_matches: {type: Int32, key: "FeastMatches"},
-        id: {type: Int32, key: "ID"},
+        id: {type: UInt64, key: "ID"},
         name: {type: String, key: "Name"},
         rank: {type: String?, key: "Rank", converter: String::RawConverter},
         rank_icon: {type: String?, key: "RankIcon", converter: String::RawConverter},

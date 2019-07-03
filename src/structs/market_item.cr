@@ -9,11 +9,11 @@ module XIVAPI
         history: {type: Array(Structs::History)?, key: "History"},
         id: {type: String?, key: "ID"},
         item: {type: Structs::Item?, key: "Item"},
-        item_id: {type: Int32?, key: "ItemID"},
+        item_id: {type: UInt64?, key: "ItemID"},
         lodestone_id: {type: String?, key: "LodestoneID"},
         prices: {type: Array(MarketEntry)?, key: "Prices"},
-        server: {type: Int32?, key: "Server"},
-        update_priority: {type: Int32?, key: "UpdatePriority"},
+        server: {type: UInt64?, key: "Server"},
+        update_priority: {type: UInt64?, key: "UpdatePriority"},
         updated: {type: Time?, key: "Updated", converter: Time::EpochConverter},
       )
       # the sale history of the item

@@ -7,14 +7,14 @@ module XIVAPI
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
         date: {type: Time?, key: "Date"},
-        id: {type: Int32?, key: "ID"},
+        id: {type: UInt64?, key: "ID"},
         icon: {type: String?, key: "Icon"},
         name: {type: String?, key: "Name"},
         points: {type: Int32?, key: "Points"},
       )
       # the date when the achievement was acheived
       getter date
-      # the ID
+      # Lodestone ID of the achievement
       getter id
       # the Icon
       getter icon

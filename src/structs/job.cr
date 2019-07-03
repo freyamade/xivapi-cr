@@ -8,7 +8,7 @@ module XIVAPI
       JSON.mapping(
         abbreviation: {type: String?, key: "Abbreviation"},
         class_job_category: {type: Structs::IDName?, key: "ClassJobCategory"},
-        id: {type: Int32?, key: "ID"},
+        id: {type: UInt64?, key: "ID"},
         icon: {type: String?, key: "Icon"},
         name: {type: String?, key: "Name"},
         url: {type: String?, key: "Url"},
