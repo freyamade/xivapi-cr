@@ -18,7 +18,7 @@ describe XIVAPI::Structs do
     it "is properly constructed from JSON from the API" do
       test = HTTP::Client.get("https://xivapi.com/character/search?name=Terrance+Rihker&server=Lich").body
       begin
-        response = XIVAPI::Paginator(XIVAPI::Structs::CharacterSearch).from_json test
+        response = XIVAPI::Structs::Page(XIVAPI::Structs::CharacterSearch).from_json test
         response.results[0].name.should eq "Terrance Rihker"
       rescue e
         fail "Error occurred when mapping struct from JSON: #{e}"
