@@ -14,6 +14,18 @@ describe XIVAPI::Structs do
     end
   end
 
+  describe XIVAPI::Structs::CharacterSearch do
+    it "is properly constructed from JSON from the API" do
+      test = HTTP::Client.get("https://xivapi.com/character/search?name=Terrance+Rihker&server=Lich").body
+      begin
+        response = XIVAPI::Paginator(XIVAPI::Structs::CharacterSearch).from_json test
+        response.results[0].name.should eq "Terrance Rihker"
+      rescue e
+        fail "Error occurred when mapping struct from JSON: #{e}"
+      end
+    end
+  end
+
   describe XIVAPI::Structs::MarketItem do
     it "is properly constructed from JSON from the API" do
       test = HTTP::Client.get("https://xivapi.com/market/Lich/item/25058?extended=1").body
@@ -41,17 +53,6 @@ describe XIVAPI::Structs do
       test = HTTP::Client.get("https://xivapi.com/market/items?servers=Lich&ids=25058").body
       begin
         Array(Hash(String, XIVAPI::Structs::MarketItem)).from_json test
-      rescue e
-        fail "Error occurred when mapping struct from JSON: #{e}"
-      end
-    end
-  end
-
-  describe XIVAPI::Structs::NameServer do
-    it "is properly constructed from JSON from the API" do
-      test = HTTP::Client.get("https://xivapi.com/character/search?name=Terrance+Rihker&server=Lich").body
-      begin
-        XIVAPI::Structs::NameServer.from_json test
       rescue e
         fail "Error occurred when mapping struct from JSON: #{e}"
       end
