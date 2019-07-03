@@ -39,7 +39,6 @@ module XIVAPI
 
     # Make a request to a specific endpoint and return the HTTP body of the response, to be parsed in other methods.
     # Attaches the supplied endpoint to the the current in-use url value
-    # TODO - Overload to take in extra parameters
     private def request(endpoint : String) : String
       url = "#{@url}#{endpoint}"
       return HTTP::Client.get(url).body
