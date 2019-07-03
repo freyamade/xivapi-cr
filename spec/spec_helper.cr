@@ -1,2 +1,4 @@
 require "spec"
-require "../src/xivapi"
+require "../src/paginator"
+require "../src/client/*"
+require "../src/structs/*"
