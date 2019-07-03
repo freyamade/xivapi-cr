@@ -17,7 +17,7 @@ module XIVAPI
     @poll_rate : UInt32
     @url : String = API_URL
 
-    def initialize(@api_key : String = "", language : String = "en", @poll_rate : UInt32 = 5, @staging : Bool = false)
+    def initialize(@api_key : String = "", language : String = "en", @poll_rate : UInt32 = 5, staging : Bool = false)
       # Use the setter method for language to ensure it's in the array of allowed languages
       self.staging = staging
       self.language = language
