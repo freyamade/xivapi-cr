@@ -3,7 +3,7 @@ require "json"
 module XIVAPI
   module Structs
     # Struct for a pvp team result
-    struct PvPTeamResult
+    struct PvpTeamResult
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
         avatar: {type: String?, key: "Avatar"},

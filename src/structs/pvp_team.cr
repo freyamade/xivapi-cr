@@ -8,7 +8,7 @@ module XIVAPI
       JSON.mapping(
         pagination: {type: Structs::Pagination?, key: "Pagination"},
         profile: {type: Structs::Profile?, key: "Profile"},
-        results: {type: Array(Structs::Result)?, key: "Results"},
+        results: {type: Array(Structs::PvpTeamResult)?, key: "Results"},
       )
       # info about the results pages
       getter pagination

@@ -3,7 +3,7 @@ require "json"
 module XIVAPI
   module Structs
     # Struct for a character search
-    struct CharacterSearch
+    struct CharacterSummary
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
         avatar: {type: String, key: "Avatar"},
