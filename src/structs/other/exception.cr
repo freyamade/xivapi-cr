@@ -2,7 +2,8 @@ require "json"
 
 module XIVAPI
   module Structs
-    # Struct for Exceptions returned from the API
+    # Struct for Exceptions returned from the API.
+    # This struct will be used to generate custom exception instances.
     struct Exception
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
@@ -14,19 +15,19 @@ module XIVAPI
         debug: {type: JSON::Any, key: "Debug"},
       )
 
-      # flag stating if the exception was an error or not
+      # A flag stating if the exception was an error or not.
       getter error
-      # the type of exception received
+      # String indicating the type of exception that was received.
       getter subject
-      # the exception message
+      # The exception message from the API.
       getter message
-      # a sha1 trackable hash of the error message
+      # A sha1 trackable hash of the exception.
       getter hash
-      # the name of the exception thrown
+      # The name of the exception that was thrown.
       getter exception_type
-      # extra arbitrary data that helps the API devs understand bugs.
-      # do not code against this structure as it can change at any time
-      getter datatype
+      # Extra arbitrary data that helps the API devs understand bugs.
+      # Do not code against this structure as it can change at any time.
+      getter debug
     end
   end
 end

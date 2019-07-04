@@ -19,10 +19,10 @@ module XIVAPI
 
     # Retrieve the details of the Character with the given Lodestone ID.
     # For now, sends a flag to retrieve extended character data from the API.
-    def character(id : UInt64) : Structs::Character
+    def character(id : UInt64) : Structs::CharacterResponse
       endpoint = "/character/#{id}"
       response = request endpoint, {"extended" => "1"}
-      return Structs::Character.from_json response
+      return Structs::CharacterResponse.from_json response
     end
 
     # Verify the Character using a token.

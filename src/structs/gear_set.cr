@@ -6,7 +6,7 @@ module XIVAPI
     struct GearSet
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
-        attributes: {type: Array(Structs::Attribute)?, key: "Attributes"},
+        attributes: {type: Array(Structs::GearSetAttribute)?, key: "Attributes"},
         clas: {type: Structs::Job?, key: "Class"},
         gear: {type: Structs::Gears?, key: "Gear"},
         gear_key: {type: String?, key: "GearKey"},

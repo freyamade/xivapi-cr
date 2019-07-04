@@ -3,7 +3,7 @@ require "json"
 module XIVAPI
   module Structs
     # Struct for the availability of a certain piece of data
-    struct InfoData
+    struct Info
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
         is_active: {type: Bool?, key: "IsActive"},

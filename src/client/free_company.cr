@@ -1,4 +1,4 @@
 ENDPOINT_MAP = {
-  "/freecompany/search" => Structs::FreeCompanySearch,
-  "/freecompany/{id}"   => Structs::FC,
+  "/freecompany/search" => Structs::Page(Structs::FreeCompanySearch),
+  "/freecompany/{id}"   => Structs::FreeCompanyResponse,
 }

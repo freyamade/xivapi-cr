@@ -6,20 +6,20 @@ module XIVAPI
     struct Gears
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
-        body: {type: Structs::Gear?, key: "Body"},
-        bracelets: {type: Structs::Gear?, key: "Bracelets"},
-        earrings: {type: Structs::Gear?, key: "Earrings"},
-        feet: {type: Structs::Gear?, key: "Feet"},
-        hands: {type: Structs::Gear?, key: "Hands"},
-        head: {type: Structs::Gear?, key: "Head"},
-        legs: {type: Structs::Gear?, key: "Legs"},
-        main_hand: {type: Structs::Gear?, key: "MainHand"},
-        necklace: {type: Structs::Gear?, key: "Necklace"},
-        off_hand: {type: Structs::Gear?, key: "OffHand"},
-        ring1: {type: Structs::Gear?, key: "Ring1"},
-        ring2: {type: Structs::Gear?, key: "Ring2"},
-        soul_crystal: {type: Structs::Gear?, key: "SoulCrystal"},
-        waist: {type: Structs::Gear?, key: "Waist"},
+        body: {type: Structs::EquippedGear?, key: "Body"},
+        bracelets: {type: Structs::EquippedGear?, key: "Bracelets"},
+        earrings: {type: Structs::EquippedGear?, key: "Earrings"},
+        feet: {type: Structs::EquippedGear?, key: "Feet"},
+        hands: {type: Structs::EquippedGear?, key: "Hands"},
+        head: {type: Structs::EquippedGear?, key: "Head"},
+        legs: {type: Structs::EquippedGear?, key: "Legs"},
+        main_hand: {type: Structs::EquippedGear?, key: "MainHand"},
+        necklace: {type: Structs::EquippedGear?, key: "Necklace"},
+        off_hand: {type: Structs::EquippedGear?, key: "OffHand"},
+        ring1: {type: Structs::EquippedGear?, key: "Ring1"},
+        ring2: {type: Structs::EquippedGear?, key: "Ring2"},
+        soul_crystal: {type: Structs::EquippedGear?, key: "SoulCrystal"},
+        waist: {type: Structs::EquippedGear?, key: "Waist"},
       )
       # the body
       getter body

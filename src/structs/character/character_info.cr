@@ -1,17 +1,18 @@
 require "json"
+require "../other/info"
 
 module XIVAPI
   module Structs
     # Struct for info about the availability of different data
-    struct Info
+    struct CharacterInfo
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
-        achievements: {type: Structs::InfoData?, key: "Achievements"},
-        character: {type: Structs::InfoData?, key: "Character"},
-        free_company: {type: Structs::InfoData?, key: "FreeCompany"},
-        free_company_members: {type: Structs::InfoData?, key: "FreeCompanyMembers"},
-        friends: {type: Structs::InfoData?, key: "Friends"},
-        pvp_team: {type: Structs::InfoData?, key: "PvPTeam"}
+        achievements: {type: Structs::Info?, key: "Achievements"},
+        character: {type: Structs::Info, key: "Character"},
+        free_company: {type: Structs::Info?, key: "FreeCompany"},
+        free_company_members: {type: Structs::Info?, key: "FreeCompanyMembers"},
+        friends: {type: Structs::Info?, key: "Friends"},
+        pvp_team: {type: Structs::Info?, key: "PvPTeam"}
       )
       # info about the achievements struct
       getter achievements

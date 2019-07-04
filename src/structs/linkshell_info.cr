@@ -6,7 +6,7 @@ module XIVAPI
     struct LinkshellInfo
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
-        linkshell: {type: Structs::InfoData?, key: "Linkshell"},
+        linkshell: {type: Structs::Info?, key: "Linkshell"},
       )
       # info about the availability of linkshell data
       getter linkshell
