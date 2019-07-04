@@ -41,7 +41,7 @@ module XIVAPI
     # Attaches the supplied endpoint to the the current in-use url value.
     # Also extends the client's instance variables into the supplied params hash.
     private def request(endpoint : String, params : Hash(String, String) = {} of String => String) : String
-      params = params.merge default_params
+      params.merge! default_params
       endpoint = "#{endpoint}?#{HTTP::Params.encode params}"
       return request endpoint
     end
