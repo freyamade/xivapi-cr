@@ -3,25 +3,25 @@
 An unofficial Crystal library for [XIVAPI](https;//xivapi.com), written by a couple of people who like Final Fantasy XIV and Crystal!
 
 ## Table Of Contents
-- [Installation]()
-- [Usage]()
-    - [Character]()
-        - [`character_search`]()
-        - [`character`]()
-        - [`character_verify`]()
-        - [`character_update`]()
-    - [Free Company]()
-        - [`free_company_search`]()
-        - [`free_company`]()
-    - [Linkshell]()
-    - [Lodestone]()
-    - [Market]()
-    - [Other]()
-    - [PvP Team]()
-    - [Servers]()
-- [Development]()
-- [Contributing]()
-- [Contributors]()
+- [Installation](#installation)
+- [Usage](#usage)
+    - [Character](#character)
+        - [`character_search`](#character_search)
+        - [`character`](#character-1)
+        - [`character_verification`](#character_verification)
+        - [`character_update`](#character_update)
+    - [Free Company](#free-company)
+        - [`free_company_search`](#free_company_search)
+        - [`free_company`](#free_company)
+    - [Linkshell](#linkshell)
+    - [Lodestone](#lodestone)
+    - [Market](#market)
+    - [Other](#other)
+    - [PvP Team](#pvp-team)
+    - [Servers](#servers)
+- [Development](#development)
+- [Contributing](#contributing)
+- [Contributors](#contributors)
 
 ## Installation
 
@@ -177,9 +177,9 @@ require "xivapi/client/pvp_team"
 
 Methods related to PvP Team information.
 
-### Server
+### Servers
 ```crystal
-require "xivapi/client/server"
+require "xivapi/client/servers"
 ```
 
 Methods related to Server information.
