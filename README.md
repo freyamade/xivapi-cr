@@ -44,10 +44,18 @@ The character search method interacts with the `/character/search` endpoint of t
 
 #### `character`
 ```crystal
+# Just returns the Character data
 XIVAPI::Client.new().character(id: 123456)
+# Fetch Achievement data as well
+XIVAPI::Client.new().character(id: 123456, data: ["AC"])
+# Fetch all data
+XIVAPI::Client.new().character(id: 123456, data: XIVAPI::Client::CHARACTER_DATA_VALUES)
 ```
 This method reads the information for the specified character and returns it.
 It uses the `extended` field by default currently, though we plan to eventually allow users to choose whether or not to make the extended request.
+
+By default the `character` field is always returned, and you can add extra fields using the `data` parameter.
+The allowed fields are take from the docs.
 
 [XIVAPI Docs](https://xivapi.com/docs/Character#character)
 
