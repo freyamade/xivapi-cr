@@ -16,7 +16,15 @@ describe XIVAPI::Client do
       character.server.should eq CHARACTER_SERVER
     end
 
-    it "has an empty results list when an invalid search is sent" do
+    it "successfully raises an exception if an invalid search is sent" do
+      client = XIVAPI::Client.new
+      ex = expect_raises(XIVAPI::Exceptions::XIVAPIException) do
+        client.character_search ""
+      end
+      ex.api_exception.message.should eq "You must provide a name to search."
+    end
+
+    it "has an empty results list when an search is sent that won't return any details" do
       client = XIVAPI::Client.new
       page = client.character_search CHARACTER_NAME, "Shiva"
       page.results.size.should eq 0

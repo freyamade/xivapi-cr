@@ -14,7 +14,11 @@ module XIVAPI
         "page"   => page.to_s,
       }
       response = request "freecompany/search", params
-      return Dataclasses::Page(Dataclasses::FreeCompanyProfile).from_json response
+      begin
+        return Dataclasses::Page(Dataclasses::FreeCompanyProfile).from_json response
+      rescue
+        raise Exceptions::XIVAPIException.new(Dataclasses::Exception.from_json response)
+      end
     end
 
     # Retrieve the details of the FreeCompany with the given Lodestone ID.
@@ -27,7 +31,11 @@ module XIVAPI
       else
         response = request endpoint
       end
-      return Dataclasses::FreeCompanyResponse.from_json response
+      begin
+        return Dataclasses::FreeCompanyResponse.from_json response
+      rescue
+        raise Exceptions::XIVAPIException.new(Dataclasses::Exception.from_json response)
+      end
     end
   end
 end

@@ -17,7 +17,11 @@ module XIVAPI
         "page"   => page.to_s,
       }
       response = request "character/search", params
-      return Dataclasses::Page(Dataclasses::CharacterSummary).from_json response
+      begin
+        return Dataclasses::Page(Dataclasses::CharacterSummary).from_json response
+      rescue
+        raise Exceptions::XIVAPIException.new(Dataclasses::Exception.from_json response)
+      end
     end
 
     # Retrieve the details of the Character with the given Lodestone ID.
@@ -27,7 +31,11 @@ module XIVAPI
       data.reject! { |field| !CHARACTER_DATA_VALUES.includes? field }
       endpoint = "character/#{id}"
       response = request endpoint, {"data" => data.join ","}
-      return Dataclasses::CharacterResponse.from_json response
+      begin
+        return Dataclasses::CharacterResponse.from_json response
+      rescue
+        raise Exceptions::XIVAPIException.new(Dataclasses::Exception.from_json response)
+      end
     end
 
     # Verify the Character using a token.
@@ -35,7 +43,11 @@ module XIVAPI
     def character_verification(id : UInt64, token : String = "") : Dataclasses::CharacterVerification
       endpoint = "character/#{id}/verification"
       response = request endpoint, {"token" => token}
-      return Dataclasses::CharacterVerification.from_json response
+      begin
+        return Dataclasses::CharacterVerification.from_json response
+      rescue
+        raise Exceptions::XIVAPIException.new(Dataclasses::Exception.from_json response)
+      end
     end
 
     # Send a request to update the Character with the given ID.
@@ -43,7 +55,11 @@ module XIVAPI
     def character_update(id : UInt64) : Int32
       endpoint = "character/#{id}/update"
       response = request endpoint
-      return response.to_i
+      begin
+        return response.to_i
+      rescue
+        raise Exceptions::XIVAPIException.new(Dataclasses::Exception.from_json response)
+      end
     end
   end
 end
