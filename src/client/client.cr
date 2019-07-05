@@ -42,14 +42,15 @@ module XIVAPI
     # Also extends the client's instance variables into the supplied params hash.
     private def request(endpoint : String, params : Hash(String, String) = {} of String => String) : String
       params.merge! default_params
-      endpoint = "#{endpoint}?#{HTTP::Params.encode params}"
-      return request endpoint
+      endpoint = "#{endpoint}?#{HTTP::Params.encode params}".lstrip "/"
+      url = "#{@url}/#{endpoint}"
+      return HTTP::Client.get(url).body
     end
 
     # Return a Hash of the default parameters that should be added in every request.
     # These are currently; api_key, language
     def default_params : Hash(String, String)
-      return {"private_key" => @api_key, "language" => @language}
+      return {"private_key" => @api_key, "language" => @language, "extended" => "1"}
     end
 
     # The api key for the client, can be changed while in use
