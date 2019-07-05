@@ -6,7 +6,7 @@ module XIVAPI
     class Achievement
       # define a JSON mapping to create instances of this class
       JSON.mapping(
-        date: {type: Time, key: "Date"},
+        date: {type: Time, key: "Date", converter: Time::EpochConverter},
         id: {type: UInt64, key: "ID"},
         icon: {type: String, key: "Icon"},
         name: {type: String, key: "Name"},
