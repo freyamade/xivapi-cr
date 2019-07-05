@@ -2,13 +2,13 @@ require "./client"
 
 module XIVAPI
   class Client
-    # In this file, add methods for polling Character data
+    # In this file, add methods for retrieving Character data
 
     # An Array of Strings representing the fields that can be requested using the Character endpoint
     CHARACTER_DATA_VALUES = ["AC", "FR", "FC", "FCM", "PVP"]
 
     # Search the lodestone API for characters with a given name.
-    # Optionally, search specific servers.
+    # Optionally, search specific servers, add request extra fields.
     def character_search(name : String, server : String = "", page : UInt32 = 1) : Dataclasses::Page(Dataclasses::CharacterSummary)
       # Send a request to the API for character data, sending the passed parameters along with it
       params = {
