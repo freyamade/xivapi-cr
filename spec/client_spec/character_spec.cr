@@ -1,4 +1,3 @@
-# Spec file for testing the actual client functions as they are written
 require "../spec_helper"
 
 # Some Character detail constants that will be handy for the tests
