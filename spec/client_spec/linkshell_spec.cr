@@ -10,6 +10,14 @@ describe XIVAPI::Client do
       page.results.size.should_not eq 0
     end
 
+    it "successfully raises an exception if an invalid search is sent" do
+      client = XIVAPI::Client.new
+      ex = expect_raises(XIVAPI::Exceptions::XIVAPIException) do
+        client.linkshell_search ""
+      end
+      ex.api_exception.message.should eq "You must provide a name to search."
+    end
+
     it "reads a Linkshell properly" do
       client = XIVAPI::Client.new
       # Get the ID by doing a search and grabbing the first one.
