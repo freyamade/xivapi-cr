@@ -60,6 +60,8 @@ The various Client files and their methods are detailed below;
 require "xivapi/client/character"
 ```
 
+Methods related to Character information.
+
 #### `character_search`
 ```crystal
 XIVAPI::Client.new().character_search("name", "server", page: 1)
@@ -112,6 +114,8 @@ According to the XIVAPI Docs, you can only run this method for a given character
 require "xivapi/client/free_company"
 ```
 
+Methods related to Free Company information.
+
 #### `free_company_search`
 ```crystal
 XIVAPI::Client.new().free_company_search("name", "server", page: 1)
@@ -135,6 +139,48 @@ By default, only the `free_company` field is always returned.
 If you require the Array of Characters that are Members of the Free Company, then set the `members` flag to `true`.
 
 [XIVAPI Docs](https://xivapi.com/docs/Free-Company#free-company)
+
+### Linkshell
+```crystal
+require "xivapi/client/linkshell"
+```
+
+Methods related to Linkshell information.
+
+### Lodestone
+```crystal
+require "xivapi/client/lodestone"
+```
+
+Methods related to Lodestone information.
+
+### Market
+```crystal
+require "xivapi/client/market"
+```
+
+Methods related to Linkshell information.
+
+### Other
+```crystal
+require "xivapi/client/other"
+```
+
+A collection of methods that did not fit into the other groupings.
+
+### PvP Team
+```crystal
+require "xivapi/client/pvp_team"
+```
+
+Methods related to PvP Team information.
+
+### Server
+```crystal
+require "xivapi/client/server"
+```
+
+Methods related to Server information.
 
 ## Development
 
