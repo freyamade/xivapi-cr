@@ -1,5 +1,7 @@
 require "json"
 require "./gear"
+require "../utils/id_icon_name"
+require "../utils/id_icon_name_url"
 
 module XIVAPI
   module Structs
@@ -9,10 +11,10 @@ module XIVAPI
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
         creator: {type: UInt64, key: "Creator"},
-        dye: {type: Structs::IDIconName, key: "Dye"},
+        dye: {type: IDIconName, key: "Dye"},
         glamour: {type: IDIconName, key: "Mirage"},
-        item: {type: Structs::Gear, key: "Item"},
-        materia: {type: Array(Structs::IDIconNameUrl), key: "Materia"},
+        item: {type: Gear, key: "Item"},
+        materia: {type: Array(IDIconNameUrl), key: "Materia"},
       )
       # The ID of the Character that made the piece of equipment in question.
       getter creator

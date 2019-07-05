@@ -7,12 +7,12 @@ module XIVAPI
     struct CharacterInfo
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
-        achievements: {type: Structs::Info?, key: "Achievements"},
-        character: {type: Structs::Info, key: "Character"},
-        free_company: {type: Structs::Info?, key: "FreeCompany"},
-        free_company_members: {type: Structs::Info?, key: "FreeCompanyMembers"},
-        friends: {type: Structs::Info?, key: "Friends"},
-        pvp_team: {type: Structs::Info?, key: "PvPTeam"}
+        achievements: {type: Info?, key: "Achievements"},
+        character: {type: Info, key: "Character"},
+        free_company: {type: Info?, key: "FreeCompany"},
+        free_company_members: {type: Info?, key: "FreeCompanyMembers"},
+        friends: {type: Info?, key: "Friends"},
+        pvp_team: {type: Info?, key: "PvPTeam"}
       )
       # info about the achievements struct
       getter achievements

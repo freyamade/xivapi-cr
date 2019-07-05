@@ -10,16 +10,16 @@ module XIVAPI
   module Structs
     # A struct used to map out the response from the Character endpoint.
     # Currently, this struct contains the entire data using the `extended=1` flag, but columns are still specifiable for the requests.
-    struct CharacterResponse.
+    struct CharacterResponse
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
-        achievements: {type: Structs::Achievements?, key: "Achievements"},
-        character: {type: Structs::Character, key: "Character"},
-        free_company: {type: Structs::FreeCompany?, key: "FreeCompany"},
-        free_company_members: {type: Array(Structs::CharacterSummary)?, key: "FreeCompanyMembers"},
-        friends: {type: Array(Structs::CharacterSummary)?, key: "Friends"},
-        info: {type: Structs::CharacterInfo, key: "Info"},
-        pvp_team: {type: Structs::PvPTeam?, key: "PvPTeam"}
+        achievements: {type: Achievements?, key: "Achievements"},
+        character: {type: Character, key: "Character"},
+        free_company: {type: FreeCompany?, key: "FreeCompany"},
+        free_company_members: {type: Array(CharacterSummary)?, key: "FreeCompanyMembers"},
+        friends: {type: Array(CharacterSummary)?, key: "Friends"},
+        info: {type: CharacterInfo, key: "Info"},
+        pvp_team: {type: PvPTeam?, key: "PvPTeam"}
       )
       # An `Achievements` struct containing all of the Character's Achievements data.
       # Will be `nil` unless the Achievements data (AC) is requested.

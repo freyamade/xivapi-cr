@@ -3,6 +3,9 @@ require "./class_job"
 require "./gear_set"
 require "./grand_company_character_data"
 require "./guardian_deity"
+require "./minion_mount"
+require "../utils/id_icon_name_url"
+require "../utils/id_name_url"
 
 module XIVAPI
   module Structs
@@ -10,21 +13,21 @@ module XIVAPI
     struct Character
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
-        active_class_job: {type: Structs::ClassJob, key: "ActiveClassJob"},
+        active_class_job: {type: ClassJob, key: "ActiveClassJob"},
         avatar: {type: String, key: "Avatar"},
         bio: {type: String, key: "Bio"},
-        class_jobs: {type: Hash(String, Structs::ClassJob), key: "ClassJobs"},
+        class_jobs: {type: Hash(String, ClassJob), key: "ClassJobs"},
         free_company_id: {type: String, key: "FreeCompanyId"},
-        gear_set: {type: Structs::GearSet, key: "GearSet"},
+        gear_set: {type: GearSet, key: "GearSet"},
         gender: {type: UInt8, key: "Gender"},
-        grand_company: {type: Structs::GrandCompanyCharacterData, key: "GrandCompany"},
-        guardian_deity: {type: Structs::GuardianDeity, key: "GuardianDeity"},
+        grand_company: {type: GrandCompanyCharacterData, key: "GrandCompany"},
+        guardian_deity: {type: GuardianDeity, key: "GuardianDeity"},
         id: {type: UInt64, key: "ID"},
-        minions: {type: Array(Structs::MinionMount), key: "Minions"},
+        minions: {type: Array(MinionMount), key: "Minions"},
         minions_count: {type: UInt64, key: "MinionsCount"},
         minions_progress: {type: String, key: "MinionsProgress", converter: String::RawConverter},
         minions_total: {type: UInt64, key: "MinionsTotal"},
-        mounts: {type: Array(Structs::MinionMount), key: "Mounts"},
+        mounts: {type: Array(MinionMount), key: "Mounts"},
         mounts_count: {type: UInt64, key: "MountsCount"},
         mounts_progress: {type: String, key: "MountsProgress", converter: String::RawConverter},
         mounts_total: {type: UInt64, key: "MountsTotal"},
@@ -33,11 +36,11 @@ module XIVAPI
         parse_date: {type: Time, key: "ParseDate", converter: Time::EpochConverter},
         portrait: {type: String, key: "Portrait"},
         pvp_team_id: {type: UInt64, key: "PvPTeamId"},
-        race: {type: Structs::IDNameUrl, key: "Race"},
+        race: {type: IDNameUrl, key: "Race"},
         server: {type: String, key: "Server"},
-        title: {type: Structs::IDIconNameUrl, key: "Title"},
-        town: {type: Structs::IDIconNameUrl, key: "Town"},
-        tribe: {type: Structs::IDIconNameUrl, key: "Tribe"},
+        title: {type: IDIconNameUrl, key: "Title"},
+        town: {type: IDIconNameUrl, key: "Town"},
+        tribe: {type: IDIconNameUrl, key: "Tribe"},
       )
       # A `ClassJob` struct representing the Class or Job the Character currently is at the time of the previous XIVAPI update.
       getter active_class_job

@@ -1,4 +1,5 @@
 require "json"
+require "./job"
 
 module XIVAPI
   module Structs
@@ -6,12 +7,12 @@ module XIVAPI
     struct ClassJob
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
-        cls: {type: Structs::Job, key: "Class"},
+        cls: {type: Job, key: "Class"},
         exp_level: {type: Int32, key: "ExpLevel"},
         exp_level_max: {type: Int32, key: "ExpLevelMax"},
         exp_level_togo: {type: Int32, key: "ExpLevelTogo"},
         is_specialised: {type: Bool, key: "IsSpecialised"},
-        job: {type: Structs::Job, key: "Job"},
+        job: {type: Job, key: "Job"},
         level: {type: Int32, key: "Level"},
       )
       # A `Job` struct containing the details about the Class for this Class / Job.

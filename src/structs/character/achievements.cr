@@ -7,7 +7,7 @@ module XIVAPI
     struct Achievements
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
-        list: {type: Array(Structs::Achievement), key: "List"},
+        list: {type: Array(Achievement), key: "List"},
         parse_date: {type: Time, key: "ParseDate", converter: Time::EpochConverter},
         points: {type: UInt64, key: "Points"}
       )

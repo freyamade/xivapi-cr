@@ -1,4 +1,5 @@
 require "json"
+require "../utils/id_name"
 
 module XIVAPI
   module Structs
@@ -7,14 +8,14 @@ module XIVAPI
     struct Gear
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
-        class_job_category: {type: Structs::IDName, key: "ClassJobCategory"},
+        class_job_category: {type: IDName, key: "ClassJobCategory"},
         equip_level: {type: UInt64, key: "LevelEquip"},
         id: {type: UInt64, key: "ID"},
         icon: {type: String, key: "Icon"},
         item_level: {type: UInt64, key: "LevelItem"},
         name: {type: String, key: "Name"},
         rarity: {type: UInt64, key: "Rarity"},
-        ui_category: {type: Structs::IDName, key: "ItemUICategory"},
+        ui_category: {type: IDName, key: "ItemUICategory"},
       )
       # An `IDName` struct representing the class or job that is required for the Gear.
       getter class_job_category

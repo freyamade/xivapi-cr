@@ -1,4 +1,6 @@
 require "json"
+require "../utils/id_name_url"
+require "../utils/id_icon_name_url"
 
 module XIVAPI
   module Structs
@@ -7,8 +9,8 @@ module XIVAPI
     struct GrandCompanyCharacterData
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
-        company: {type: Structs::IDNameUrl, key: "Company"},
-        rank: {type: Structs::IDIconNameUrl, key: "Rank"},
+        company: {type: IDNameUrl, key: "Company"},
+        rank: {type: IDIconNameUrl, key: "Rank"},
       )
       # An `IDNameUrl` struct containing information about the Grand Company.
       getter company

@@ -1,4 +1,5 @@
 require "json"
+require "../utils/id_name"
 
 module XIVAPI
   module Structs
@@ -7,7 +8,7 @@ module XIVAPI
     struct GearSetAttribute
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
-        attribute: {type: Structs::IDName, key: "Attribute"},
+        attribute: {type: IDName, key: "Attribute"},
         value: {type: UInt64, key: "Value"},
       )
       # An `IDName` struct containing the name and id of the attribute, e.g. Piety

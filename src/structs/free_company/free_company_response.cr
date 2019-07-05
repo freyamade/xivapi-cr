@@ -9,9 +9,9 @@ module XIVAPI
     struct FreeCompanyResponse
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
-        free_company: {type: Structs::FreeCompany, key: "FreeCompany"},
-        free_company_members: {type: Array(Structs::CharacterSummary)?, key: "FreeCompanyMembers"},
-        info: {type: Structs::FreeCompanyInfo, key: "Info"},
+        free_company: {type: FreeCompany, key: "FreeCompany"},
+        free_company_members: {type: Array(CharacterSummary)?, key: "FreeCompanyMembers"},
+        info: {type: FreeCompanyInfo, key: "Info"},
       )
       # A `FreeCompany` struct containing the information about the Free Company.
       getter free_company
