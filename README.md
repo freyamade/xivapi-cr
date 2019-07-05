@@ -199,4 +199,4 @@ TODO: Write development instructions here
 ## Contributors
 
 - [freyamade](https://github.com/freyamade) - creator and maintainer
-- [Arthan](https://github.com/ArthanJans) - maintainer
+- [ArthanJans](https://github.com/ArthanJans) - maintainer
