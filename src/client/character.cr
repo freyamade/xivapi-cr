@@ -4,6 +4,9 @@ module XIVAPI
   class Client
     # In this file, add methods for polling Character data
 
+    # An Array of Strings representing the fields that can be requested using the Character endpoint
+    CHARACTER_DATA_VALUES = ["AC", "FR", "FC", "FCM", "PVP"]
+
     # Search the lodestone API for characters with a given name.
     # Optionally, search specific servers.
     def character_search(name : String, server : String = "", page : UInt32 = 1) : Dataclasses::Page(Dataclasses::CharacterSummary)
@@ -18,10 +21,12 @@ module XIVAPI
     end
 
     # Retrieve the details of the Character with the given Lodestone ID.
-    # For now, sends a flag to retrieve extended character data from the API.
-    def character(id : UInt64) : Dataclasses::CharacterResponse
+    # Any data fields that are sent will me mapped against the `CHARACTER_DATA_VALUES` variable to ensure only allowed values are sent.
+    def character(id : UInt64, data : Array(String) = [] of String) : Dataclasses::CharacterResponse
+      # Reject any items in `data` not in the allowed array of items
+      data.reject! { |field| !CHARACTER_DATA_VALUES.includes? field }
       endpoint = "character/#{id}"
-      response = request endpoint
+      response = request endpoint, {"data" => data.join ","}
       return Dataclasses::CharacterResponse.from_json response
     end
 
