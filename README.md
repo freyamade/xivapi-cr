@@ -50,6 +50,9 @@ The `language` parameter must be a [supported language](https://xivapi.com/docs/
 To add API methods to the Client class, you can import the needed files. For example, importing `xivapi/client/character` will add the character methods to the Client class.
 Alternatively, if you want all of the methods, you can import `xivapi/client/*` instead of just `xivapi/client`.
 
+***NOTE:*** By default, `extended=1` is sent in every request.
+This is a design choice until we figure out the best way to allow this flag to be sent on a per-request basis, given the fact that we've had to make structs for all the response data.
+
 The various Client files and their methods are detailed below;
 
 ### Character
@@ -59,9 +62,10 @@ require "xivapi/client/character"
 
 #### `character_search`
 ```crystal
-XIVAPI::Client.new().character_search("name", "server", page: 0)
+XIVAPI::Client.new().character_search("name", "server", page: 1)
 ```
-The character search method interacts with the `/character/search` endpoint of the API. Only the `name` parameter is required, the others are optional.
+The character search method interacts with the `/character/search` endpoint of the API.
+Only the `name` parameter is required, the others are optional.
 
 [XIVAPI Docs](https://xivapi.com/docs/Character#search)
 
@@ -77,8 +81,9 @@ XIVAPI::Client.new().character(id: 123456, data: XIVAPI::Client::CHARACTER_DATA_
 This method reads the information for the specified character and returns it.
 It uses the `extended` field by default currently, though we plan to eventually allow users to choose whether or not to make the extended request.
 
-By default the `character` field is always returned, and you can add extra fields using the `data` parameter.
-The allowed fields are take from the docs.
+By default, only the `character` field is always returned.
+You can request other fields as necessary using the `data` array.
+The allowed fields are taken from the docs.
 
 [XIVAPI Docs](https://xivapi.com/docs/Character#character)
 
@@ -101,6 +106,35 @@ The response from this method will be either a 1 or 0, representing success or f
 According to the XIVAPI Docs, you can only run this method for a given character once every 12 hours.
 
 [XIVAPI Docs](https://xivapi.com/docs/Character#update)
+
+### Free Company
+```crystal
+require "xivapi/client/free_company"
+```
+
+#### `free_company_search`
+```crystal
+XIVAPI::Client.new().free_company_search("name", "server", page: 1)
+```
+The character search method interacts with the `/freecompany/search` endpoint of the API.
+Only the `name` parameter is required, the others are optional.
+
+[XIVAPI Docs](https://xivapi.com/docs/Free-Company#search)
+
+#### `free_company`
+```crystal
+# Just returns the Free Company data
+XIVAPI::Client.new().free_company(id: "123456")
+# Fetch Free Company Members information too
+XIVAPI::Client.new().free_company(id: 123456, members: true)
+```
+This method reads the information for the specified free_company and returns it.
+It uses the `extended` field by default currently, though we plan to eventually allow users to choose whether or not to make the extended request.
+
+By default, only the `free_company` field is always returned.
+If you require the Array of Characters that are Members of the Free Company, then set the `members` flag to `true`.
+
+[XIVAPI Docs](https://xivapi.com/docs/Free-Company#free-company)
 
 ## Development
 
