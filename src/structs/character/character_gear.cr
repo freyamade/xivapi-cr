@@ -10,9 +10,9 @@ module XIVAPI
     struct CharacterGear
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
-        creator: {type: UInt64, key: "Creator"},
-        dye: {type: IDIconName, key: "Dye"},
-        glamour: {type: IDIconName, key: "Mirage"},
+        creator: {type: UInt64?, key: "Creator"},
+        dye: {type: IDIconName?, key: "Dye"},
+        glamour: {type: IDIconName?, key: "Mirage"},
         item: {type: Gear, key: "Item"},
         materia: {type: Array(IDIconNameUrl), key: "Materia"},
       )

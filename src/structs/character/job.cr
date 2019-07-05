@@ -8,7 +8,7 @@ module XIVAPI
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
         abbreviation: {type: String, key: "Abbreviation"},
-        class_job_category: {type: IDName, key: "ClassJobCategory"},
+        class_job_category: {type: IDName?, key: "ClassJobCategory"},
         id: {type: UInt64, key: "ID"},
         icon: {type: String, key: "Icon"},
         name: {type: String, key: "Name"},
@@ -16,7 +16,8 @@ module XIVAPI
       )
       # The abbreviated name of the Class or Job.
       getter abbreviation
-      # The category of the Class or Job.
+      # An `IDName` struct representing the category of the Class or Job.
+      # Sometimes it is not sent, in which case the field will be nil.
       getter class_job_category
       # The XIVAPI ID of the Class or Job.
       getter id

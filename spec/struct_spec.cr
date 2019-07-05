@@ -3,22 +3,22 @@ require "http/client"
 require "./spec_helper"
 
 describe XIVAPI::Structs do
-  describe XIVAPI::Structs::Character do
+  describe XIVAPI::Structs::CharacterResponse do
     it "is properly constructed from JSON from the API" do
       test = HTTP::Client.get("https://xivapi.com/character/9811984?data=AC,FR,FC,FCM,PVP&extended=1").body
       begin
-        XIVAPI::Structs::Character.from_json test
+        XIVAPI::Structs::CharacterResponse.from_json test
       rescue e
         fail "Error occurred when mapping struct from JSON: #{e}"
       end
     end
   end
 
-  describe XIVAPI::Structs::CharacterSearch do
+  describe XIVAPI::Structs::CharacterSummary do
     it "is properly constructed from JSON from the API" do
       test = HTTP::Client.get("https://xivapi.com/character/search?name=Terrance+Rihker&server=Lich").body
       begin
-        response = XIVAPI::Structs::Page(XIVAPI::Structs::CharacterSearch).from_json test
+        response = XIVAPI::Structs::Page(XIVAPI::Structs::CharacterSummary).from_json test
         response.results[0].name.should eq "Terrance Rihker"
       rescue e
         fail "Error occurred when mapping struct from JSON: #{e}"
@@ -37,66 +37,44 @@ describe XIVAPI::Structs do
     end
   end
 
-  describe XIVAPI::Structs::Category do
+  describe XIVAPI::Structs::MarketCategory do
     it "is properly constructed from JSON from the API" do
       test = HTTP::Client.get("https://xivapi.com/market/categories").body
       begin
-        Array(XIVAPI::Structs::Category).from_json test
+        Array(XIVAPI::Structs::MarketCategory).from_json test
       rescue e
         fail "Error occurred when mapping struct from JSON: #{e}"
       end
     end
   end
 
-  describe XIVAPI::Structs::MarketItem do
-    it "is properly constructed from JSON from the API" do
-      test = HTTP::Client.get("https://xivapi.com/market/items?servers=Lich&ids=25058").body
-      begin
-        Array(Hash(String, XIVAPI::Structs::MarketItem)).from_json test
-      rescue e
-        fail "Error occurred when mapping struct from JSON: #{e}"
-      end
-    end
-  end
-
-  describe XIVAPI::Structs::Verification do
+  describe XIVAPI::Structs::CharacterVerification do
     it "is properly constructed from JSON from the API" do
       test = HTTP::Client.get("https://xivapi.com/character/9811984/verification").body
       begin
-        XIVAPI::Structs::Verification.from_json test
+        XIVAPI::Structs::CharacterVerification.from_json test
       rescue e
         fail "Error occurred when mapping struct from JSON: #{e}"
       end
     end
   end
 
-  describe Int32 do
-    it "is properly constructed from JSON from the API" do
-      test = HTTP::Client.get("https://xivapi.com/character/9811984/update").body
-      begin
-        Int32.from_json test
-      rescue e
-        fail "Error occurred when mapping struct from JSON: #{e}"
-      end
-    end
-  end
-
-  describe XIVAPI::Structs::FreeCompanySearch do
+  describe XIVAPI::Structs::FreeCompanyProfile do
     it "is properly constructed from JSON from the API" do
       test = HTTP::Client.get("https://xivapi.com/freecompany/search?name=Blobs").body
       begin
-        XIVAPI::Structs::FreeCompanySearch.from_json test
+        XIVAPI::Structs::Page(XIVAPI::Structs::FreeCompanyProfile).from_json test
       rescue e
         fail "Error occurred when mapping struct from JSON: #{e}"
       end
     end
   end
 
-  describe XIVAPI::Structs::FC do
+  describe XIVAPI::Structs::FreeCompanyResponse do
     it "is properly constructed from JSON from the API" do
       test = HTTP::Client.get("https://xivapi.com/freecompany/9228438586435675634?data=FCM&extended=1").body
       begin
-        XIVAPI::Structs::FC.from_json test
+        XIVAPI::Structs::FreeCompanyResponse.from_json test
       rescue e
         fail "Error occurred when mapping struct from JSON: #{e}"
       end
@@ -107,18 +85,18 @@ describe XIVAPI::Structs do
     it "is properly constructed from JSON from the API" do
       test = HTTP::Client.get("https://xivapi.com/linkshell/search?name=a").body
       begin
-        XIVAPI::Structs::LinkshellSearch.from_json test
+        XIVAPI::Structs::Page(XIVAPI::Structs::LinkshellSearch).from_json test
       rescue e
         fail "Error occurred when mapping struct from JSON: #{e}"
       end
     end
   end
 
-  describe XIVAPI::Structs::LS do
+  describe XIVAPI::Structs::Linkshell do
     it "is properly constructed from JSON from the API" do
       test = HTTP::Client.get("https://xivapi.com/linkshell/12947848928791712").body
       begin
-        XIVAPI::Structs::FC.from_json test
+        XIVAPI::Structs::Linkshell.from_json test
       rescue e
         fail "Error occurred when mapping struct from JSON: #{e}"
       end

@@ -1,6 +1,6 @@
 require "json"
 require "./achievements"
-require "./character_data"
+require "./character"
 require "./character_info"
 require "./character_summary"
 require "../free_company"

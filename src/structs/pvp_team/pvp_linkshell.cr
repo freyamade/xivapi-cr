@@ -6,7 +6,7 @@ require "../other/pagination"
 module XIVAPI
   module Structs
     # Struct for the Linkshell data for the PvP Team response.
-    struct PvPLinkshell
+    struct PvpLinkshell
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
         pagination: {type: Pagination, key: "Pagination"},

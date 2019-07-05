@@ -1,7 +1,7 @@
 require "json"
+require "./pvp_info"
 require "./pvp_linkshell"
 require "./pvp_team"
-require "./pvp_team_info"
 
 module XIVAPI
   module Structs

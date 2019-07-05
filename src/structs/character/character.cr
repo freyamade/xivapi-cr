@@ -17,10 +17,10 @@ module XIVAPI
         avatar: {type: String, key: "Avatar"},
         bio: {type: String, key: "Bio"},
         class_jobs: {type: Hash(String, ClassJob), key: "ClassJobs"},
-        free_company_id: {type: String, key: "FreeCompanyId"},
+        free_company_id: {type: String?, key: "FreeCompanyId"},
         gear_set: {type: GearSet, key: "GearSet"},
         gender: {type: UInt8, key: "Gender"},
-        grand_company: {type: GrandCompanyCharacterData, key: "GrandCompany"},
+        grand_company: {type: GrandCompanyCharacterData?, key: "GrandCompany"},
         guardian_deity: {type: GuardianDeity, key: "GuardianDeity"},
         id: {type: UInt64, key: "ID"},
         minions: {type: Array(MinionMount), key: "Minions"},
@@ -35,12 +35,12 @@ module XIVAPI
         nameday: {type: String, key: "Nameday"},
         parse_date: {type: Time, key: "ParseDate", converter: Time::EpochConverter},
         portrait: {type: String, key: "Portrait"},
-        pvp_team_id: {type: UInt64, key: "PvPTeamId"},
+        pvp_team_id: {type: UInt64?, key: "PvPTeamId"},
         race: {type: IDNameUrl, key: "Race"},
         server: {type: String, key: "Server"},
-        title: {type: IDIconNameUrl, key: "Title"},
+        title: {type: IDIconNameUrl?, key: "Title"},
         town: {type: IDIconNameUrl, key: "Town"},
-        tribe: {type: IDIconNameUrl, key: "Tribe"},
+        tribe: {type: IDNameUrl, key: "Tribe"},
       )
       # A `ClassJob` struct representing the Class or Job the Character currently is at the time of the previous XIVAPI update.
       getter active_class_job
@@ -99,7 +99,8 @@ module XIVAPI
       getter title
       # An `IDIconNameUrl` struct containing the details about the Character's starting town.
       getter town
-      # An `IDIconNameUrl` struct containing the details about the Character's race clan.
+      # An `IDNameUrl` struct containing the details about the Character's race clan.
+      # An Icon field is returned from the API but we've found this to normally be null so we have removed it.
       getter tribe
     end
   end

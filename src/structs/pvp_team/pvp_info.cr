@@ -4,7 +4,7 @@ require "../other/info"
 module XIVAPI
   module Structs
     # Struct that contains the `Info` structs for the PvP Team request.
-    struct PvPTeam
+    struct PvpInfo
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
         linkshell: {type: Info, key: "Linkshell"},

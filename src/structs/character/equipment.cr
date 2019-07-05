@@ -4,23 +4,23 @@ require "./character_gear"
 module XIVAPI
   module Structs
     # Struct that maps an `CharacterGear` struct to each possible equipment slot for a Character.
-    struct Gears
+    struct Equipment
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
-        body: {type: CharacterGear, key: "Body"},
-        bracelets: {type: CharacterGear, key: "Bracelets"},
-        earrings: {type: CharacterGear, key: "Earrings"},
-        feet: {type: CharacterGear, key: "Feet"},
-        hands: {type: CharacterGear, key: "Hands"},
-        head: {type: CharacterGear, key: "Head"},
-        legs: {type: CharacterGear, key: "Legs"},
-        main_hand: {type: CharacterGear, key: "MainHand"},
-        necklace: {type: CharacterGear, key: "Necklace"},
-        off_hand: {type: CharacterGear, key: "OffHand"},
-        ring1: {type: CharacterGear, key: "Ring1"},
-        ring2: {type: CharacterGear, key: "Ring2"},
-        soul_crystal: {type: CharacterGear, key: "SoulCrystal"},
-        waist: {type: CharacterGear, key: "Waist"},
+        body: {type: CharacterGear?, key: "Body"},
+        bracelets: {type: CharacterGear?, key: "Bracelets"},
+        earrings: {type: CharacterGear?, key: "Earrings"},
+        feet: {type: CharacterGear?, key: "Feet"},
+        hands: {type: CharacterGear?, key: "Hands"},
+        head: {type: CharacterGear?, key: "Head"},
+        legs: {type: CharacterGear?, key: "Legs"},
+        main_hand: {type: CharacterGear?, key: "MainHand"},
+        necklace: {type: CharacterGear?, key: "Necklace"},
+        off_hand: {type: CharacterGear?, key: "OffHand"},
+        ring1: {type: CharacterGear?, key: "Ring1"},
+        ring2: {type: CharacterGear?, key: "Ring2"},
+        soul_crystal: {type: CharacterGear?, key: "SoulCrystal"},
+        waist: {type: CharacterGear?, key: "Waist"},
       )
       # The `CharacterGear` that is currently equipped in the body slot.
       getter body

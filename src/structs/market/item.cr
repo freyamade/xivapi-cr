@@ -8,7 +8,7 @@ module XIVAPI
       JSON.mapping(
         id: {type: UInt64, key: "ID"},
         icon: {type: String, key: "Icon"},
-        item_level: {type: UInt64, key: "ItemLevel"},
+        item_level: {type: UInt64, key: "LevelItem"},
         name: {type: String, key: "Name"},
         name_de: {type: String, key: "Name_de"},
         name_en: {type: String, key: "Name_en"},

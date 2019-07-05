@@ -7,7 +7,7 @@ module XIVAPI
     struct Devblog
       # define a JSON mapping to create instances of this struct
       JSON.mapping(
-        author: Name,
+        author: NameLowcase,
         content: String,
         id: String,
         link: JSON::Any,
