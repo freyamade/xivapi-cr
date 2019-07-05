@@ -38,7 +38,7 @@ describe XIVAPI::Client do
 
     it "reads a FreeCompany properly, also requesting the members" do
       client = XIVAPI::Client.new
-      free_company_response = client.free_company FREE_COMPANY_ID, ["FCM"]
+      free_company_response = client.free_company FREE_COMPANY_ID, true
 
       # Check that the FreeCompany returned is the right one
       free_company_response.free_company.name.should eq FREE_COMPANY_NAME

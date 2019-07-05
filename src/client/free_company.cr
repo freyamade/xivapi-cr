@@ -4,9 +4,6 @@ module XIVAPI
   class Client
     # In this file, add methods for retrieving FreeCompany data
 
-    # An Array of Strings representing the fields that can be requested using the FreeCompany endpoint
-    FREE_COMPANY_DATA_VALUES = ["FCM"]
-
     # Search the Lodestone API for Free Companies with a given name.
     # Optionally, search specific servers.
     def free_company_search(name : String, server : String = "", page : UInt32 = 1) : Dataclasses::Page(Dataclasses::FreeCompanyProfile)
@@ -21,11 +18,15 @@ module XIVAPI
     end
 
     # Retrieve the details of the FreeCompany with the given Lodestone ID.
-    # Any data fields that are requested will me mapped against the `FREE_COMPANY_DATA_VALUES` variable to ensure only allowed values are sent.
-    def free_company(id : String, data : Array(String) = [] of String) : Dataclasses::FreeCompanyResponse
-      data.reject! { |field| !FREE_COMPANY_DATA_VALUES.includes? field }
+    # If the Members Array is also needed, then it can be requested using the `members` flag by setting it to true.
+    def free_company(id : String, members : Bool = false) : Dataclasses::FreeCompanyResponse
       endpoint = "freecompany/#{id}"
-      response = request endpoint, {"data" => data.join ","}
+      response : String
+      if members
+        response = request endpoint, {"data" => "FCM"}
+      else
+        response = request endpoint
+      end
       return Dataclasses::FreeCompanyResponse.from_json response
     end
   end
