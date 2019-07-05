@@ -1,6 +1,6 @@
 require "http/client"
 require "http/params"
-require "../structs"
+require "../dataclasses"
 
 module XIVAPI
   # Top level API client to interact with the API

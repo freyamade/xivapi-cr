@@ -1,0 +1,36 @@
+require "json"
+
+module XIVAPI
+  module Dataclasses
+    # Dataclass containing minimal data about a Character.
+    # This class is used during Character searches, as well as used to represent Character's in another Character's Friend List or Free Company Member List.
+    class CharacterSummary
+      # define a JSON mapping to create instances of this class
+      JSON.mapping(
+        avatar: {type: String, key: "Avatar"},
+        feast_matches: {type: UInt64, key: "FeastMatches"},
+        id: {type: UInt64, key: "ID"},
+        name: {type: String, key: "Name"},
+        rank: {type: String?, key: "Rank", converter: String::RawConverter},
+        rank_icon: {type: String?, key: "RankIcon", converter: String::RawConverter},
+        server: {type: String, key: "Server"},
+      )
+      # URL of the Character's Avatar.
+      getter avatar
+      # The number of feast matches the character has played.
+      getter feast_matches
+      # The Lodestone ID of the character.
+      getter id
+      # The Character's Name.
+      getter name
+      # Unsure what this is, it's null for the characters I could find.
+      # It will be returned as a String if it's not nil.
+      getter rank
+      # Unsure what this is, it's null for the characters I could find.
+      # It will be returned as a String if it's not nil.
+      getter rank_icon
+      # The name of the Server the Character is currently on.
+      getter server
+    end
+  end
+end

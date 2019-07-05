@@ -6,7 +6,7 @@ module XIVAPI
 
     # Search the lodestone API for characters with a given name.
     # Optionally, search specific servers.
-    def character_search(name : String, server : String = "", page : UInt32 = 1) : Structs::Page(Structs::CharacterSummary)
+    def character_search(name : String, server : String = "", page : UInt32 = 1) : Dataclasses::Page(Dataclasses::CharacterSummary)
       # Send a request to the API for character data, sending the passed parameters along with it
       params = {
         "name"   => name,
@@ -14,23 +14,23 @@ module XIVAPI
         "page"   => page.to_s,
       }
       response = request "/character/search", params
-      return Structs::Page(Structs::CharacterSummary).from_json response
+      return Dataclasses::Page(Dataclasses::CharacterSummary).from_json response
     end
 
     # Retrieve the details of the Character with the given Lodestone ID.
     # For now, sends a flag to retrieve extended character data from the API.
-    def character(id : UInt64) : Structs::CharacterResponse
+    def character(id : UInt64) : Dataclasses::CharacterResponse
       endpoint = "/character/#{id}"
       response = request endpoint, {"extended" => "1"}
-      return Structs::CharacterResponse.from_json response
+      return Dataclasses::CharacterResponse.from_json response
     end
 
     # Verify the Character using a token.
     # This method returns the Character's Bio and a `pass` flag that states if the supplied token was found in their bio
-    def character_verification(id : UInt64, token : String = "") : Structs::CharacterVerification
+    def character_verification(id : UInt64, token : String = "") : Dataclasses::CharacterVerification
       endpoint = "/character/#{id}/verification"
       response = request endpoint, {"token" => token}
-      return Structs::CharacterVerification.from_json response
+      return Dataclasses::CharacterVerification.from_json response
     end
 
     # Send a request to update the Character with the given ID.
