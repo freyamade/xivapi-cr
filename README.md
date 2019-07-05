@@ -11,6 +11,8 @@ An unofficial Crystal library for [XIVAPI](https;//xivapi.com), written by a cou
         - [`character_verify`]()
         - [`character_update`]()
     - [Free Company]()
+        - [`free_company_search`]()
+        - [`free_company`]()
     - [Linkshell]()
     - [Lodestone]()
     - [Market]()
