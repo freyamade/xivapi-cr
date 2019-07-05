@@ -2,6 +2,25 @@
 
 An unofficial Crystal library for [XIVAPI](https;//xivapi.com), written by a couple of people who like Final Fantasy XIV and Crystal!
 
+## Table Of Contents
+- [Installation]()
+- [Usage]()
+    - [Character]()
+        - [`character_search`]()
+        - [`character`]()
+        - [`character_verify`]()
+        - [`character_update`]()
+    - [Free Company]()
+    - [Linkshell]()
+    - [Lodestone]()
+    - [Market]()
+    - [Other]()
+    - [PvP Team]()
+    - [Servers]()
+- [Development]()
+- [Contributing]()
+- [Contributors]()
+
 ## Installation
 
 1. Add the dependency to your `shard.yml`:
