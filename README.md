@@ -47,7 +47,8 @@ The `language` parameter must be a [supported language](https://xivapi.com/docs/
 `poll_rate` is the number of seconds the Client will wait when attempting to poll cached responses (currently unused).
 `staging` is a flag stating whether you want to interact with the stage API (if true) or the live API (if false).
 
-To add API methods to the Client class, you can import the needed files. For example, importing `xivapi/client/character` will add the character methods to the Client class. Alternatively, if you want all of the methods, you can import `xivapi/client/*` instead of just `xivapi/client`.
+To add API methods to the Client class, you can import the needed files. For example, importing `xivapi/client/character` will add the character methods to the Client class.
+Alternatively, if you want all of the methods, you can import `xivapi/client/*` instead of just `xivapi/client`.
 
 The various Client files and their methods are detailed below;
 
