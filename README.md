@@ -23,7 +23,7 @@ An unofficial Crystal library for [XIVAPI](https;//xivapi.com), written by a cou
         - [`pvp_team_search`](#pvp_team_search)
         - [`pvp_team`](#pvp_team)
     - [Servers](#servers)
-        - [`servers`](#servers1)
+        - [`servers`](#servers-1)
         - [`datacenters`](#datacenters)
 - [Development](#development)
 - [Contributing](#contributing)
