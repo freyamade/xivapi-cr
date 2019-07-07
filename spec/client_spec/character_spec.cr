@@ -24,7 +24,7 @@ describe XIVAPI::Client do
       ex.api_exception.message.should eq "You must provide a name to search."
     end
 
-    it "has an empty results list when an search is sent that won't return any details" do
+    it "has an empty results list when a search is sent that won't return any details" do
       client = XIVAPI::Client.new
       page = client.character_search CHARACTER_NAME, "Shiva"
       page.results.size.should eq 0
