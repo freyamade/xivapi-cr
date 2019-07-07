@@ -14,11 +14,17 @@ An unofficial Crystal library for [XIVAPI](https;//xivapi.com), written by a cou
         - [`free_company_search`](#free_company_search)
         - [`free_company`](#free_company)
     - [Linkshell](#linkshell)
+        - [`linkshell_search`](#linkshell_search)
+        - [`linkshell`](#linkshell-1)
     - [Lodestone](#lodestone)
     - [Market](#market)
     - [Other](#other)
     - [PvP Team](#pvp-team)
+        - [`pvp_team_search`](#pvp_team_search)
+        - [`pvp_team`](#pvp_team)
     - [Servers](#servers)
+        - [`servers`](#servers1)
+        - [`datacenters`](#datacenters)
 - [Development](#development)
 - [Contributing](#contributing)
 - [Contributors](#contributors)
@@ -134,7 +140,7 @@ XIVAPI::Client.new().free_company(id: "123456")
 # Fetch Free Company Members information too
 XIVAPI::Client.new().free_company(id: 123456, members: true)
 ```
-This method reads the information for the specified free_company and returns it.
+This method reads the information for the specified Free Company and returns it.
 It uses the `extended` field by default currently, though we plan to eventually allow users to choose whether or not to make the extended request.
 
 By default, only the `free_company` field is always returned.
@@ -148,6 +154,24 @@ require "xivapi/client/linkshell"
 ```
 
 Methods related to Linkshell information.
+
+#### `linkshell_search`
+```crystal
+XIVAPI::Client.new().linkshell_search("name", "server", page: 1)
+```
+The character search method interacts with the `/linkshell/search` endpoint of the API.
+Only the `name` parameter is required, the others are optional.
+
+[XIVAPI Docs](https://xivapi.com/docs/Linkshell#search)
+
+#### `linkshell`
+```crystal
+XIVAPI::Client.new().linkshell(id: "123456")
+```
+This method reads the information for the Linkshell and returns it.
+It uses the `extended` field by default currently, though we plan to eventually allow users to choose whether or not to make the extended request.
+
+[XIVAPI Docs](https://xivapi.com/docs/Linkshell#linkshell)
 
 ### Lodestone
 ```crystal
@@ -177,12 +201,48 @@ require "xivapi/client/pvp_team"
 
 Methods related to PvP Team information.
 
+#### `pvp_team_search`
+```crystal
+XIVAPI::Client.new().pvp_team_search("name", "server", page: 1)
+```
+The character search method interacts with the `/pvpteam/search` endpoint of the API.
+Only the `name` parameter is required, the others are optional.
+
+[XIVAPI Docs](https://xivapi.com/docs/PVP-Team#search)
+
+#### `pvp_team`
+```crystal
+XIVAPI::Client.new().pvp_team(id: "123456")
+```
+This method reads the information for the PvP Team and returns it.
+It uses the `extended` field by default currently, though we plan to eventually allow users to choose whether or not to make the extended request.
+
+[XIVAPI Docs](https://xivapi.com/docs/PVP-Team#pvp-team)
+
 ### Servers
 ```crystal
 require "xivapi/client/servers"
 ```
 
 Methods related to Server information.
+
+#### `servers`
+```crystal
+XIVAPI::Client.new().servers
+```
+
+Retrieves a list of official Server names.
+
+[XIVAPI Docs](https://xivapi.com/docs/Game-Data#servers)
+
+#### `datacenters`
+```crystal
+XIVAPI::Client.new().datacenters
+```
+
+Retrieves a HashMap of Datacenter names to an Array of the Servers in the Datacenter.
+
+[XIVAPI Docs](https://xivapi.com/docs/Game-Data#data-center)
 
 ## Development
 
