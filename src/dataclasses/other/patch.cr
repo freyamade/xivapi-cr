@@ -6,7 +6,7 @@ module XIVAPI
     class Patch
       # define a JSON mapping to create instances of this class
       JSON.mapping(
-        banner: {type: String, key: "Banner"},
+        banner: {type: String?, key: "Banner"},
         ex_version: {type: UInt64, key: "ExVersion"},
         id: {type: UInt64, key: "ID"},
         name: {type: String, key: "Name"},

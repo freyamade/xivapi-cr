@@ -19,6 +19,10 @@ An unofficial Crystal library for [XIVAPI](https;//xivapi.com), written by a cou
     - [Lodestone](#lodestone)
     - [Market](#market)
     - [Other](#other)
+        - [`search`](#search)
+        - [`lore`](#lore)
+        - [`content`](#content)
+        - [`patch_list`](#patch_list)
     - [PvP Team](#pvp-team)
         - [`pvp_team_search`](#pvp_team_search)
         - [`pvp_team`](#pvp_team)
@@ -193,6 +197,28 @@ require "xivapi/client/other"
 ```
 
 A collection of methods that did not fit into the other groupings.
+
+#### `search`
+```crystal
+XIVAPI::Client.new().search
+```
+
+#### `lore`
+```crystal
+XIVAPI::Client.new().lore
+```
+
+#### `content`
+```crystal
+XIVAPI::Client.new().content
+```
+
+#### `patch_list`
+```crystal
+XIVAPI::Client.new().patch_list
+```
+
+Retrieves an Array of Patch data from the API.
 
 ### PvP Team
 ```crystal
