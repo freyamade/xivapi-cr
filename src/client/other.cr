@@ -11,6 +11,17 @@ module XIVAPI
   class Client
     # In this file, add methods that are not in any other group.
 
+    # Retrieve an Array of all of the available content that is accessible in the API.
+    def content : Array(String)
+      endpoint = "content"
+      response = request endpoint
+      begin
+        return Array(String).from_json response
+      rescue
+        raise Exceptions::XIVAPIException.new(Dataclasses::Exception.from_json response)
+      end
+    end
+
     # Retrieve an Array of `Patch` structs, providing data on each game patch XIV has had.
     def patch_list : Array(Dataclasses::Patch)
       endpoint = "patchlist"

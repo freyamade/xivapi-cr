@@ -213,12 +213,20 @@ XIVAPI::Client.new().lore
 XIVAPI::Client.new().content
 ```
 
+***NOTE:*** The other Game-Data methods are not currently available, we need to figure out the best way to implement them.
+
+Retrieve an Array of all of the various types of Game Content that are available from the API.
+
+[XIVAPI Docs](https://xivapi.com/docs/Game-Data#content)
+
 #### `patch_list`
 ```crystal
 XIVAPI::Client.new().patch_list
 ```
 
 Retrieves an Array of Patch data from the API.
+
+[XIVAPI Docs](https://xivapi.com/docs/Patch-List)
 
 ### PvP Team
 ```crystal
