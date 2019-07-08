@@ -121,11 +121,11 @@ module XIVAPI
       params = prepare_search_parameters string, string_algo, string_column, filters, indexes, sort_field, sort_order, page, limit
       # Then simply send the request and return the response
       response = request endpoint, params
-      # begin
-      return Dataclasses::Page(Dataclasses::SearchResult).from_json response
-      # rescue
-      # raise Exceptions::XIVAPIException.new(Dataclasses::Exception.from_json response)
-      # end
+      begin
+        return Dataclasses::Page(Dataclasses::SearchResult).from_json response
+      rescue
+        raise Exceptions::XIVAPIException.new(Dataclasses::Exception.from_json response)
+      end
     end
 
     # Search the API for Lore entries.
@@ -151,11 +151,11 @@ module XIVAPI
       end
       # Then simply send the request and return the response
       response = request endpoint, params
-      # begin
-      return Dataclasses::Page(Dataclasses::Lore).from_json response
-      # rescue
-      # raise Exceptions::XIVAPIException.new(Dataclasses::Exception.from_json response)
-      # end
+      begin
+        return Dataclasses::Page(Dataclasses::Lore).from_json response
+      rescue
+        raise Exceptions::XIVAPIException.new(Dataclasses::Exception.from_json response)
+      end
     end
 
     # Retrieve an Array of all of the available content that is accessible in the API.
