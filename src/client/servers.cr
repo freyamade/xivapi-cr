@@ -8,7 +8,8 @@ module XIVAPI
     # Retrieve an Array of Servers (Worlds) for the game.
     def servers : Array(String)
       # Fetch an array of Servers.
-      response = request "servers"
+      endpoint = "servers"
+      response = request endpoint
       begin
         return Array(String).from_json response
       rescue

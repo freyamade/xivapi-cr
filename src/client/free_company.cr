@@ -8,12 +8,13 @@ module XIVAPI
     # Optionally, search specific servers.
     def free_company_search(name : String, server : String = "", page : UInt32 = 1) : Dataclasses::Page(Dataclasses::FreeCompanyProfile)
       # Send a request to the API for free company data, sending the passed parameters along with it
+      endpoint = "freecompany/search"
       params = {
         "name"   => name,
         "server" => server,
         "page"   => page.to_s,
       }
-      response = request "freecompany/search", params
+      response = request endpoint, params
       begin
         return Dataclasses::Page(Dataclasses::FreeCompanyProfile).from_json response
       rescue

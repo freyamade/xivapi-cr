@@ -11,12 +11,13 @@ module XIVAPI
     # Optionally, search specific servers, add request extra fields.
     def character_search(name : String, server : String = "", page : UInt32 = 1) : Dataclasses::Page(Dataclasses::CharacterSummary)
       # Send a request to the API for character data, sending the passed parameters along with it
+      endpoint = "character/search"
       params = {
         "name"   => name,
         "server" => server,
         "page"   => page.to_s,
       }
-      response = request "character/search", params
+      response = request endpoint, params
       begin
         return Dataclasses::Page(Dataclasses::CharacterSummary).from_json response
       rescue

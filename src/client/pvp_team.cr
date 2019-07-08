@@ -9,12 +9,13 @@ module XIVAPI
     # NOTE: This method isn't fully tested, since any requests we made to the endpoint returned no results.
     def pvp_team_search(name : String, server : String = "", page : UInt32 = 1) : Dataclasses::Page(Dataclasses::PvpTeamProfile)
       # Send a request to the API for pvp team data, sending the passed parameters along with it
+      endpoint = "pvpteam/search"
       params = {
         "name"   => name,
         "server" => server,
         "page"   => page.to_s,
       }
-      response = request "pvpteam/search", params
+      response = request endpoint, params
       begin
         return Dataclasses::Page(Dataclasses::PvpTeamProfile).from_json response
       rescue
