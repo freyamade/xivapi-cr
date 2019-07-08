@@ -7,7 +7,7 @@ module XIVAPI
       # define a JSON mapping to create instances of this class
       JSON.mapping(
         id: {type: UInt64, key: "ID"},
-        icon: {type: String, key: "Icon"},
+        icon: {type: String?, key: "Icon"},
         name: {type: String, key: "Name"},
         url: {type: String, key: "Url"},
       )
