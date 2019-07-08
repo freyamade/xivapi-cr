@@ -200,13 +200,48 @@ A collection of methods that did not fit into the other groupings.
 
 #### `search`
 ```crystal
-XIVAPI::Client.new().search
+XIVAPI::Client.new().search(
+  string: "",
+  string_algo: "",
+  string_column: "",
+  filters: [] of String,
+  indexes: [] of String,
+  sort_field: "",
+  sort_order: "",
+  page: 1,
+  limit: 50,
+)
 ```
+
+Search the XIV API for anything in particular.
+All the parameters to this method follow the XIVAPI docs and work as intended, except for `string_algo` as we have not included the `query_string` algorithm for now until we understand how it works.
+
+***NOTE:*** This client does not currently support the Elastic Search payload method of searching. If there is a need for it, we can add it in at a later date.
+
+[XIVAPI Docs](https://xivapi.com/docs/Search#search)
 
 #### `lore`
 ```crystal
-XIVAPI::Client.new().lore
+XIVAPI::Client.new().lore(
+  string: "",
+  string_algo: "",
+  string_column: "",
+  filters: [] of String,
+  indexes: [] of String,
+  sort_field: "",
+  sort_order: "",
+  page: 1,
+  limit: 50,
+  include_data: true,
+)
 ```
+Search through the XIVAPI for Lore entries.
+The parameters to this method are the same as the ones for the `search` method, except for the `include_data` parameter.
+Setting the `include_data` parameter to true will make the response also contain the `Data` column.
+
+***NOTE:*** This client does not currently support the Elastic Search payload method of searching. If there is a need for it, we can add it in at a later date.
+
+[XIVAPI Docs](https://xivapi.com/docs/Search#lore)
 
 #### `content`
 ```crystal
