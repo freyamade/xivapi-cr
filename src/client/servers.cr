@@ -1,4 +1,3 @@
-require "json"
 require "./client"
 
 module XIVAPI

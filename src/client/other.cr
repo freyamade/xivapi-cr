@@ -1,10 +1,3 @@
-# ENDPOINT_MAP = {
-#   "/search"    => Paginator(Structs::SearchResult),
-#   "/lore"      => Paginator(Structs::Lore),
-#   "/content"   => Array(String),
-# }
-
-require "json"
 require "./client"
 
 module XIVAPI
