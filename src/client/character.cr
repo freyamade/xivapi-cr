@@ -26,7 +26,7 @@ module XIVAPI
     end
 
     # Retrieve the details of the Character with the given Lodestone ID.
-    # Any data fields that are requested will me mapped against the `CHARACTER_DATA_VALUES` variable to ensure only allowed values are sent.
+    # Any data fields that are requested will be mapped against the `CHARACTER_DATA_VALUES` variable to ensure only allowed values are sent.
     def character(id : UInt64, data : Enumerable(String) = [] of String) : Dataclasses::CharacterResponse
       # Reject any items in `data` not in the allowed array of items
       data = data.reject { |field| !CHARACTER_DATA_VALUES.includes? field.upcase }
