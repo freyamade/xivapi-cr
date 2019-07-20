@@ -1,3 +1,4 @@
+require "json"
 require "./pagination"
 
 module XIVAPI
