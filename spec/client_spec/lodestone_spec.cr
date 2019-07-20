@@ -7,5 +7,10 @@ describe XIVAPI::Client do
       client = XIVAPI::Client.new
       lodestone_data = client.lodestone
     end
+
+    it "retrieves Feast leaderboard data" do
+      client = XIVAPI::Client.new
+      leaderboard = client.feasts "10"
+    end
   end
 end

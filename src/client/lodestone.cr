@@ -133,6 +133,17 @@ module XIVAPI
       end
     end
 
-    #
+    # Get information about Feasts Ranking Leaderboards.
+    # Response will be empty if there is currently no active season.
+    def feasts(season : String) : Dataclasses::FeastResponse
+      endpoint = "lodestone/feasts"
+      params = {"season" => season}
+      response = request endpoint
+      begin
+        return Dataclasses::FeastResponse.from_json response
+      rescue
+        raise Exceptions::XIVAPIException.new(Dataclasses::Exception.from_json response)
+      end
+    end
   end
 end
