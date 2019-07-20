@@ -133,11 +133,60 @@ module XIVAPI
       end
     end
 
+    # Get information about Palace of the Dead Leaderboards.
+    #
+    # `ranking_type` is either "solo" or "party".
+    # Defaults to "party".
+    # `job_name` is the acronym for a job to get rankings for, for "solo" type rankings.
+    # Defaults to "pld".
+    #
+    # `datacenter` is the Datacenter to fetch results from.
+    # Defaults to "Chaos" as that's the default for the Lodestone page.
+    def palace_of_the_dead(ranking_type : String = "party", job_name : String = "pld", datacenter : String = "Chaos") : Dataclasses::DeepDungeonResponse
+      endpoint = "lodestone/deepdungeon"
+      params = {"solo_party" => ranking_type, "subtype" => job_name, "dcgroup" => datacenter}
+      response = request endpoint
+      begin
+        return Dataclasses::DeepDungeonResponse.from_json response
+      rescue
+        raise Exceptions::XIVAPIException.new(Dataclasses::Exception.from_json response)
+      end
+    end
+
+    # Get information about Heaven on High Leaderboards.
+    #
+    # `ranking_type` is either "solo" or "party".
+    # Defaults to "party".
+    # `job_name` is the acronym for a job to get rankings for, for "solo" type rankings.
+    # Defaults to "pld".
+    #
+    # `datacenter` is the Datacenter to fetch results from.
+    # Defaults to "Chaos" as that's the default for the Lodestone page.
+    def heaven_on_high(ranking_type : String = "party", job_name : String = "pld", datacenter : String = "Chaos") : Dataclasses::DeepDungeonResponse
+      endpoint = "lodestone/heavenonhigh"
+      params = {"solo_party" => ranking_type, "subtype" => job_name, "dcgroup" => datacenter}
+      response = request endpoint
+      begin
+        return Dataclasses::DeepDungeonResponse.from_json response
+      rescue
+        raise Exceptions::XIVAPIException.new(Dataclasses::Exception.from_json response)
+      end
+    end
+
     # Get information about Feasts Ranking Leaderboards.
     # Response will be empty if there is currently no active season.
-    def feasts(season : String) : Dataclasses::FeastResponse
+    #
+    # `season` is the string value of the season number to get results for.
+    # Defaults to the current season by sending an empty value.
+    #
+    # `rank_type` can be the string "all", or strings of numbers from "1" to "5" inclusive.
+    # Defaults to "all".
+    #
+    # `datacenter` is the Datacenter to fetch results from.
+    # Defaults to "Chaos" as that's the default for the Lodestone page.
+    def feasts(season : String = "", rank_type : String = "all", datacenter : String = "Chaos") : Dataclasses::FeastResponse
       endpoint = "lodestone/feasts"
-      params = {"season" => season}
+      params = {"season" => season, "rank_type" => rank_type, "dcgroup" => datacenter}
       response = request endpoint
       begin
         return Dataclasses::FeastResponse.from_json response

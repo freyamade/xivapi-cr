@@ -8,6 +8,16 @@ describe XIVAPI::Client do
       lodestone_data = client.lodestone
     end
 
+    it "retrieves Palace of the Dead leaderboard data" do
+      client = XIVAPI::Client.new
+      leaderboard = client.palace_of_the_dead
+    end
+
+    it "retrieves Heaven on High leaderboard data" do
+      client = XIVAPI::Client.new
+      leaderboard = client.heaven_on_high
+    end
+
     it "retrieves Feast leaderboard data" do
       client = XIVAPI::Client.new
       leaderboard = client.feasts "10"
