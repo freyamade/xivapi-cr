@@ -57,7 +57,7 @@ An unofficial Crystal library for [XIVAPI](https;//xivapi.com), written by a cou
 
    ```yaml
    dependencies:
-     xivapi:
+     xivapi-cr:
        github: freyamade/xivapi-cr
    ```
 
