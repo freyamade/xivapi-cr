@@ -18,12 +18,13 @@ describe XIVAPI::Client do
     end
 
     it "searches the API for Lore" do
+      name = "Brute Justice"
       client = XIVAPI::Client.new
-      results = client.lore "Brute Justice", include_data: true
+      results = client.lore name, include_data: true
       # Find the "Metal - Brute Justice Mode Orchestrion Roll" in the response
       found = false
       results.results.each do |result|
-        if result.data.not_nil!.name == "Metal - Brute Justice Mode Orchestrion Roll"
+        if result.data.not_nil!.name == name
           found = true
           break
         end
