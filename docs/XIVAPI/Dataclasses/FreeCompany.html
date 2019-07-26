@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.28.0">
+
+
+<link href="../../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../../";
+</script>
+
+  <meta id="repository-name" content="github.com/freyamade/xivapi-cr">
+  <title>XIVAPI::Dataclasses::FreeCompany - github.com/freyamade/xivapi-cr</title>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="repository-links">
+      <a href="../../index.html">README</a>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="github.com/freyamade/xivapi-cr/XIVAPI" data-name="xivapi">
+      <a href="../../XIVAPI.html">XIVAPI</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Client" data-name="xivapi::client">
+      <a href="../../XIVAPI/Client.html">Client</a>
+      
+    </li>
+  
+  <li class="parent open current" data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses" data-name="xivapi::dataclasses">
+      <a href="../../XIVAPI/Dataclasses.html">Dataclasses</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Achievement" data-name="xivapi::dataclasses::achievement">
+      <a href="../../XIVAPI/Dataclasses/Achievement.html">Achievement</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Achievements" data-name="xivapi::dataclasses::achievements">
+      <a href="../../XIVAPI/Dataclasses/Achievements.html">Achievements</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Character" data-name="xivapi::dataclasses::character">
+      <a href="../../XIVAPI/Dataclasses/Character.html">Character</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/CharacterGear" data-name="xivapi::dataclasses::charactergear">
+      <a href="../../XIVAPI/Dataclasses/CharacterGear.html">CharacterGear</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/CharacterInfo" data-name="xivapi::dataclasses::characterinfo">
+      <a href="../../XIVAPI/Dataclasses/CharacterInfo.html">CharacterInfo</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/CharacterResponse" data-name="xivapi::dataclasses::characterresponse">
+      <a href="../../XIVAPI/Dataclasses/CharacterResponse.html">CharacterResponse</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/CharacterSummary" data-name="xivapi::dataclasses::charactersummary">
+      <a href="../../XIVAPI/Dataclasses/CharacterSummary.html">CharacterSummary</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/CharacterVerification" data-name="xivapi::dataclasses::characterverification">
+      <a href="../../XIVAPI/Dataclasses/CharacterVerification.html">CharacterVerification</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/ClassJob" data-name="xivapi::dataclasses::classjob">
+      <a href="../../XIVAPI/Dataclasses/ClassJob.html">ClassJob</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/DeepDungeon" data-name="xivapi::dataclasses::deepdungeon">
+      <a href="../../XIVAPI/Dataclasses/DeepDungeon.html">DeepDungeon</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/DeepDungeonLeaderboard" data-name="xivapi::dataclasses::deepdungeonleaderboard">
+      <a href="../../XIVAPI/Dataclasses/DeepDungeonLeaderboard.html">DeepDungeonLeaderboard</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/DeepDungeonResponse" data-name="xivapi::dataclasses::deepdungeonresponse">
+      <a href="../../XIVAPI/Dataclasses/DeepDungeonResponse.html">DeepDungeonResponse</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Devblog" data-name="xivapi::dataclasses::devblog">
+      <a href="../../XIVAPI/Dataclasses/Devblog.html">Devblog</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Devpost" data-name="xivapi::dataclasses::devpost">
+      <a href="../../XIVAPI/Dataclasses/Devpost.html">Devpost</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Equipment" data-name="xivapi::dataclasses::equipment">
+      <a href="../../XIVAPI/Dataclasses/Equipment.html">Equipment</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Estate" data-name="xivapi::dataclasses::estate">
+      <a href="../../XIVAPI/Dataclasses/Estate.html">Estate</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Exception" data-name="xivapi::dataclasses::exception">
+      <a href="../../XIVAPI/Dataclasses/Exception.html">Exception</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Feast" data-name="xivapi::dataclasses::feast">
+      <a href="../../XIVAPI/Dataclasses/Feast.html">Feast</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/FeastLeaderboard" data-name="xivapi::dataclasses::feastleaderboard">
+      <a href="../../XIVAPI/Dataclasses/FeastLeaderboard.html">FeastLeaderboard</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/FeastResponse" data-name="xivapi::dataclasses::feastresponse">
+      <a href="../../XIVAPI/Dataclasses/FeastResponse.html">FeastResponse</a>
+      
+    </li>
+  
+  <li class=" current" data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/FreeCompany" data-name="xivapi::dataclasses::freecompany">
+      <a href="../../XIVAPI/Dataclasses/FreeCompany.html">FreeCompany</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/FreeCompanyInfo" data-name="xivapi::dataclasses::freecompanyinfo">
+      <a href="../../XIVAPI/Dataclasses/FreeCompanyInfo.html">FreeCompanyInfo</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/FreeCompanyProfile" data-name="xivapi::dataclasses::freecompanyprofile">
+      <a href="../../XIVAPI/Dataclasses/FreeCompanyProfile.html">FreeCompanyProfile</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/FreeCompanyRanking" data-name="xivapi::dataclasses::freecompanyranking">
+      <a href="../../XIVAPI/Dataclasses/FreeCompanyRanking.html">FreeCompanyRanking</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/FreeCompanyReputation" data-name="xivapi::dataclasses::freecompanyreputation">
+      <a href="../../XIVAPI/Dataclasses/FreeCompanyReputation.html">FreeCompanyReputation</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/FreeCompanyResponse" data-name="xivapi::dataclasses::freecompanyresponse">
+      <a href="../../XIVAPI/Dataclasses/FreeCompanyResponse.html">FreeCompanyResponse</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/FreeCompanySeeking" data-name="xivapi::dataclasses::freecompanyseeking">
+      <a href="../../XIVAPI/Dataclasses/FreeCompanySeeking.html">FreeCompanySeeking</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Gear" data-name="xivapi::dataclasses::gear">
+      <a href="../../XIVAPI/Dataclasses/Gear.html">Gear</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/GearSet" data-name="xivapi::dataclasses::gearset">
+      <a href="../../XIVAPI/Dataclasses/GearSet.html">GearSet</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/GearSetAttribute" data-name="xivapi::dataclasses::gearsetattribute">
+      <a href="../../XIVAPI/Dataclasses/GearSetAttribute.html">GearSetAttribute</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/GrandCompanyCharacterData" data-name="xivapi::dataclasses::grandcompanycharacterdata">
+      <a href="../../XIVAPI/Dataclasses/GrandCompanyCharacterData.html">GrandCompanyCharacterData</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/GuardianDeity" data-name="xivapi::dataclasses::guardiandeity">
+      <a href="../../XIVAPI/Dataclasses/GuardianDeity.html">GuardianDeity</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/IDIconName" data-name="xivapi::dataclasses::idiconname">
+      <a href="../../XIVAPI/Dataclasses/IDIconName.html">IDIconName</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/IDIconNameUrl" data-name="xivapi::dataclasses::idiconnameurl">
+      <a href="../../XIVAPI/Dataclasses/IDIconNameUrl.html">IDIconNameUrl</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/IDName" data-name="xivapi::dataclasses::idname">
+      <a href="../../XIVAPI/Dataclasses/IDName.html">IDName</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/IDNameUrl" data-name="xivapi::dataclasses::idnameurl">
+      <a href="../../XIVAPI/Dataclasses/IDNameUrl.html">IDNameUrl</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Info" data-name="xivapi::dataclasses::info">
+      <a href="../../XIVAPI/Dataclasses/Info.html">Info</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Item" data-name="xivapi::dataclasses::item">
+      <a href="../../XIVAPI/Dataclasses/Item.html">Item</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/ItemHistory" data-name="xivapi::dataclasses::itemhistory">
+      <a href="../../XIVAPI/Dataclasses/ItemHistory.html">ItemHistory</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Job" data-name="xivapi::dataclasses::job">
+      <a href="../../XIVAPI/Dataclasses/Job.html">Job</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Linkshell" data-name="xivapi::dataclasses::linkshell">
+      <a href="../../XIVAPI/Dataclasses/Linkshell.html">Linkshell</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/LinkshellInfo" data-name="xivapi::dataclasses::linkshellinfo">
+      <a href="../../XIVAPI/Dataclasses/LinkshellInfo.html">LinkshellInfo</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/LinkshellSearch" data-name="xivapi::dataclasses::linkshellsearch">
+      <a href="../../XIVAPI/Dataclasses/LinkshellSearch.html">LinkshellSearch</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Lodestone" data-name="xivapi::dataclasses::lodestone">
+      <a href="../../XIVAPI/Dataclasses/Lodestone.html">Lodestone</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/LodestoneBanner" data-name="xivapi::dataclasses::lodestonebanner">
+      <a href="../../XIVAPI/Dataclasses/LodestoneBanner.html">LodestoneBanner</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/LodestoneCharacter" data-name="xivapi::dataclasses::lodestonecharacter">
+      <a href="../../XIVAPI/Dataclasses/LodestoneCharacter.html">LodestoneCharacter</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Lore" data-name="xivapi::dataclasses::lore">
+      <a href="../../XIVAPI/Dataclasses/Lore.html">Lore</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/LoreData" data-name="xivapi::dataclasses::loredata">
+      <a href="../../XIVAPI/Dataclasses/LoreData.html">LoreData</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/MarketCategory" data-name="xivapi::dataclasses::marketcategory">
+      <a href="../../XIVAPI/Dataclasses/MarketCategory.html">MarketCategory</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/MarketEntry" data-name="xivapi::dataclasses::marketentry">
+      <a href="../../XIVAPI/Dataclasses/MarketEntry.html">MarketEntry</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/MarketItem" data-name="xivapi::dataclasses::marketitem">
+      <a href="../../XIVAPI/Dataclasses/MarketItem.html">MarketItem</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/MinionMount" data-name="xivapi::dataclasses::minionmount">
+      <a href="../../XIVAPI/Dataclasses/MinionMount.html">MinionMount</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Name" data-name="xivapi::dataclasses::name">
+      <a href="../../XIVAPI/Dataclasses/Name.html">Name</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/NameLowcase" data-name="xivapi::dataclasses::namelowcase">
+      <a href="../../XIVAPI/Dataclasses/NameLowcase.html">NameLowcase</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/News" data-name="xivapi::dataclasses::news">
+      <a href="../../XIVAPI/Dataclasses/News.html">News</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Notice" data-name="xivapi::dataclasses::notice">
+      <a href="../../XIVAPI/Dataclasses/Notice.html">Notice</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Page" data-name="xivapi::dataclasses::page(t)">
+      <a href="../../XIVAPI/Dataclasses/Page.html">Page</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Pagination" data-name="xivapi::dataclasses::pagination">
+      <a href="../../XIVAPI/Dataclasses/Pagination.html">Pagination</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Patch" data-name="xivapi::dataclasses::patch">
+      <a href="../../XIVAPI/Dataclasses/Patch.html">Patch</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/PvpInfo" data-name="xivapi::dataclasses::pvpinfo">
+      <a href="../../XIVAPI/Dataclasses/PvpInfo.html">PvpInfo</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/PvpLinkshell" data-name="xivapi::dataclasses::pvplinkshell">
+      <a href="../../XIVAPI/Dataclasses/PvpLinkshell.html">PvpLinkshell</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/PvpTeam" data-name="xivapi::dataclasses::pvpteam">
+      <a href="../../XIVAPI/Dataclasses/PvpTeam.html">PvpTeam</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/PvPTeam" data-name="xivapi::dataclasses::pvpteam">
+      <a href="../../XIVAPI/Dataclasses/PvPTeam.html">PvPTeam</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/PvpTeamProfile" data-name="xivapi::dataclasses::pvpteamprofile">
+      <a href="../../XIVAPI/Dataclasses/PvpTeamProfile.html">PvpTeamProfile</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/SearchResult" data-name="xivapi::dataclasses::searchresult">
+      <a href="../../XIVAPI/Dataclasses/SearchResult.html">SearchResult</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Status" data-name="xivapi::dataclasses::status">
+      <a href="../../XIVAPI/Dataclasses/Status.html">Status</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/WorldStatus" data-name="xivapi::dataclasses::worldstatus">
+      <a href="../../XIVAPI/Dataclasses/WorldStatus.html">WorldStatus</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Exceptions" data-name="xivapi::exceptions">
+      <a href="../../XIVAPI/Exceptions.html">Exceptions</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Exceptions/XIVAPIException" data-name="xivapi::exceptions::xivapiexception">
+      <a href="../../XIVAPI/Exceptions/XIVAPIException.html">XIVAPIException</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/InfoStates" data-name="xivapi::infostates">
+      <a href="../../XIVAPI/InfoStates.html">InfoStates</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> XIVAPI::Dataclasses::FreeCompany
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../XIVAPI/Dataclasses/FreeCompany.html">XIVAPI::Dataclasses::FreeCompany</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>Overview</h2>
+
+  <p>Dataclass containing the information about a Free Company.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/freyamade/xivapi-cr/blob/193cb06c219697cbaecefd379f8344e3bd952f52/src/dataclasses/free_company/free_company.cr#L10" target="_blank">
+        dataclasses/free_company/free_company.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>Constructors</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28__temp_411%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_411 : JSON::PullParser)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#active%3AString-instance-method" class="signature"><strong>#active</strong> : String</a>
+        
+          <div class="summary"><p>A string indicating the active times of the Free Company.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#active%3D%28_active%3AString%29-instance-method" class="signature"><strong>#active=</strong>(_active : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#active_member_count%3AUInt64-instance-method" class="signature"><strong>#active_member_count</strong> : UInt64</a>
+        
+          <div class="summary"><p>The number of active members in the Free Company.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#active_member_count%3D%28_active_member_count%3AUInt64%29-instance-method" class="signature"><strong>#active_member_count=</strong>(_active_member_count : UInt64)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#crest%3AArray%28String%29-instance-method" class="signature"><strong>#crest</strong> : Array(String)</a>
+        
+          <div class="summary"><p>An array of URLs to the images that make up the crest for the Free Company.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#crest%3D%28_crest%3AArray%28String%29%29-instance-method" class="signature"><strong>#crest=</strong>(_crest : Array(String))</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#estate%3AXIVAPI%3A%3ADataclasses%3A%3AEstate-instance-method" class="signature"><strong>#estate</strong> : XIVAPI::Dataclasses::Estate</a>
+        
+          <div class="summary"><p>An <code><a href="../../XIVAPI/Dataclasses/Estate.html">Estate</a></code> class containing details about the Free Company's Estate.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#estate%3D%28_estate%3AEstate%29-instance-method" class="signature"><strong>#estate=</strong>(_estate : Estate)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#focus%3AArray%28XIVAPI%3A%3ADataclasses%3A%3AFreeCompanySeeking%29-instance-method" class="signature"><strong>#focus</strong> : Array(XIVAPI::Dataclasses::FreeCompanySeeking)</a>
+        
+          <div class="summary"><p>An Array of <code><a href="../../XIVAPI/Dataclasses/FreeCompanySeeking.html">FreeCompanySeeking</a></code> classs indicating what the focuses of the Free Company are.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#focus%3D%28_focus%3AArray%28FreeCompanySeeking%29%29-instance-method" class="signature"><strong>#focus=</strong>(_focus : Array(FreeCompanySeeking))</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#formed%3ATime-instance-method" class="signature"><strong>#formed</strong> : Time</a>
+        
+          <div class="summary"><p>Timestamp of when the Free Company formed.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#formed%3D%28_formed%3ATime%29-instance-method" class="signature"><strong>#formed=</strong>(_formed : Time)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#grand_company%3AString-instance-method" class="signature"><strong>#grand_company</strong> : String</a>
+        
+          <div class="summary"><p>The name of the Free Company's presiding Grand Company</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#grand_company%3D%28_grand_company%3AString%29-instance-method" class="signature"><strong>#grand_company=</strong>(_grand_company : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#id%3AString-instance-method" class="signature"><strong>#id</strong> : String</a>
+        
+          <div class="summary"><p>The Lodestone ID of the Free Company</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#id%3D%28_id%3AString%29-instance-method" class="signature"><strong>#id=</strong>(_id : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#name%3AString-instance-method" class="signature"><strong>#name</strong> : String</a>
+        
+          <div class="summary"><p>The Free Company's name</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#name%3D%28_name%3AString%29-instance-method" class="signature"><strong>#name=</strong>(_name : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#parse_date%3ATime-instance-method" class="signature"><strong>#parse_date</strong> : Time</a>
+        
+          <div class="summary"><p>Timestamp representing the last time the Free Company's data was pulled from the Lodestone into XIVAPI.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#parse_date%3D%28_parse_date%3ATime%29-instance-method" class="signature"><strong>#parse_date=</strong>(_parse_date : Time)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#rank%3AUInt8-instance-method" class="signature"><strong>#rank</strong> : UInt8</a>
+        
+          <div class="summary"><p>Integer rank of the Free Company</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#rank%3D%28_rank%3AUInt8%29-instance-method" class="signature"><strong>#rank=</strong>(_rank : UInt8)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ranking%3AXIVAPI%3A%3ADataclasses%3A%3AFreeCompanyRanking-instance-method" class="signature"><strong>#ranking</strong> : XIVAPI::Dataclasses::FreeCompanyRanking</a>
+        
+          <div class="summary"><p>A <code><a href="../../XIVAPI/Dataclasses/FreeCompanyRanking.html">FreeCompanyRanking</a></code> class containing the Free Company's rankings.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ranking%3D%28_ranking%3AFreeCompanyRanking%29-instance-method" class="signature"><strong>#ranking=</strong>(_ranking : FreeCompanyRanking)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#recruitment%3AString-instance-method" class="signature"><strong>#recruitment</strong> : String</a>
+        
+          <div class="summary"><p>A string representing the recruitment status of the Free Company.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#recruitment%3D%28_recruitment%3AString%29-instance-method" class="signature"><strong>#recruitment=</strong>(_recruitment : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#reputation%3AArray%28XIVAPI%3A%3ADataclasses%3A%3AFreeCompanyReputation%29-instance-method" class="signature"><strong>#reputation</strong> : Array(XIVAPI::Dataclasses::FreeCompanyReputation)</a>
+        
+          <div class="summary"><p>An Array of <code><a href="../../XIVAPI/Dataclasses/FreeCompanyReputation.html">FreeCompanyReputation</a></code> classs indicating the Free Company's reputation scores with the Grand Companies.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#reputation%3D%28_reputation%3AArray%28FreeCompanyReputation%29%29-instance-method" class="signature"><strong>#reputation=</strong>(_reputation : Array(FreeCompanyReputation))</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#seeking%3AArray%28XIVAPI%3A%3ADataclasses%3A%3AFreeCompanySeeking%29-instance-method" class="signature"><strong>#seeking</strong> : Array(XIVAPI::Dataclasses::FreeCompanySeeking)</a>
+        
+          <div class="summary"><p>An array of <code><a href="../../XIVAPI/Dataclasses/FreeCompanySeeking.html">FreeCompanySeeking</a></code> classs indicating what the Free Company is currently seeking in terms of players.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#seeking%3D%28_seeking%3AArray%28FreeCompanySeeking%29%29-instance-method" class="signature"><strong>#seeking=</strong>(_seeking : Array(FreeCompanySeeking))</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#server%3AString-instance-method" class="signature"><strong>#server</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#server%3D%28_server%3AString%29-instance-method" class="signature"><strong>#server=</strong>(_server : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#slogan%3AString-instance-method" class="signature"><strong>#slogan</strong> : String</a>
+        
+          <div class="summary"><p>The Free Company's slogan.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#slogan%3D%28_slogan%3AString%29-instance-method" class="signature"><strong>#slogan=</strong>(_slogan : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tag%3AString-instance-method" class="signature"><strong>#tag</strong> : String</a>
+        
+          <div class="summary"><p>The Free Company's tag.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tag%3D%28_tag%3AString%29-instance-method" class="signature"><strong>#tag=</strong>(_tag : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method" class="signature"><strong>#to_json</strong>(json : JSON::Builder)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>Constructor Detail</h2>
+  
+    <div class="entry-detail" id="new(__temp_411:JSON::PullParser)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(__temp_411 : JSON::PullParser)
+
+        <a class="method-permalink" href="#new%28__temp_411%3AJSON%3A%3APullParser%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="active:String-instance-method">
+      <div class="signature">
+        
+        def <strong>active</strong> : String
+
+        <a class="method-permalink" href="#active%3AString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>A string indicating the active times of the Free Company.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/193cb06c219697cbaecefd379f8344e3bd952f52/src/dataclasses/free_company/free_company.cr#L33" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="active=(_active:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>active=</strong>(_active : String)
+
+        <a class="method-permalink" href="#active%3D%28_active%3AString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="active_member_count:UInt64-instance-method">
+      <div class="signature">
+        
+        def <strong>active_member_count</strong> : UInt64
+
+        <a class="method-permalink" href="#active_member_count%3AUInt64-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>The number of active members in the Free Company.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/193cb06c219697cbaecefd379f8344e3bd952f52/src/dataclasses/free_company/free_company.cr#L35" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="active_member_count=(_active_member_count:UInt64)-instance-method">
+      <div class="signature">
+        
+        def <strong>active_member_count=</strong>(_active_member_count : UInt64)
+
+        <a class="method-permalink" href="#active_member_count%3D%28_active_member_count%3AUInt64%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="crest:Array(String)-instance-method">
+      <div class="signature">
+        
+        def <strong>crest</strong> : Array(String)
+
+        <a class="method-permalink" href="#crest%3AArray%28String%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>An array of URLs to the images that make up the crest for the Free Company.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/193cb06c219697cbaecefd379f8344e3bd952f52/src/dataclasses/free_company/free_company.cr#L37" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="crest=(_crest:Array(String))-instance-method">
+      <div class="signature">
+        
+        def <strong>crest=</strong>(_crest : Array(String))
+
+        <a class="method-permalink" href="#crest%3D%28_crest%3AArray%28String%29%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="estate:XIVAPI::Dataclasses::Estate-instance-method">
+      <div class="signature">
+        
+        def <strong>estate</strong> : <a href="../../XIVAPI/Dataclasses/Estate.html">XIVAPI::Dataclasses::Estate</a>
+
+        <a class="method-permalink" href="#estate%3AXIVAPI%3A%3ADataclasses%3A%3AEstate-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>An <code><a href="../../XIVAPI/Dataclasses/Estate.html">Estate</a></code> class containing details about the Free Company's Estate.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/193cb06c219697cbaecefd379f8344e3bd952f52/src/dataclasses/free_company/free_company.cr#L39" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="estate=(_estate:Estate)-instance-method">
+      <div class="signature">
+        
+        def <strong>estate=</strong>(_estate : <a href="../../XIVAPI/Dataclasses/Estate.html">Estate</a>)
+
+        <a class="method-permalink" href="#estate%3D%28_estate%3AEstate%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="focus:Array(XIVAPI::Dataclasses::FreeCompanySeeking)-instance-method">
+      <div class="signature">
+        
+        def <strong>focus</strong> : Array(<a href="../../XIVAPI/Dataclasses/FreeCompanySeeking.html">XIVAPI::Dataclasses::FreeCompanySeeking</a>)
+
+        <a class="method-permalink" href="#focus%3AArray%28XIVAPI%3A%3ADataclasses%3A%3AFreeCompanySeeking%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>An Array of <code><a href="../../XIVAPI/Dataclasses/FreeCompanySeeking.html">FreeCompanySeeking</a></code> classs indicating what the focuses of the Free Company are.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/193cb06c219697cbaecefd379f8344e3bd952f52/src/dataclasses/free_company/free_company.cr#L41" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="focus=(_focus:Array(FreeCompanySeeking))-instance-method">
+      <div class="signature">
+        
+        def <strong>focus=</strong>(_focus : Array(<a href="../../XIVAPI/Dataclasses/FreeCompanySeeking.html">FreeCompanySeeking</a>))
+
+        <a class="method-permalink" href="#focus%3D%28_focus%3AArray%28FreeCompanySeeking%29%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="formed:Time-instance-method">
+      <div class="signature">
+        
+        def <strong>formed</strong> : Time
+
+        <a class="method-permalink" href="#formed%3ATime-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Timestamp of when the Free Company formed.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/193cb06c219697cbaecefd379f8344e3bd952f52/src/dataclasses/free_company/free_company.cr#L43" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="formed=(_formed:Time)-instance-method">
+      <div class="signature">
+        
+        def <strong>formed=</strong>(_formed : Time)
+
+        <a class="method-permalink" href="#formed%3D%28_formed%3ATime%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="grand_company:String-instance-method">
+      <div class="signature">
+        
+        def <strong>grand_company</strong> : String
+
+        <a class="method-permalink" href="#grand_company%3AString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>The name of the Free Company's presiding Grand Company</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/193cb06c219697cbaecefd379f8344e3bd952f52/src/dataclasses/free_company/free_company.cr#L45" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="grand_company=(_grand_company:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>grand_company=</strong>(_grand_company : String)
+
+        <a class="method-permalink" href="#grand_company%3D%28_grand_company%3AString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="id:String-instance-method">
+      <div class="signature">
+        
+        def <strong>id</strong> : String
+
+        <a class="method-permalink" href="#id%3AString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>The Lodestone ID of the Free Company</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/193cb06c219697cbaecefd379f8344e3bd952f52/src/dataclasses/free_company/free_company.cr#L47" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="id=(_id:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>id=</strong>(_id : String)
+
+        <a class="method-permalink" href="#id%3D%28_id%3AString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="name:String-instance-method">
+      <div class="signature">
+        
+        def <strong>name</strong> : String
+
+        <a class="method-permalink" href="#name%3AString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>The Free Company's name</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/193cb06c219697cbaecefd379f8344e3bd952f52/src/dataclasses/free_company/free_company.cr#L49" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="name=(_name:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>name=</strong>(_name : String)
+
+        <a class="method-permalink" href="#name%3D%28_name%3AString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="parse_date:Time-instance-method">
+      <div class="signature">
+        
+        def <strong>parse_date</strong> : Time
+
+        <a class="method-permalink" href="#parse_date%3ATime-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Timestamp representing the last time the Free Company's data was pulled from the Lodestone into XIVAPI.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/193cb06c219697cbaecefd379f8344e3bd952f52/src/dataclasses/free_company/free_company.cr#L51" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="parse_date=(_parse_date:Time)-instance-method">
+      <div class="signature">
+        
+        def <strong>parse_date=</strong>(_parse_date : Time)
+
+        <a class="method-permalink" href="#parse_date%3D%28_parse_date%3ATime%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="rank:UInt8-instance-method">
+      <div class="signature">
+        
+        def <strong>rank</strong> : UInt8
+
+        <a class="method-permalink" href="#rank%3AUInt8-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Integer rank of the Free Company</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/193cb06c219697cbaecefd379f8344e3bd952f52/src/dataclasses/free_company/free_company.cr#L53" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="rank=(_rank:UInt8)-instance-method">
+      <div class="signature">
+        
+        def <strong>rank=</strong>(_rank : UInt8)
+
+        <a class="method-permalink" href="#rank%3D%28_rank%3AUInt8%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ranking:XIVAPI::Dataclasses::FreeCompanyRanking-instance-method">
+      <div class="signature">
+        
+        def <strong>ranking</strong> : <a href="../../XIVAPI/Dataclasses/FreeCompanyRanking.html">XIVAPI::Dataclasses::FreeCompanyRanking</a>
+
+        <a class="method-permalink" href="#ranking%3AXIVAPI%3A%3ADataclasses%3A%3AFreeCompanyRanking-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>A <code><a href="../../XIVAPI/Dataclasses/FreeCompanyRanking.html">FreeCompanyRanking</a></code> class containing the Free Company's rankings.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/193cb06c219697cbaecefd379f8344e3bd952f52/src/dataclasses/free_company/free_company.cr#L55" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ranking=(_ranking:FreeCompanyRanking)-instance-method">
+      <div class="signature">
+        
+        def <strong>ranking=</strong>(_ranking : <a href="../../XIVAPI/Dataclasses/FreeCompanyRanking.html">FreeCompanyRanking</a>)
+
+        <a class="method-permalink" href="#ranking%3D%28_ranking%3AFreeCompanyRanking%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="recruitment:String-instance-method">
+      <div class="signature">
+        
+        def <strong>recruitment</strong> : String
+
+        <a class="method-permalink" href="#recruitment%3AString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>A string representing the recruitment status of the Free Company.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/193cb06c219697cbaecefd379f8344e3bd952f52/src/dataclasses/free_company/free_company.cr#L57" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="recruitment=(_recruitment:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>recruitment=</strong>(_recruitment : String)
+
+        <a class="method-permalink" href="#recruitment%3D%28_recruitment%3AString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="reputation:Array(XIVAPI::Dataclasses::FreeCompanyReputation)-instance-method">
+      <div class="signature">
+        
+        def <strong>reputation</strong> : Array(<a href="../../XIVAPI/Dataclasses/FreeCompanyReputation.html">XIVAPI::Dataclasses::FreeCompanyReputation</a>)
+
+        <a class="method-permalink" href="#reputation%3AArray%28XIVAPI%3A%3ADataclasses%3A%3AFreeCompanyReputation%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>An Array of <code><a href="../../XIVAPI/Dataclasses/FreeCompanyReputation.html">FreeCompanyReputation</a></code> classs indicating the Free Company's reputation scores with the Grand Companies.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/193cb06c219697cbaecefd379f8344e3bd952f52/src/dataclasses/free_company/free_company.cr#L59" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="reputation=(_reputation:Array(FreeCompanyReputation))-instance-method">
+      <div class="signature">
+        
+        def <strong>reputation=</strong>(_reputation : Array(<a href="../../XIVAPI/Dataclasses/FreeCompanyReputation.html">FreeCompanyReputation</a>))
+
+        <a class="method-permalink" href="#reputation%3D%28_reputation%3AArray%28FreeCompanyReputation%29%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="seeking:Array(XIVAPI::Dataclasses::FreeCompanySeeking)-instance-method">
+      <div class="signature">
+        
+        def <strong>seeking</strong> : Array(<a href="../../XIVAPI/Dataclasses/FreeCompanySeeking.html">XIVAPI::Dataclasses::FreeCompanySeeking</a>)
+
+        <a class="method-permalink" href="#seeking%3AArray%28XIVAPI%3A%3ADataclasses%3A%3AFreeCompanySeeking%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>An array of <code><a href="../../XIVAPI/Dataclasses/FreeCompanySeeking.html">FreeCompanySeeking</a></code> classs indicating what the Free Company is currently seeking in terms of players.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/193cb06c219697cbaecefd379f8344e3bd952f52/src/dataclasses/free_company/free_company.cr#L61" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="seeking=(_seeking:Array(FreeCompanySeeking))-instance-method">
+      <div class="signature">
+        
+        def <strong>seeking=</strong>(_seeking : Array(<a href="../../XIVAPI/Dataclasses/FreeCompanySeeking.html">FreeCompanySeeking</a>))
+
+        <a class="method-permalink" href="#seeking%3D%28_seeking%3AArray%28FreeCompanySeeking%29%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="server:String-instance-method">
+      <div class="signature">
+        
+        def <strong>server</strong> : String
+
+        <a class="method-permalink" href="#server%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="server=(_server:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>server=</strong>(_server : String)
+
+        <a class="method-permalink" href="#server%3D%28_server%3AString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="slogan:String-instance-method">
+      <div class="signature">
+        
+        def <strong>slogan</strong> : String
+
+        <a class="method-permalink" href="#slogan%3AString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>The Free Company's slogan.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/193cb06c219697cbaecefd379f8344e3bd952f52/src/dataclasses/free_company/free_company.cr#L63" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="slogan=(_slogan:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>slogan=</strong>(_slogan : String)
+
+        <a class="method-permalink" href="#slogan%3D%28_slogan%3AString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tag:String-instance-method">
+      <div class="signature">
+        
+        def <strong>tag</strong> : String
+
+        <a class="method-permalink" href="#tag%3AString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>The Free Company's tag.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/193cb06c219697cbaecefd379f8344e3bd952f52/src/dataclasses/free_company/free_company.cr#L65" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tag=(_tag:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>tag=</strong>(_tag : String)
+
+        <a class="method-permalink" href="#tag%3D%28_tag%3AString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_json(json:JSON::Builder)-instance-method">
+      <div class="signature">
+        
+        def <strong>to_json</strong>(json : JSON::Builder)
+
+        <a class="method-permalink" href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
