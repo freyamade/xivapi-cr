@@ -545,10 +545,6 @@ Retrieves a HashMap of Datacenter names to an Array of the Servers in the Datace
 
 [XIVAPI Docs](https://xivapi.com/docs/Game-Data#data-center)
 
-## Development
-
-TODO: Write development instructions here
-
 ## Contributing
 
 1. Fork it (<https://github.com/freyamade/xivapi-cr/fork>)
@@ -557,7 +553,9 @@ TODO: Write development instructions here
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
 
+Please ensure to add extra specs as needed, and ensure all specs pass before we will merge any pull requests.
+
 ## Contributors
 
-- [freyamade](https://github.com/freyamade) - creator and maintainer
-- [ArthanJans](https://github.com/ArthanJans) - maintainer
+- [freyamade](https://github.com/freyamade) - co-creator and maintainer
+- [ArthanJans](https://github.com/ArthanJans) - co-creator and maintainer
