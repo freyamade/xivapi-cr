@@ -1,7 +1,7 @@
 require "./client"
 
 module XIVAPI
-  class Client
+  module Client::Character
     # In this file, add methods for retrieving Character data
 
     # A Set of Strings representing the fields that can be requested using the Character endpoint
@@ -62,5 +62,10 @@ module XIVAPI
         raise Exceptions::XIVAPIException.new(Dataclasses::Exception.from_json response)
       end
     end
+  end
+
+  # When this file is required, include the Character module to have access to the commands
+  class Client
+    include Character
   end
 end

@@ -1,7 +1,7 @@
 require "./client"
 
 module XIVAPI
-  class Client
+  module Client::PvpTeam
     # In this file, add methods for retrieving PvpTeam data
 
     # Search the Lodestone API for PvP Teams with a given name.
@@ -33,5 +33,10 @@ module XIVAPI
         raise Exceptions::XIVAPIException.new(Dataclasses::Exception.from_json response)
       end
     end
+  end
+
+  # When this file is required, include the PvpTeam module to have access to the commands
+  class Client
+    include PvpTeam
   end
 end

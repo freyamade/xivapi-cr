@@ -1,7 +1,7 @@
 require "./client"
 
 module XIVAPI
-  class Client
+  module Client::FreeCompany
     # In this file, add methods for retrieving FreeCompany data
 
     # Search the Lodestone API for Free Companies with a given name.
@@ -38,5 +38,10 @@ module XIVAPI
         raise Exceptions::XIVAPIException.new(Dataclasses::Exception.from_json response)
       end
     end
+  end
+
+  # When this file is required, include the FreeCompany module to have access to the commands
+  class Client
+    include FreeCompany
   end
 end
