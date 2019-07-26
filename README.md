@@ -6,29 +6,42 @@ An unofficial Crystal library for [XIVAPI](https;//xivapi.com), written by a cou
 - [Installation](#installation)
 - [Usage](#usage)
     - [Character](#character)
-        - [`character_search`](#character_search)
-        - [`character`](#character-1)
-        - [`character_verification`](#character_verification)
-        - [`character_update`](#character_update)
+      - [`character_search`](#character_search)
+      - [`character`](#character-1)
+      - [`character_verification`](#character_verification)
+      - [`character_update`](#character_update)
     - [Free Company](#free-company)
-        - [`free_company_search`](#free_company_search)
-        - [`free_company`](#free_company)
+      - [`free_company_search`](#free_company_search)
+      - [`free_company`](#free_company)
     - [Linkshell](#linkshell)
-        - [`linkshell_search`](#linkshell_search)
-        - [`linkshell`](#linkshell-1)
+      - [`linkshell_search`](#linkshell_search)
+      - [`linkshell`](#linkshell-1)
     - [Lodestone](#lodestone)
+        - [`lodestone`](#lodestone-1)
+        - [`news`](#news)
+        - [`notices`](#notices)
+        - [`maintenance`](#maintenance)
+        - [`updates`](#updates)
+        - [`status`](#status)
+        - [`topics`](#topics)
+        - [`world_status`](#world_status)
+        - [`devblog`](#devblog)
+        - [`devposts`](#devposts)
+        - [`palace_of_the_dead`](#palace_of_the_dead)
+        - [`heaven_on_high`](#heaven_on_high)
+        - [`feasts`](#feasts)
     - [Market](#market)
     - [Other](#other)
-        - [`search`](#search)
-        - [`lore`](#lore)
-        - [`content`](#content)
-        - [`patch_list`](#patch_list)
+      - [`search`](#search)
+      - [`lore`](#lore)
+      - [`content`](#content)
+      - [`patch_list`](#patch_list)
     - [PvP Team](#pvp-team)
-        - [`pvp_team_search`](#pvp_team_search)
-        - [`pvp_team`](#pvp_team)
+      - [`pvp_team_search`](#pvp_team_search)
+      - [`pvp_team`](#pvp_team)
     - [Servers](#servers)
-        - [`servers`](#servers-1)
-        - [`datacenters`](#datacenters)
+      - [`servers`](#servers-1)
+      - [`datacenters`](#datacenters)
 - [Development](#development)
 - [Contributing](#contributing)
 - [Contributors](#contributors)
@@ -183,6 +196,155 @@ require "xivapi/client/lodestone"
 ```
 
 Methods related to Lodestone information.
+
+NOTE: All of these methods only come from the NA Lodestone, as it is the only one that is parsed.
+Therefore, the language parameter will not affect the output.
+
+#### `lodestone`
+```crystal
+XIVAPI::Client.new().lodestone()
+```
+
+This is the recommended method for fetching Lodestone data, as it is cached every 15 minutes.
+It returns a response that contains the information from each of the following requests;
+- `news`
+- `notices`
+- `maintenance`
+- `updates`
+- `status`
+- `topics`
+- `devblog`
+- `devposts`
+
+As well as some other information, like an array of banners currently being displayed in the official FFXIV Launcher.
+
+[XIVAPI Docs](https://xivapi.com/docs/Lodestone#lodestone)
+
+#### `news`
+```crystal
+XIVAPI::Client.new().news()
+```
+
+Retrieves the latest news from the Lodestone.
+
+As far as I can tell, this method parses the Lodestone in real time instead responding from a cache, but I am unsure.
+
+[XIVAPI Docs](https://xivapi.com/docs/Lodestone#news)
+
+#### `notices`
+```crystal
+XIVAPI::Client.new().notices()
+```
+
+Retrieves the latest notices from the Lodestone.
+
+As far as I can tell, this method parses the Lodestone in real time instead responding from a cache, but I am unsure.
+
+[XIVAPI Docs](https://xivapi.com/docs/Lodestone#notices)
+
+#### `maintenance`
+```crystal
+XIVAPI::Client.new().maintenance()
+```
+
+Retrieves the latest maintenance posts from the Lodestone.
+These do not contain specific details, such as times, however.
+
+As far as I can tell, this method parses the Lodestone in real time instead responding from a cache, but I am unsure.
+
+[XIVAPI Docs](https://xivapi.com/docs/Lodestone#maintenance)
+
+#### `updates`
+```crystal
+XIVAPI::Client.new().updates()
+```
+
+Retrieves the latest update posts from the Lodestone.
+
+As far as I can tell, this method parses the Lodestone in real time instead responding from a cache, but I am unsure.
+
+[XIVAPI Docs](https://xivapi.com/docs/Lodestone#updates)
+
+#### `status`
+```crystal
+XIVAPI::Client.new().status()
+```
+
+Retrieves the latest status posts from the Lodestone.
+
+As far as I can tell, this method parses the Lodestone in real time instead responding from a cache, but I am unsure.
+
+[XIVAPI Docs](https://xivapi.com/docs/Lodestone#status)
+
+#### `topics`
+```crystal
+XIVAPI::Client.new().topics()
+```
+
+Retrieves the latest topics from the Lodestone.
+
+As far as I can tell, this method parses the Lodestone in real time instead responding from a cache, but I am unsure.
+
+This endpoint is acually undocumented on the API.
+
+#### `world_status`
+```crystal
+XIVAPI::Client.new().world_status()
+```
+
+Retrieves the latest world status information from the Lodestone.
+
+As far as I can tell, this method parses the Lodestone in real time instead responding from a cache, but I am unsure.
+
+[XIVAPI Docs](https://xivapi.com/docs/Lodestone#worldstatus)
+
+#### `devblog`
+```crystal
+XIVAPI::Client.new().devblog()
+```
+
+Retrieves the latest developer blog information.
+This data is pulled from an XML feed.
+
+[XIVAPI Docs](https://xivapi.com/docs/Lodestone#devblog)
+
+#### `devposts`
+```crystal
+XIVAPI::Client.new().devposts()
+```
+
+Retrieves the latest dev posts from the official forums.
+
+[XIVAPI Docs](https://xivapi.com/docs/Lodestone#devposts)
+
+#### `palace_of_the_dead`
+```crystal
+XIVAPI::Client.new().palace_of_the_dead(ranking_type: "solo", job_name: "whm", datacenter: "Light")
+```
+
+This method provides access to the Palace of the Dead rankings.
+
+[XIVAPI Docs](https://xivapi.com/docs/Lodestone#deepdungeon)
+
+#### `heaven_on_high`
+```crystal
+XIVAPI::Client.new().heaven_on_high(ranking_type: "solo", job_name: "pld", datacenter: "Light")
+```
+
+This method provides access to the Heaven On High rankings.
+
+[XIVAPI Docs](https://xivapi.com/docs/Lodestone#HeavenOnHigh)
+
+#### `feasts`
+```crystal
+XIVAPI::Client.new().feasts(season: "12", rank_type: "all", datacenter: "Light")
+```
+
+This method provides access to the Feasts rankings.
+If no season is provided, the endpoint will return the current season.
+If the current season is not active, the method will return an empty response.
+
+[XIVAPI Docs](https://xivapi.com/docs/Lodestone#feasts)
 
 ### Market
 ```crystal
