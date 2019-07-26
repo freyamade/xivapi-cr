@@ -7,7 +7,7 @@ module XIVAPI
       # define a JSON mapping to create instances of this class
       JSON.mapping(
         added: {type: Time, key: "Added", converter: Time::EpochConverter},
-        character_id: {type: String, key: "CharacterID"},
+        character_id: {type: String?, key: "CharacterID"},
         character_name: {type: String, key: "CharacterName"},
         id: {type: String, key: "ID"},
         is_hq: {type: Bool, key: "IsHQ"},

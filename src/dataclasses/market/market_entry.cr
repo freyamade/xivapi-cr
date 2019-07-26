@@ -8,7 +8,7 @@ module XIVAPI
       # define a JSON mapping to create instances of this class
       JSON.mapping(
         added: {type: Time, key: "Added", converter: Time::EpochConverter},
-        creator_signature_id: {type: String, key: "CreatorSignatureID"},
+        creator_signature_id: {type: String?, key: "CreatorSignatureID"},
         creator_signature: {type: String, key: "CreatorSignatureName"},
         id: {type: String, key: "ID"},
         is_crafted: {type: Bool, key: "IsCrafted"},
@@ -17,7 +17,7 @@ module XIVAPI
         price_per_unit: {type: UInt64, key: "PricePerUnit"},
         price_total: {type: UInt64, key: "PriceTotal"},
         quantity: {type: UInt64, key: "Quantity"},
-        retainer_id: {type: String, key: "RetainerID"},
+        retainer_id: {type: String?, key: "RetainerID"},
         retainer_name: {type: String, key: "RetainerName"},
         stain_id: {type: UInt64, key: "StainID"},
         town_id: {type: UInt64, key: "TownID"},
