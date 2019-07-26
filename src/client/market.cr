@@ -1,7 +1,7 @@
 require "./client"
 
 module XIVAPI
-  class Client
+  module Client::Market
     # In this file, add methods for retrieving Market data
 
     # Retrieve the details of a specific item on a specific server.
@@ -80,5 +80,10 @@ module XIVAPI
         raise Exceptions::XIVAPIException.new(Dataclasses::Exception.from_json response)
       end
     end
+  end
+
+  # When this file is required, include the Market module to have access to the commands
+  class Client
+    include Market
   end
 end

@@ -1,7 +1,7 @@
 require "./client"
 
 module XIVAPI
-  class Client
+  module Client::Servers
     # In this file, add methods for retrieving Servers data
 
     # Retrieve an Array of Servers (Worlds) for the game.
@@ -26,5 +26,10 @@ module XIVAPI
         raise Exceptions::XIVAPIException.new(Dataclasses::Exception.from_json response)
       end
     end
+  end
+
+  # When this file is required, include the Servers module to have access to the commands
+  class Client
+    include Servers
   end
 end

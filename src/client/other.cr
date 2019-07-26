@@ -1,7 +1,7 @@
 require "./client"
 
 module XIVAPI
-  class Client
+  module Client::Other
     # In this file, add methods that are not in any other group.
 
     # A Set of Strings representing the allowed values for `indexes` for the Search endpoint.
@@ -172,5 +172,10 @@ module XIVAPI
         raise Exceptions::XIVAPIException.new(Dataclasses::Exception.from_json response)
       end
     end
+  end
+
+  # When this file is required, include the Other module to have access to the commands
+  class Client
+    include Other
   end
 end

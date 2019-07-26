@@ -1,7 +1,7 @@
 require "./client"
 
 module XIVAPI
-  class Client
+  module Client::Linkshell
     # In this file, add methods for retrieving Linkshell data
 
     # Search the Lodestone API for Linkshells with a given name.
@@ -32,5 +32,10 @@ module XIVAPI
         raise Exceptions::XIVAPIException.new(Dataclasses::Exception.from_json response)
       end
     end
+  end
+
+  # When this file is required, include the Linkshell module to have access to the commands
+  class Client
+    include Linkshell
   end
 end

@@ -1,13 +1,7 @@
-# ENDPOINT_MAP = {
-#   "/lodestone/deepdungeon"  => Array(Structs::DeepDungeon),
-#   "/lodestone/heavenonhigh" => Array(Structs::DeepDungeon),
-#   "/lodestone/feasts"       => Array(Structs::Feast),
-# }
-
 require "./client"
 
 module XIVAPI
-  class Client
+  module Client::Lodestone
     # In this file, add methods for retrieving Lodestone data
 
     # Retrieve all of the current Lodestone information in a single request.
@@ -194,5 +188,10 @@ module XIVAPI
         raise Exceptions::XIVAPIException.new(Dataclasses::Exception.from_json response)
       end
     end
+  end
+
+  # When this file is required, include the Lodestone module to have access to the commands
+  class Client
+    include Lodestone
   end
 end
