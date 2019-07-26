@@ -30,51 +30,6 @@ describe XIVAPI::Client do
       page.results.size.should eq 0
     end
 
-    it "reads a Character properly with no extra data requested" do
-      client = XIVAPI::Client.new
-      character_response = client.character CHARACTER_ID
-
-      # Check that the Character returned is the right one
-      character_response.character.name.should eq CHARACTER_NAME
-      character_response.character.server.should eq CHARACTER_SERVER
-
-      # Check that the non-requested details are nil
-      character_response.achievements.should be_nil
-      character_response.free_company.should be_nil
-      character_response.free_company_members.should be_nil
-      character_response.friends.should be_nil
-      character_response.pvp_team.should be_nil
-      character_response.info.achievements.should be_nil
-      character_response.info.free_company.should be_nil
-      character_response.info.free_company_members.should be_nil
-      character_response.info.friends.should be_nil
-      character_response.info.pvp_team.should be_nil
-    end
-
-    it "reads a Character properly with some extra data requested" do
-      client = XIVAPI::Client.new
-      # Include an invalid data field just to test
-      character_response = client.character CHARACTER_ID, ["AC", "AL"]
-
-      # Check that the Character returned is the right one
-      character_response.character.name.should eq CHARACTER_NAME
-      character_response.character.server.should eq CHARACTER_SERVER
-
-      # Ensure the extra requested data is not nil
-      character_response.achievements.should_not be_nil
-      character_response.info.achievements.should_not be_nil
-
-      # Check that the non-requested details are nil
-      character_response.free_company.should be_nil
-      character_response.free_company_members.should be_nil
-      character_response.friends.should be_nil
-      character_response.pvp_team.should be_nil
-      character_response.info.free_company.should be_nil
-      character_response.info.free_company_members.should be_nil
-      character_response.info.friends.should be_nil
-      character_response.info.pvp_team.should be_nil
-    end
-
     it "reads a Character properly with all extra data requested" do
       client = XIVAPI::Client.new
       # Include an invalid data field just to test
