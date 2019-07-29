@@ -492,19 +492,20 @@
 
 <h2>Usage</h2>
 
-<p>The base Client class can be imported from <code>xivapi/client</code>.</p>
+<p>The base Client class can be imported from <code>xivapi-cr/client</code>.</p>
 
 <p>This class can be instantiated as follows;</p>
 
-<pre><code class="language-crystal">client <span class="o">=</span> <span class="t">XIVAPI</span><span class="t">::</span><span class="t">Client</span>.<span class="k">new</span> <span class="s">&quot;api_key&quot;</span>, <span class="s">&quot;language&quot;</span>, poll_rate: <span class="n">5</span>, staging: <span class="n">true</span></code></pre>
+<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;xivapi-cr&quot;</span>
+client <span class="o">=</span> <span class="t">XIVAPI</span><span class="t">::</span><span class="t">Client</span>.<span class="k">new</span> <span class="s">&quot;api_key&quot;</span>, <span class="s">&quot;language&quot;</span>, poll_rate: <span class="n">5</span>, staging: <span class="n">true</span></code></pre>
 
 <p>All parameters are optional.
 The <code>language</code> parameter must be a <a href="https://xivapi.com/docs/Common-Features#language" target="_blank">supported language</a> for the API.
 <code>poll_rate</code> is the number of seconds the Client will wait when attempting to poll cached responses (currently unused).
 <code>staging</code> is a flag stating whether you want to interact with the stage API (if true) or the live API (if false).</p>
 
-<p>To add API methods to the Client class, you can import the needed files. For example, importing <code>xivapi/client/character</code> will add the character methods to the Client class.
-Alternatively, if you want all of the methods, you can import <code>xivapi/client/*</code> instead of just <code>xivapi/client</code>.</p>
+<p>To add API methods to the Client class, you can import the needed files. For example, importing <code>xivapi-cr/client/character</code> will add the character methods to the Client class.
+Alternatively, if you want all of the methods, you can import <code>xivapi-cr/client/all</code> instead of just <code>xivapi-cr/client</code>.</p>
 
 <p>*<strong>NOTE:</strong>* By default, <code>extended=1</code> is sent in every request.
 This is a design choice until we figure out the best way to allow this flag to be sent on a per-request basis, given the fact that we've had to make structs for all the response data.</p>
@@ -513,7 +514,7 @@ This is a design choice until we figure out the best way to allow this flag to b
 
 <h3>Character</h3>
 
-<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;xivapi/client/character&quot;</span></code></pre>
+<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;xivapi-cr/client/character&quot;</span></code></pre>
 
 <p>Methods related to Character information.</p>
 
@@ -566,7 +567,7 @@ The response from this method will be either a 1 or 0, representing success or f
 
 <h3>Free Company</h3>
 
-<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;xivapi/client/free_company&quot;</span></code></pre>
+<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;xivapi-cr/client/free_company&quot;</span></code></pre>
 
 <p>Methods related to Free Company information.</p>
 
@@ -596,7 +597,7 @@ If you require the Array of Characters that are Members of the Free Company, the
 
 <h3>Linkshell</h3>
 
-<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;xivapi/client/linkshell&quot;</span></code></pre>
+<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;xivapi-cr/client/linkshell&quot;</span></code></pre>
 
 <p>Methods related to Linkshell information.</p>
 
@@ -620,7 +621,7 @@ It uses the <code>extended</code> field by default currently, though we plan to 
 
 <h3>Lodestone</h3>
 
-<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;xivapi/client/lodestone&quot;</span></code></pre>
+<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;xivapi-cr/client/lodestone&quot;</span></code></pre>
 
 <p>Methods related to Lodestone information.</p>
 
@@ -756,7 +757,7 @@ If the current season is not active, the method will return an empty response.</
 
 <h3>Market</h3>
 
-<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;xivapi/client/market&quot;</span></code></pre>
+<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;xivapi-cr/client/market&quot;</span></code></pre>
 
 <p>Methods related to Market information.</p>
 
@@ -820,7 +821,7 @@ e.g. for the above examples, you will receive something like this;</p>
 
 <h3>Other</h3>
 
-<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;xivapi/client/other&quot;</span></code></pre>
+<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;xivapi-cr/client/other&quot;</span></code></pre>
 
 <p>A collection of methods that did not fit into the other groupings.</p>
 
@@ -888,7 +889,7 @@ Setting the <code>include_data</code> parameter to true will make the response a
 
 <h3>PvP Team</h3>
 
-<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;xivapi/client/pvp_team&quot;</span></code></pre>
+<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;xivapi-cr/client/pvp_team&quot;</span></code></pre>
 
 <p>Methods related to PvP Team information.</p>
 
@@ -912,7 +913,7 @@ It uses the <code>extended</code> field by default currently, though we plan to 
 
 <h3>Servers</h3>
 
-<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;xivapi/client/servers&quot;</span></code></pre>
+<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;xivapi-cr/client/servers&quot;</span></code></pre>
 
 <p>Methods related to Server information.</p>
 
