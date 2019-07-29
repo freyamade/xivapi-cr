@@ -64,11 +64,12 @@ An unofficial Crystal library for [XIVAPI](https;//xivapi.com), written by a cou
 2. Run `shards install`
 
 ## Usage
-The base Client class can be imported from `xivapi/client`.
+The base Client class can be imported from `xivapi-cr/client`.
 
 This class can be instantiated as follows;
 
 ```crystal
+require "xivapi-cr"
 client = XIVAPI::Client.new "api_key", "language", poll_rate: 5, staging: true
 ```
 
@@ -77,8 +78,8 @@ The `language` parameter must be a [supported language](https://xivapi.com/docs/
 `poll_rate` is the number of seconds the Client will wait when attempting to poll cached responses (currently unused).
 `staging` is a flag stating whether you want to interact with the stage API (if true) or the live API (if false).
 
-To add API methods to the Client class, you can import the needed files. For example, importing `xivapi/client/character` will add the character methods to the Client class.
-Alternatively, if you want all of the methods, you can import `xivapi/client/*` instead of just `xivapi/client`.
+To add API methods to the Client class, you can import the needed files. For example, importing `xivapi-cr/client/character` will add the character methods to the Client class.
+Alternatively, if you want all of the methods, you can import `xivapi-cr/client/all` instead of just `xivapi-cr/client`.
 
 ***NOTE:*** By default, `extended=1` is sent in every request.
 This is a design choice until we figure out the best way to allow this flag to be sent on a per-request basis, given the fact that we've had to make structs for all the response data.
@@ -87,7 +88,7 @@ The various Client files and their methods are detailed below;
 
 ### Character
 ```crystal
-require "xivapi/client/character"
+require "xivapi-cr/client/character"
 ```
 
 Methods related to Character information.
@@ -141,7 +142,7 @@ According to the XIVAPI Docs, you can only run this method for a given character
 
 ### Free Company
 ```crystal
-require "xivapi/client/free_company"
+require "xivapi-cr/client/free_company"
 ```
 
 Methods related to Free Company information.
@@ -172,7 +173,7 @@ If you require the Array of Characters that are Members of the Free Company, the
 
 ### Linkshell
 ```crystal
-require "xivapi/client/linkshell"
+require "xivapi-cr/client/linkshell"
 ```
 
 Methods related to Linkshell information.
@@ -197,7 +198,7 @@ It uses the `extended` field by default currently, though we plan to eventually 
 
 ### Lodestone
 ```crystal
-require "xivapi/client/lodestone"
+require "xivapi-cr/client/lodestone"
 ```
 
 Methods related to Lodestone information.
@@ -353,7 +354,7 @@ If the current season is not active, the method will return an empty response.
 
 ### Market
 ```crystal
-require "xivapi/client/market"
+require "xivapi-cr/client/market"
 ```
 
 Methods related to Market information.
@@ -425,7 +426,7 @@ Retrieve a list of search categories for the Market items.
 
 ### Other
 ```crystal
-require "xivapi/client/other"
+require "xivapi-cr/client/other"
 ```
 
 A collection of methods that did not fit into the other groupings.
@@ -497,7 +498,7 @@ Retrieves an Array of Patch data from the API.
 
 ### PvP Team
 ```crystal
-require "xivapi/client/pvp_team"
+require "xivapi-cr/client/pvp_team"
 ```
 
 Methods related to PvP Team information.
@@ -522,7 +523,7 @@ It uses the `extended` field by default currently, though we plan to eventually 
 
 ### Servers
 ```crystal
-require "xivapi/client/servers"
+require "xivapi-cr/client/servers"
 ```
 
 Methods related to Server information.
