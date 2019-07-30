@@ -13,7 +13,7 @@ module XIVAPI
         url: {type: String, key: "Url"},
         url_type: {type: String, key: "UrlType"},
         datatype: {type: String, key: "_"},
-        score: {type: UInt32, key: "_Score"},
+        score: {type: String, key: "_Score", converter: String::RawConverter},
       )
 
       # The ID of the item returned from the search results.
