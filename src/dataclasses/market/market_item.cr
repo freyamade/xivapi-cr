@@ -4,6 +4,25 @@ require "./item_history"
 require "./market_entry"
 
 module XIVAPI
+  module NilableEpochConverter
+    def self.from_json(value : JSON::PullParser) : Time?
+      time = value.read_int_or_null
+      if !time.nil?
+        return Time.unix(time)
+      else
+        return nil
+      end
+    end
+
+    def self.to_json(value : Time?, io : IO)
+      if value.nil?
+        io << value
+      else
+        io << value.unix
+      end
+    end
+  end
+
   module Dataclasses
     # Dataclass representing an item on the Market Board.
     class MarketItem
@@ -13,11 +32,11 @@ module XIVAPI
         id: {type: String, key: "ID"},
         item: {type: Item, key: "Item"},
         item_id: {type: UInt64, key: "ItemID"},
-        lodestone_id: {type: String, key: "LodestoneID"},
+        lodestone_id: {type: String?, key: "LodestoneID"},
         prices: {type: Array(MarketEntry), key: "Prices"},
         server: {type: UInt64, key: "Server"},
-        update_priority: {type: UInt64, key: "UpdatePriority"},
-        updated: {type: Time, key: "Updated", converter: Time::EpochConverter},
+        update_priority: {type: UInt64?, key: "UpdatePriority"},
+        updated: {type: Time?, key: "Updated", converter: NilableEpochConverter},
       )
       # An Array of `ItemHistory` classs representing the old sale values of the Item.
       getter history

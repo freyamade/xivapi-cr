@@ -45,5 +45,10 @@ describe XIVAPI::Client do
       client = XIVAPI::Client.new
       client.market_search_categories
     end
+
+    it "tests against arthan's found error" do
+      client = XIVAPI::Client.new
+      client.market(item_id: 20770_u64, server: "Lich")
+    end
   end
 end
