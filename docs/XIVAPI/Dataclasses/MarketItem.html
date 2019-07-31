@@ -91,6 +91,21 @@
       
     </li>
   
+  <li class="parent " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Converters" data-name="xivapi::converters">
+      <a href="../../XIVAPI/Converters.html">Converters</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Converters/NilableEpochConverter" data-name="xivapi::converters::nilableepochconverter">
+      <a href="../../XIVAPI/Converters/NilableEpochConverter.html">NilableEpochConverter</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
   <li class="parent open current" data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses" data-name="xivapi::dataclasses">
       <a href="../../XIVAPI/Dataclasses.html">Dataclasses</a>
       
@@ -500,7 +515,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/freyamade/xivapi-cr/blob/5e25e5d5bbad740b64b0ea495ea2f0c5d5e1873d/src/dataclasses/market/market_item.cr#L9" target="_blank">
+      <a href="https://github.com/freyamade/xivapi-cr/blob/522a794b7dba44445c6b94bde76fb23c2a0e1d72/src/dataclasses/market/market_item.cr#L10" target="_blank">
         dataclasses/market/market_item.cr
       </a>
     
@@ -577,14 +592,14 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#lodestone_id%3AString-instance-method" class="signature"><strong>#lodestone_id</strong> : String</a>
+        <a href="#lodestone_id%3AString%3F-instance-method" class="signature"><strong>#lodestone_id</strong> : String?</a>
         
           <div class="summary"><p>The ID of the Item on the Lodestone.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#lodestone_id%3D%28_lodestone_id%3AString%29-instance-method" class="signature"><strong>#lodestone_id=</strong>(_lodestone_id : String)</a>
+        <a href="#lodestone_id%3D%28_lodestone_id%3A%3A%3AUnion%28String%2CNil%29%29-instance-method" class="signature"><strong>#lodestone_id=</strong>(_lodestone_id : ::Union(String, Nil))</a>
         
       </li>
     
@@ -618,26 +633,26 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#update_priority%3AUInt64-instance-method" class="signature"><strong>#update_priority</strong> : UInt64</a>
+        <a href="#update_priority%3AUInt64%3F-instance-method" class="signature"><strong>#update_priority</strong> : UInt64?</a>
         
           <div class="summary"><p>The value of the priority for updating the Item's Market details.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#update_priority%3D%28_update_priority%3AUInt64%29-instance-method" class="signature"><strong>#update_priority=</strong>(_update_priority : UInt64)</a>
+        <a href="#update_priority%3D%28_update_priority%3A%3A%3AUnion%28UInt64%2CNil%29%29-instance-method" class="signature"><strong>#update_priority=</strong>(_update_priority : ::Union(UInt64, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#updated%3ATime-instance-method" class="signature"><strong>#updated</strong> : Time</a>
+        <a href="#updated%3ATime%3F-instance-method" class="signature"><strong>#updated</strong> : Time?</a>
         
           <div class="summary"><p>Timestamp for the previous time that the Market data was updated.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#updated%3D%28_updated%3ATime%29-instance-method" class="signature"><strong>#updated=</strong>(_updated : Time)</a>
+        <a href="#updated%3D%28_updated%3A%3A%3AUnion%28Time%2CNil%29%29-instance-method" class="signature"><strong>#updated=</strong>(_updated : ::Union(Time, Nil))</a>
         
       </li>
     
@@ -708,7 +723,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/5e25e5d5bbad740b64b0ea495ea2f0c5d5e1873d/src/dataclasses/market/market_item.cr#L23" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/522a794b7dba44445c6b94bde76fb23c2a0e1d72/src/dataclasses/market/market_item.cr#L24" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -741,7 +756,7 @@ The ID string is in the format of "#{server_id}_#{item_id}".</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/5e25e5d5bbad740b64b0ea495ea2f0c5d5e1873d/src/dataclasses/market/market_item.cr#L26" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/522a794b7dba44445c6b94bde76fb23c2a0e1d72/src/dataclasses/market/market_item.cr#L27" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -773,7 +788,7 @@ The ID string is in the format of "#{server_id}_#{item_id}".</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/5e25e5d5bbad740b64b0ea495ea2f0c5d5e1873d/src/dataclasses/market/market_item.cr#L28" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/522a794b7dba44445c6b94bde76fb23c2a0e1d72/src/dataclasses/market/market_item.cr#L29" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -805,7 +820,7 @@ The ID string is in the format of "#{server_id}_#{item_id}".</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/5e25e5d5bbad740b64b0ea495ea2f0c5d5e1873d/src/dataclasses/market/market_item.cr#L30" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/522a794b7dba44445c6b94bde76fb23c2a0e1d72/src/dataclasses/market/market_item.cr#L31" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -824,12 +839,12 @@ The ID string is in the format of "#{server_id}_#{item_id}".</p></div>
       </div>
     </div>
   
-    <div class="entry-detail" id="lodestone_id:String-instance-method">
+    <div class="entry-detail" id="lodestone_id:String?-instance-method">
       <div class="signature">
         
-        def <strong>lodestone_id</strong> : String
+        def <strong>lodestone_id</strong> : String?
 
-        <a class="method-permalink" href="#lodestone_id%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#lodestone_id%3AString%3F-instance-method">#</a>
       </div>
       
         <div class="doc"><p>The ID of the Item on the Lodestone.</p></div>
@@ -837,17 +852,17 @@ The ID string is in the format of "#{server_id}_#{item_id}".</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/5e25e5d5bbad740b64b0ea495ea2f0c5d5e1873d/src/dataclasses/market/market_item.cr#L32" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/522a794b7dba44445c6b94bde76fb23c2a0e1d72/src/dataclasses/market/market_item.cr#L33" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="lodestone_id=(_lodestone_id:String)-instance-method">
+    <div class="entry-detail" id="lodestone_id=(_lodestone_id:::Union(String,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>lodestone_id=</strong>(_lodestone_id : String)
+        def <strong>lodestone_id=</strong>(_lodestone_id : ::Union(String, Nil))
 
-        <a class="method-permalink" href="#lodestone_id%3D%28_lodestone_id%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#lodestone_id%3D%28_lodestone_id%3A%3A%3AUnion%28String%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -869,7 +884,7 @@ The ID string is in the format of "#{server_id}_#{item_id}".</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/5e25e5d5bbad740b64b0ea495ea2f0c5d5e1873d/src/dataclasses/market/market_item.cr#L34" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/522a794b7dba44445c6b94bde76fb23c2a0e1d72/src/dataclasses/market/market_item.cr#L35" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -901,7 +916,7 @@ The ID string is in the format of "#{server_id}_#{item_id}".</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/5e25e5d5bbad740b64b0ea495ea2f0c5d5e1873d/src/dataclasses/market/market_item.cr#L36" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/522a794b7dba44445c6b94bde76fb23c2a0e1d72/src/dataclasses/market/market_item.cr#L37" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -934,12 +949,12 @@ The ID string is in the format of "#{server_id}_#{item_id}".</p></div>
       </div>
     </div>
   
-    <div class="entry-detail" id="update_priority:UInt64-instance-method">
+    <div class="entry-detail" id="update_priority:UInt64?-instance-method">
       <div class="signature">
         
-        def <strong>update_priority</strong> : UInt64
+        def <strong>update_priority</strong> : UInt64?
 
-        <a class="method-permalink" href="#update_priority%3AUInt64-instance-method">#</a>
+        <a class="method-permalink" href="#update_priority%3AUInt64%3F-instance-method">#</a>
       </div>
       
         <div class="doc"><p>The value of the priority for updating the Item's Market details.</p></div>
@@ -947,17 +962,17 @@ The ID string is in the format of "#{server_id}_#{item_id}".</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/5e25e5d5bbad740b64b0ea495ea2f0c5d5e1873d/src/dataclasses/market/market_item.cr#L38" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/522a794b7dba44445c6b94bde76fb23c2a0e1d72/src/dataclasses/market/market_item.cr#L39" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="update_priority=(_update_priority:UInt64)-instance-method">
+    <div class="entry-detail" id="update_priority=(_update_priority:::Union(UInt64,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>update_priority=</strong>(_update_priority : UInt64)
+        def <strong>update_priority=</strong>(_update_priority : ::Union(UInt64, Nil))
 
-        <a class="method-permalink" href="#update_priority%3D%28_update_priority%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#update_priority%3D%28_update_priority%3A%3A%3AUnion%28UInt64%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -966,12 +981,12 @@ The ID string is in the format of "#{server_id}_#{item_id}".</p></div>
       </div>
     </div>
   
-    <div class="entry-detail" id="updated:Time-instance-method">
+    <div class="entry-detail" id="updated:Time?-instance-method">
       <div class="signature">
         
-        def <strong>updated</strong> : Time
+        def <strong>updated</strong> : Time?
 
-        <a class="method-permalink" href="#updated%3ATime-instance-method">#</a>
+        <a class="method-permalink" href="#updated%3ATime%3F-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Timestamp for the previous time that the Market data was updated.</p></div>
@@ -979,17 +994,17 @@ The ID string is in the format of "#{server_id}_#{item_id}".</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/5e25e5d5bbad740b64b0ea495ea2f0c5d5e1873d/src/dataclasses/market/market_item.cr#L40" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/522a794b7dba44445c6b94bde76fb23c2a0e1d72/src/dataclasses/market/market_item.cr#L41" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="updated=(_updated:Time)-instance-method">
+    <div class="entry-detail" id="updated=(_updated:::Union(Time,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>updated=</strong>(_updated : Time)
+        def <strong>updated=</strong>(_updated : ::Union(Time, Nil))
 
-        <a class="method-permalink" href="#updated%3D%28_updated%3ATime%29-instance-method">#</a>
+        <a class="method-permalink" href="#updated%3D%28_updated%3A%3A%3AUnion%28Time%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
