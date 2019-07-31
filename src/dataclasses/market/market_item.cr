@@ -2,6 +2,7 @@ require "json"
 require "./item"
 require "./item_history"
 require "./market_entry"
+require "../../converters"
 
 module XIVAPI
   module Dataclasses
@@ -13,11 +14,11 @@ module XIVAPI
         id: {type: String, key: "ID"},
         item: {type: Item, key: "Item"},
         item_id: {type: UInt64, key: "ItemID"},
-        lodestone_id: {type: String, key: "LodestoneID"},
+        lodestone_id: {type: String?, key: "LodestoneID"},
         prices: {type: Array(MarketEntry), key: "Prices"},
         server: {type: UInt64, key: "Server"},
-        update_priority: {type: UInt64, key: "UpdatePriority"},
-        updated: {type: Time, key: "Updated", converter: Time::EpochConverter},
+        update_priority: {type: UInt64?, key: "UpdatePriority"},
+        updated: {type: Time?, key: "Updated", converter: XIVAPI::Converters::NilableEpochConverter},
       )
       # An Array of `ItemHistory` classs representing the old sale values of the Item.
       getter history
