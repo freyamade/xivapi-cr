@@ -1,6 +1,6 @@
-# xivapi-cr
+# xivapi-cr [![Latest Release Version](https://img.shields.io/github/release/freyamade/xivapi-cr?style=flat-square)](https://github.com/freyamade/xivapi-cr/releases/latest)
 
-An unofficial Crystal library for [XIVAPI](https;//xivapi.com), written by a couple of people who like Final Fantasy XIV and Crystal!
+An unofficial Crystal library for [XIVAPI](https://xivapi.com), written by a couple of people who like Final Fantasy XIV and Crystal!
 
 ## Table Of Contents
 - [Installation](#installation)
