@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.28.0">
+
+
+<link href="../../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../../";
+</script>
+
+  <meta id="repository-name" content="github.com/freyamade/xivapi-cr">
+  <title>XIVAPI::Client::Character - github.com/freyamade/xivapi-cr</title>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="repository-links">
+      <a href="../../index.html">README</a>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="github.com/freyamade/xivapi-cr/XIVAPI" data-name="xivapi">
+      <a href="../../XIVAPI.html">XIVAPI</a>
+      
+        <ul>
+  
+  <li class="parent open current" data-id="github.com/freyamade/xivapi-cr/XIVAPI/Client" data-name="xivapi::client">
+      <a href="../../XIVAPI/Client.html">Client</a>
+      
+        <ul>
+  
+  <li class=" current" data-id="github.com/freyamade/xivapi-cr/XIVAPI/Client/Character" data-name="xivapi::client::character">
+      <a href="../../XIVAPI/Client/Character.html">Character</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Client/FreeCompany" data-name="xivapi::client::freecompany">
+      <a href="../../XIVAPI/Client/FreeCompany.html">FreeCompany</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Client/Linkshell" data-name="xivapi::client::linkshell">
+      <a href="../../XIVAPI/Client/Linkshell.html">Linkshell</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Client/Lodestone" data-name="xivapi::client::lodestone">
+      <a href="../../XIVAPI/Client/Lodestone.html">Lodestone</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Client/Market" data-name="xivapi::client::market">
+      <a href="../../XIVAPI/Client/Market.html">Market</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Client/Other" data-name="xivapi::client::other">
+      <a href="../../XIVAPI/Client/Other.html">Other</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Client/PvpTeam" data-name="xivapi::client::pvpteam">
+      <a href="../../XIVAPI/Client/PvpTeam.html">PvpTeam</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Client/Servers" data-name="xivapi::client::servers">
+      <a href="../../XIVAPI/Client/Servers.html">Servers</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Converters" data-name="xivapi::converters">
+      <a href="../../XIVAPI/Converters.html">Converters</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Converters/NilableEpochConverter" data-name="xivapi::converters::nilableepochconverter">
+      <a href="../../XIVAPI/Converters/NilableEpochConverter.html">NilableEpochConverter</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses" data-name="xivapi::dataclasses">
+      <a href="../../XIVAPI/Dataclasses.html">Dataclasses</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Achievement" data-name="xivapi::dataclasses::achievement">
+      <a href="../../XIVAPI/Dataclasses/Achievement.html">Achievement</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Achievements" data-name="xivapi::dataclasses::achievements">
+      <a href="../../XIVAPI/Dataclasses/Achievements.html">Achievements</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Character" data-name="xivapi::dataclasses::character">
+      <a href="../../XIVAPI/Dataclasses/Character.html">Character</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/CharacterGear" data-name="xivapi::dataclasses::charactergear">
+      <a href="../../XIVAPI/Dataclasses/CharacterGear.html">CharacterGear</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/CharacterInfo" data-name="xivapi::dataclasses::characterinfo">
+      <a href="../../XIVAPI/Dataclasses/CharacterInfo.html">CharacterInfo</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/CharacterResponse" data-name="xivapi::dataclasses::characterresponse">
+      <a href="../../XIVAPI/Dataclasses/CharacterResponse.html">CharacterResponse</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/CharacterSummary" data-name="xivapi::dataclasses::charactersummary">
+      <a href="../../XIVAPI/Dataclasses/CharacterSummary.html">CharacterSummary</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/CharacterVerification" data-name="xivapi::dataclasses::characterverification">
+      <a href="../../XIVAPI/Dataclasses/CharacterVerification.html">CharacterVerification</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/ClassJob" data-name="xivapi::dataclasses::classjob">
+      <a href="../../XIVAPI/Dataclasses/ClassJob.html">ClassJob</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/DeepDungeon" data-name="xivapi::dataclasses::deepdungeon">
+      <a href="../../XIVAPI/Dataclasses/DeepDungeon.html">DeepDungeon</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/DeepDungeonLeaderboard" data-name="xivapi::dataclasses::deepdungeonleaderboard">
+      <a href="../../XIVAPI/Dataclasses/DeepDungeonLeaderboard.html">DeepDungeonLeaderboard</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/DeepDungeonResponse" data-name="xivapi::dataclasses::deepdungeonresponse">
+      <a href="../../XIVAPI/Dataclasses/DeepDungeonResponse.html">DeepDungeonResponse</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Devblog" data-name="xivapi::dataclasses::devblog">
+      <a href="../../XIVAPI/Dataclasses/Devblog.html">Devblog</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Devpost" data-name="xivapi::dataclasses::devpost">
+      <a href="../../XIVAPI/Dataclasses/Devpost.html">Devpost</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Equipment" data-name="xivapi::dataclasses::equipment">
+      <a href="../../XIVAPI/Dataclasses/Equipment.html">Equipment</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Estate" data-name="xivapi::dataclasses::estate">
+      <a href="../../XIVAPI/Dataclasses/Estate.html">Estate</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Exception" data-name="xivapi::dataclasses::exception">
+      <a href="../../XIVAPI/Dataclasses/Exception.html">Exception</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Feast" data-name="xivapi::dataclasses::feast">
+      <a href="../../XIVAPI/Dataclasses/Feast.html">Feast</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/FeastLeaderboard" data-name="xivapi::dataclasses::feastleaderboard">
+      <a href="../../XIVAPI/Dataclasses/FeastLeaderboard.html">FeastLeaderboard</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/FeastResponse" data-name="xivapi::dataclasses::feastresponse">
+      <a href="../../XIVAPI/Dataclasses/FeastResponse.html">FeastResponse</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/FreeCompany" data-name="xivapi::dataclasses::freecompany">
+      <a href="../../XIVAPI/Dataclasses/FreeCompany.html">FreeCompany</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/FreeCompanyInfo" data-name="xivapi::dataclasses::freecompanyinfo">
+      <a href="../../XIVAPI/Dataclasses/FreeCompanyInfo.html">FreeCompanyInfo</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/FreeCompanyProfile" data-name="xivapi::dataclasses::freecompanyprofile">
+      <a href="../../XIVAPI/Dataclasses/FreeCompanyProfile.html">FreeCompanyProfile</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/FreeCompanyRanking" data-name="xivapi::dataclasses::freecompanyranking">
+      <a href="../../XIVAPI/Dataclasses/FreeCompanyRanking.html">FreeCompanyRanking</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/FreeCompanyReputation" data-name="xivapi::dataclasses::freecompanyreputation">
+      <a href="../../XIVAPI/Dataclasses/FreeCompanyReputation.html">FreeCompanyReputation</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/FreeCompanyResponse" data-name="xivapi::dataclasses::freecompanyresponse">
+      <a href="../../XIVAPI/Dataclasses/FreeCompanyResponse.html">FreeCompanyResponse</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/FreeCompanySeeking" data-name="xivapi::dataclasses::freecompanyseeking">
+      <a href="../../XIVAPI/Dataclasses/FreeCompanySeeking.html">FreeCompanySeeking</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Gear" data-name="xivapi::dataclasses::gear">
+      <a href="../../XIVAPI/Dataclasses/Gear.html">Gear</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/GearSet" data-name="xivapi::dataclasses::gearset">
+      <a href="../../XIVAPI/Dataclasses/GearSet.html">GearSet</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/GearSetAttribute" data-name="xivapi::dataclasses::gearsetattribute">
+      <a href="../../XIVAPI/Dataclasses/GearSetAttribute.html">GearSetAttribute</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/GrandCompanyCharacterData" data-name="xivapi::dataclasses::grandcompanycharacterdata">
+      <a href="../../XIVAPI/Dataclasses/GrandCompanyCharacterData.html">GrandCompanyCharacterData</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/GuardianDeity" data-name="xivapi::dataclasses::guardiandeity">
+      <a href="../../XIVAPI/Dataclasses/GuardianDeity.html">GuardianDeity</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/IDIconName" data-name="xivapi::dataclasses::idiconname">
+      <a href="../../XIVAPI/Dataclasses/IDIconName.html">IDIconName</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/IDIconNameUrl" data-name="xivapi::dataclasses::idiconnameurl">
+      <a href="../../XIVAPI/Dataclasses/IDIconNameUrl.html">IDIconNameUrl</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/IDName" data-name="xivapi::dataclasses::idname">
+      <a href="../../XIVAPI/Dataclasses/IDName.html">IDName</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/IDNameUrl" data-name="xivapi::dataclasses::idnameurl">
+      <a href="../../XIVAPI/Dataclasses/IDNameUrl.html">IDNameUrl</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Info" data-name="xivapi::dataclasses::info">
+      <a href="../../XIVAPI/Dataclasses/Info.html">Info</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Item" data-name="xivapi::dataclasses::item">
+      <a href="../../XIVAPI/Dataclasses/Item.html">Item</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/ItemHistory" data-name="xivapi::dataclasses::itemhistory">
+      <a href="../../XIVAPI/Dataclasses/ItemHistory.html">ItemHistory</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Job" data-name="xivapi::dataclasses::job">
+      <a href="../../XIVAPI/Dataclasses/Job.html">Job</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Linkshell" data-name="xivapi::dataclasses::linkshell">
+      <a href="../../XIVAPI/Dataclasses/Linkshell.html">Linkshell</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/LinkshellInfo" data-name="xivapi::dataclasses::linkshellinfo">
+      <a href="../../XIVAPI/Dataclasses/LinkshellInfo.html">LinkshellInfo</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/LinkshellSearch" data-name="xivapi::dataclasses::linkshellsearch">
+      <a href="../../XIVAPI/Dataclasses/LinkshellSearch.html">LinkshellSearch</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Lodestone" data-name="xivapi::dataclasses::lodestone">
+      <a href="../../XIVAPI/Dataclasses/Lodestone.html">Lodestone</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/LodestoneBanner" data-name="xivapi::dataclasses::lodestonebanner">
+      <a href="../../XIVAPI/Dataclasses/LodestoneBanner.html">LodestoneBanner</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/LodestoneCharacter" data-name="xivapi::dataclasses::lodestonecharacter">
+      <a href="../../XIVAPI/Dataclasses/LodestoneCharacter.html">LodestoneCharacter</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Lore" data-name="xivapi::dataclasses::lore">
+      <a href="../../XIVAPI/Dataclasses/Lore.html">Lore</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/LoreData" data-name="xivapi::dataclasses::loredata">
+      <a href="../../XIVAPI/Dataclasses/LoreData.html">LoreData</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/MarketCategory" data-name="xivapi::dataclasses::marketcategory">
+      <a href="../../XIVAPI/Dataclasses/MarketCategory.html">MarketCategory</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/MarketEntry" data-name="xivapi::dataclasses::marketentry">
+      <a href="../../XIVAPI/Dataclasses/MarketEntry.html">MarketEntry</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/MarketItem" data-name="xivapi::dataclasses::marketitem">
+      <a href="../../XIVAPI/Dataclasses/MarketItem.html">MarketItem</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/MinionMount" data-name="xivapi::dataclasses::minionmount">
+      <a href="../../XIVAPI/Dataclasses/MinionMount.html">MinionMount</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Name" data-name="xivapi::dataclasses::name">
+      <a href="../../XIVAPI/Dataclasses/Name.html">Name</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/NameLowcase" data-name="xivapi::dataclasses::namelowcase">
+      <a href="../../XIVAPI/Dataclasses/NameLowcase.html">NameLowcase</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/News" data-name="xivapi::dataclasses::news">
+      <a href="../../XIVAPI/Dataclasses/News.html">News</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Notice" data-name="xivapi::dataclasses::notice">
+      <a href="../../XIVAPI/Dataclasses/Notice.html">Notice</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Page" data-name="xivapi::dataclasses::page(t)">
+      <a href="../../XIVAPI/Dataclasses/Page.html">Page</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Pagination" data-name="xivapi::dataclasses::pagination">
+      <a href="../../XIVAPI/Dataclasses/Pagination.html">Pagination</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Patch" data-name="xivapi::dataclasses::patch">
+      <a href="../../XIVAPI/Dataclasses/Patch.html">Patch</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/PvpInfo" data-name="xivapi::dataclasses::pvpinfo">
+      <a href="../../XIVAPI/Dataclasses/PvpInfo.html">PvpInfo</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/PvpLinkshell" data-name="xivapi::dataclasses::pvplinkshell">
+      <a href="../../XIVAPI/Dataclasses/PvpLinkshell.html">PvpLinkshell</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/PvpTeam" data-name="xivapi::dataclasses::pvpteam">
+      <a href="../../XIVAPI/Dataclasses/PvpTeam.html">PvpTeam</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/PvPTeam" data-name="xivapi::dataclasses::pvpteam">
+      <a href="../../XIVAPI/Dataclasses/PvPTeam.html">PvPTeam</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/PvpTeamProfile" data-name="xivapi::dataclasses::pvpteamprofile">
+      <a href="../../XIVAPI/Dataclasses/PvpTeamProfile.html">PvpTeamProfile</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/SearchResult" data-name="xivapi::dataclasses::searchresult">
+      <a href="../../XIVAPI/Dataclasses/SearchResult.html">SearchResult</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/Status" data-name="xivapi::dataclasses::status">
+      <a href="../../XIVAPI/Dataclasses/Status.html">Status</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/WorldStatus" data-name="xivapi::dataclasses::worldstatus">
+      <a href="../../XIVAPI/Dataclasses/WorldStatus.html">WorldStatus</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Exceptions" data-name="xivapi::exceptions">
+      <a href="../../XIVAPI/Exceptions.html">Exceptions</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Exceptions/XIVAPIException" data-name="xivapi::exceptions::xivapiexception">
+      <a href="../../XIVAPI/Exceptions/XIVAPIException.html">XIVAPIException</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/InfoStates" data-name="xivapi::infostates">
+      <a href="../../XIVAPI/InfoStates.html">InfoStates</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">module</span> XIVAPI::Client::Character
+
+</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Direct including types</h2>
+  <ul class="other-types-list">
+  
+    <li class="other-type"><a href="../../XIVAPI/Client.html">XIVAPI::Client</a></li>
+  
+  </ul>
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/freyamade/xivapi-cr/blob/a1bcbbd7faa5a2a909b59219cb3166159fc32621/src/client/character.cr#L4" target="_blank">
+        client/character.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>Constant Summary</h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="CHARACTER_DATA_VALUES">
+        <strong>CHARACTER_DATA_VALUES</strong> = <code><span class="t">Set</span> {<span class="s">&quot;AC&quot;</span>, <span class="s">&quot;FR&quot;</span>, <span class="s">&quot;FC&quot;</span>, <span class="s">&quot;FCM&quot;</span>, <span class="s">&quot;PVP&quot;</span>}</code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>A Set of Strings representing the fields that can be requested using the Character endpoint</p>
+      </dd>
+      
+    
+  </dl>
+
+
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#character%28id%3AUInt64%2Cdata%3AEnumerable%28String%29%3D%5B%5DofString%29%3ADataclasses%3A%3ACharacterResponse-instance-method" class="signature"><strong>#character</strong>(id : UInt64, data : Enumerable(String) = <span class="o">[]</span> <span class="k">of</span> <span class="t">String</span>) : Dataclasses::CharacterResponse</a>
+        
+          <div class="summary"><p>Retrieve the details of the Character with the given Lodestone ID.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#character_search%28name%3AString%2Cserver%3AString%3D%26quot%3B%26quot%3B%2Cpage%3AUInt32%3D1%29%3AXIVAPI%3A%3ADataclasses%3A%3APage%28Dataclasses%3A%3ACharacterSummary%29-instance-method" class="signature"><strong>#character_search</strong>(name : String, server : String = <span class="s">&quot;&quot;</span>, page : UInt32 = <span class="n">1</span>) : XIVAPI::Dataclasses::Page(Dataclasses::CharacterSummary)</a>
+        
+          <div class="summary"><p>Search the lodestone API for characters with a given name.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#character_update%28id%3AUInt64%29%3AInt32-instance-method" class="signature"><strong>#character_update</strong>(id : UInt64) : Int32</a>
+        
+          <div class="summary"><p>Send a request to update the Character with the given ID.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#character_verification%28id%3AUInt64%2Ctoken%3AString%3D%26quot%3B%26quot%3B%29%3ADataclasses%3A%3ACharacterVerification-instance-method" class="signature"><strong>#character_verification</strong>(id : UInt64, token : String = <span class="s">&quot;&quot;</span>) : Dataclasses::CharacterVerification</a>
+        
+          <div class="summary"><p>Verify the Character using a token.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+</div>
+
+
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="character(id:UInt64,data:Enumerable(String)=[]ofString):Dataclasses::CharacterResponse-instance-method">
+      <div class="signature">
+        
+        def <strong>character</strong>(id : UInt64, data : Enumerable(String) = <span class="o">[]</span> <span class="k">of</span> <span class="t">String</span>) : <a href="../../XIVAPI/Dataclasses/CharacterResponse.html">Dataclasses::CharacterResponse</a>
+
+        <a class="method-permalink" href="#character%28id%3AUInt64%2Cdata%3AEnumerable%28String%29%3D%5B%5DofString%29%3ADataclasses%3A%3ACharacterResponse-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Retrieve the details of the Character with the given Lodestone ID.
+Any data fields that are requested will be mapped against the <code><a href="../../XIVAPI/Client/Character.html#CHARACTER_DATA_VALUES">CHARACTER_DATA_VALUES</a></code> variable to ensure only allowed values are sent.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/a1bcbbd7faa5a2a909b59219cb3166159fc32621/src/client/character.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="character_search(name:String,server:String=&amp;quot;&amp;quot;,page:UInt32=1):XIVAPI::Dataclasses::Page(Dataclasses::CharacterSummary)-instance-method">
+      <div class="signature">
+        
+        def <strong>character_search</strong>(name : String, server : String = <span class="s">&quot;&quot;</span>, page : UInt32 = <span class="n">1</span>) : <a href="../../XIVAPI/Dataclasses/Page.html">XIVAPI::Dataclasses::Page</a>(<a href="../../XIVAPI/Dataclasses/CharacterSummary.html">Dataclasses::CharacterSummary</a>)
+
+        <a class="method-permalink" href="#character_search%28name%3AString%2Cserver%3AString%3D%26quot%3B%26quot%3B%2Cpage%3AUInt32%3D1%29%3AXIVAPI%3A%3ADataclasses%3A%3APage%28Dataclasses%3A%3ACharacterSummary%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Search the lodestone API for characters with a given name.
+Optionally, search specific servers, add request extra fields.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/a1bcbbd7faa5a2a909b59219cb3166159fc32621/src/client/character.cr#L12" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="character_update(id:UInt64):Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>character_update</strong>(id : UInt64) : Int32
+
+        <a class="method-permalink" href="#character_update%28id%3AUInt64%29%3AInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Send a request to update the Character with the given ID.
+A response of 0 indicates that the Character cannot be updated at this time, and a response of 1 indicates a successful request.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/a1bcbbd7faa5a2a909b59219cb3166159fc32621/src/client/character.cr#L56" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="character_verification(id:UInt64,token:String=&amp;quot;&amp;quot;):Dataclasses::CharacterVerification-instance-method">
+      <div class="signature">
+        
+        def <strong>character_verification</strong>(id : UInt64, token : String = <span class="s">&quot;&quot;</span>) : <a href="../../XIVAPI/Dataclasses/CharacterVerification.html">Dataclasses::CharacterVerification</a>
+
+        <a class="method-permalink" href="#character_verification%28id%3AUInt64%2Ctoken%3AString%3D%26quot%3B%26quot%3B%29%3ADataclasses%3A%3ACharacterVerification-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Verify the Character using a token.
+This method returns the Character's Bio and a <code>pass</code> flag that states if the supplied token was found in their bio</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/a1bcbbd7faa5a2a909b59219cb3166159fc32621/src/client/character.cr#L44" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
