@@ -6,7 +6,7 @@ require "./pvp_team"
 module XIVAPI
   module Dataclasses
     # Dataclass for the data that comes in a response from reading a specific PvP Team.
-    class PvPTeam
+    class PvpTeamResponse
       # define a JSON mapping to create instances of this class
       JSON.mapping(
         info: {type: PvpInfo, key: "Info"},
