@@ -19,7 +19,7 @@ module XIVAPI
         free_company_members: {type: Array(CharacterSummary)?, key: "FreeCompanyMembers"},
         friends: {type: Array(CharacterSummary)?, key: "Friends"},
         info: {type: CharacterInfo, key: "Info"},
-        pvp_team: {type: PvPTeam?, key: "PvPTeam"}
+        pvp_team: {type: PvpTeam?, key: "PvPTeam"}
       )
       # An `Achievements` class containing all of the Character's Achievements data.
       # Will be `nil` unless the Achievements data (AC) is requested.
@@ -37,7 +37,7 @@ module XIVAPI
       getter friends
       # An `Info` class that gives information about the statuses of requested data.
       getter info
-      # A `PvPTeam` class representing the Character's PVP Team.
+      # A `PvpTeam` class representing the Character's PVP Team.
       # Will be `nil` unless the PVP Team data (PVP) is requested, or if it is not yet in the system.
       getter pvp_team
     end
