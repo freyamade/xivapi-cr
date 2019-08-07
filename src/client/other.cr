@@ -151,7 +151,8 @@ module XIVAPI
       end
     end
 
-    def game_data(index : String, page : Int32 = 1, limit : Int32 = 100, ids : Array(Int32) = [] of Int32) : Dataclasses::Page(Dataclasses::IDIconNameUrl)
+    # List ids of game data of a specific category
+    def list_game_data(index : String, page : Int32 = 1, limit : Int32 = 100, ids : Array(Int32) = [] of Int32) : Dataclasses::Page(Dataclasses::IDIconNameUrl)
       endpoint = index
       params = {
         "page" => page.to_s,
@@ -164,6 +165,12 @@ module XIVAPI
       rescue
         raise Exceptions::XIVAPIException.new(Dataclasses::Exception.from_json response)
       end
+    end
+
+    # Retrieve a JSON::Any object of the game data with the given ID
+    def read_game_data(index : String, id : Int32) : JSON::Any
+      endpoint = "#{index}/#{id}"
+      request endpoint
     end
 
     # Retrieve an Array of all of the available content that is accessible in the API.
