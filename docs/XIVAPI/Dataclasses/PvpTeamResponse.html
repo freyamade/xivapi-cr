@@ -14,7 +14,7 @@
 </script>
 
   <meta id="repository-name" content="github.com/freyamade/xivapi-cr">
-  <title>XIVAPI::Dataclasses::CharacterGear - github.com/freyamade/xivapi-cr</title>
+  <title>XIVAPI::Dataclasses::PvpTeamResponse - github.com/freyamade/xivapi-cr</title>
 </head>
 <body>
 
@@ -126,7 +126,7 @@
       
     </li>
   
-  <li class=" current" data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/CharacterGear" data-name="xivapi::dataclasses::charactergear">
+  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/CharacterGear" data-name="xivapi::dataclasses::charactergear">
       <a href="../../XIVAPI/Dataclasses/CharacterGear.html">CharacterGear</a>
       
     </li>
@@ -426,7 +426,7 @@
       
     </li>
   
-  <li class=" " data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/PvpTeamResponse" data-name="xivapi::dataclasses::pvpteamresponse">
+  <li class=" current" data-id="github.com/freyamade/xivapi-cr/XIVAPI/Dataclasses/PvpTeamResponse" data-name="xivapi::dataclasses::pvpteamresponse">
       <a href="../../XIVAPI/Dataclasses/PvpTeamResponse.html">PvpTeamResponse</a>
       
     </li>
@@ -485,20 +485,19 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">class</span> XIVAPI::Dataclasses::CharacterGear
+  <span class="kind">class</span> XIVAPI::Dataclasses::PvpTeamResponse
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../XIVAPI/Dataclasses/CharacterGear.html">XIVAPI::Dataclasses::CharacterGear</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../XIVAPI/Dataclasses/PvpTeamResponse.html">XIVAPI::Dataclasses::PvpTeamResponse</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
 
 
 
 
   <h2>Overview</h2>
 
-  <p>Dataclass for a piece of Gear owned by a Character.
-This class wraps the <code><a href="../../XIVAPI/Dataclasses/Gear.html">Gear</a></code> class and adds extra, instanced details like dye, glamour and materia, as each character will have different copies of the same piece of <code><a href="../../XIVAPI/Dataclasses/Gear.html">Gear</a></code>.</p>
+  <p>Dataclass for the data that comes in a response from reading a specific PvP Team.</p>
 
 
 
@@ -516,8 +515,8 @@ This class wraps the <code><a href="../../XIVAPI/Dataclasses/Gear.html">Gear</a>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/character/character_gear.cr#L10" target="_blank">
-        dataclasses/character/character_gear.cr
+      <a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/pvp_team/pvp_team_response.cr#L9" target="_blank">
+        dataclasses/pvp_team/pvp_team_response.cr
       </a>
     
     <br/>
@@ -531,7 +530,7 @@ This class wraps the <code><a href="../../XIVAPI/Dataclasses/Gear.html">Gear</a>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28__temp_167%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_167 : JSON::PullParser)</a>
+        <a href="#new%28__temp_958%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_958 : JSON::PullParser)</a>
         
       </li>
     
@@ -545,62 +544,38 @@ This class wraps the <code><a href="../../XIVAPI/Dataclasses/Gear.html">Gear</a>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#creator%3AUInt64%3F-instance-method" class="signature"><strong>#creator</strong> : UInt64?</a>
+        <a href="#info%3AXIVAPI%3A%3ADataclasses%3A%3APvpInfo-instance-method" class="signature"><strong>#info</strong> : XIVAPI::Dataclasses::PvpInfo</a>
         
-          <div class="summary"><p>The ID of the Character that made the piece of equipment in question.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#creator%3D%28_creator%3A%3A%3AUnion%28UInt64%2CNil%29%29-instance-method" class="signature"><strong>#creator=</strong>(_creator : ::Union(UInt64, Nil))</a>
+          <div class="summary"><p>A <code><a href="../../XIVAPI/Dataclasses/PvpInfo.html">PvpInfo</a></code> class for the information about the Linkshell and PvpTeam responses.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#dye%3AXIVAPI%3A%3ADataclasses%3A%3AIDIconName%3F-instance-method" class="signature"><strong>#dye</strong> : XIVAPI::Dataclasses::IDIconName?</a>
-        
-          <div class="summary"><p>An <code><a href="../../XIVAPI/Dataclasses/IDIconName.html">IDIconName</a></code> class containing details about the dye currently on the Gear.</p></div>
+        <a href="#info%3D%28_info%3APvpInfo%29-instance-method" class="signature"><strong>#info=</strong>(_info : PvpInfo)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#dye%3D%28_dye%3A%3A%3AUnion%28IDIconName%2CNil%29%29-instance-method" class="signature"><strong>#dye=</strong>(_dye : ::Union(IDIconName, Nil))</a>
+        <a href="#linkshell%3AXIVAPI%3A%3ADataclasses%3A%3APvpLinkshell-instance-method" class="signature"><strong>#linkshell</strong> : XIVAPI::Dataclasses::PvpLinkshell</a>
+        
+          <div class="summary"><p>A <code><a href="../../XIVAPI/Dataclasses/PvpLinkshell.html">PvpLinkshell</a></code> class representing the Linkshell information for the PvP Team.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#glamour%3AXIVAPI%3A%3ADataclasses%3A%3AIDIconName%3F-instance-method" class="signature"><strong>#glamour</strong> : XIVAPI::Dataclasses::IDIconName?</a>
-        
-          <div class="summary"><p>An <code><a href="../../XIVAPI/Dataclasses/IDIconName.html">IDIconName</a></code> class containing information about the piece of Gear currently being used as a glamour for this piece of Gear.</p></div>
+        <a href="#linkshell%3D%28_linkshell%3APvpLinkshell%29-instance-method" class="signature"><strong>#linkshell=</strong>(_linkshell : PvpLinkshell)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#glamour%3D%28_glamour%3A%3A%3AUnion%28IDIconName%2CNil%29%29-instance-method" class="signature"><strong>#glamour=</strong>(_glamour : ::Union(IDIconName, Nil))</a>
+        <a href="#pvp_team%3AXIVAPI%3A%3ADataclasses%3A%3APvpTeam%3F-instance-method" class="signature"><strong>#pvp_team</strong> : XIVAPI::Dataclasses::PvpTeam?</a>
+        
+          <div class="summary"><p>A <code><a href="../../XIVAPI/Dataclasses/PvpTeam.html">PvpTeam</a></code> class that contains the data on the PvP Team.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#item%3AXIVAPI%3A%3ADataclasses%3A%3AGear-instance-method" class="signature"><strong>#item</strong> : XIVAPI::Dataclasses::Gear</a>
-        
-          <div class="summary"><p>A <code>GearItem</code> class that contains the details about the item that is equipped.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#item%3D%28_item%3AGear%29-instance-method" class="signature"><strong>#item=</strong>(_item : Gear)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#materia%3AArray%28XIVAPI%3A%3ADataclasses%3A%3AIDIconNameUrl%29-instance-method" class="signature"><strong>#materia</strong> : Array(XIVAPI::Dataclasses::IDIconNameUrl)</a>
-        
-          <div class="summary"><p>An Array of <code><a href="../../XIVAPI/Dataclasses/IDIconName.html">IDIconName</a></code> classs that corresponds to the list of Materia currently melded to the Equipped Gear.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#materia%3D%28_materia%3AArray%28IDIconNameUrl%29%29-instance-method" class="signature"><strong>#materia=</strong>(_materia : Array(IDIconNameUrl))</a>
+        <a href="#pvp_team%3D%28_pvp_team%3A%3A%3AUnion%28PvpTeam%2CNil%29%29-instance-method" class="signature"><strong>#pvp_team=</strong>(_pvp_team : ::Union(PvpTeam, Nil))</a>
         
       </li>
     
@@ -642,12 +617,12 @@ This class wraps the <code><a href="../../XIVAPI/Dataclasses/Gear.html">Gear</a>
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(__temp_167:JSON::PullParser)-class-method">
+    <div class="entry-detail" id="new(__temp_958:JSON::PullParser)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(__temp_167 : JSON::PullParser)
+        def self.<strong>new</strong>(__temp_958 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28__temp_167%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28__temp_958%3AJSON%3A%3APullParser%29-class-method">#</a>
       </div>
       
       <br/>
@@ -663,62 +638,30 @@ This class wraps the <code><a href="../../XIVAPI/Dataclasses/Gear.html">Gear</a>
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="creator:UInt64?-instance-method">
+    <div class="entry-detail" id="info:XIVAPI::Dataclasses::PvpInfo-instance-method">
       <div class="signature">
         
-        def <strong>creator</strong> : UInt64?
+        def <strong>info</strong> : <a href="../../XIVAPI/Dataclasses/PvpInfo.html">XIVAPI::Dataclasses::PvpInfo</a>
 
-        <a class="method-permalink" href="#creator%3AUInt64%3F-instance-method">#</a>
+        <a class="method-permalink" href="#info%3AXIVAPI%3A%3ADataclasses%3A%3APvpInfo-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>The ID of the Character that made the piece of equipment in question.</p></div>
+        <div class="doc"><p>A <code><a href="../../XIVAPI/Dataclasses/PvpInfo.html">PvpInfo</a></code> class for the information about the Linkshell and PvpTeam responses.</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/character/character_gear.cr#L20" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/pvp_team/pvp_team_response.cr#L17" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="creator=(_creator:::Union(UInt64,Nil))-instance-method">
+    <div class="entry-detail" id="info=(_info:PvpInfo)-instance-method">
       <div class="signature">
         
-        def <strong>creator=</strong>(_creator : ::Union(UInt64, Nil))
+        def <strong>info=</strong>(_info : <a href="../../XIVAPI/Dataclasses/PvpInfo.html">PvpInfo</a>)
 
-        <a class="method-permalink" href="#creator%3D%28_creator%3A%3A%3AUnion%28UInt64%2CNil%29%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="dye:XIVAPI::Dataclasses::IDIconName?-instance-method">
-      <div class="signature">
-        
-        def <strong>dye</strong> : <a href="../../XIVAPI/Dataclasses/IDIconName.html">XIVAPI::Dataclasses::IDIconName</a>?
-
-        <a class="method-permalink" href="#dye%3AXIVAPI%3A%3ADataclasses%3A%3AIDIconName%3F-instance-method">#</a>
-      </div>
-      
-        <div class="doc"><p>An <code><a href="../../XIVAPI/Dataclasses/IDIconName.html">IDIconName</a></code> class containing details about the dye currently on the Gear.</p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/character/character_gear.cr#L22" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="dye=(_dye:::Union(IDIconName,Nil))-instance-method">
-      <div class="signature">
-        
-        def <strong>dye=</strong>(_dye : ::Union(<a href="../../XIVAPI/Dataclasses/IDIconName.html">IDIconName</a>, Nil))
-
-        <a class="method-permalink" href="#dye%3D%28_dye%3A%3A%3AUnion%28IDIconName%2CNil%29%29-instance-method">#</a>
+        <a class="method-permalink" href="#info%3D%28_info%3APvpInfo%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -727,62 +670,30 @@ This class wraps the <code><a href="../../XIVAPI/Dataclasses/Gear.html">Gear</a>
       </div>
     </div>
   
-    <div class="entry-detail" id="glamour:XIVAPI::Dataclasses::IDIconName?-instance-method">
+    <div class="entry-detail" id="linkshell:XIVAPI::Dataclasses::PvpLinkshell-instance-method">
       <div class="signature">
         
-        def <strong>glamour</strong> : <a href="../../XIVAPI/Dataclasses/IDIconName.html">XIVAPI::Dataclasses::IDIconName</a>?
+        def <strong>linkshell</strong> : <a href="../../XIVAPI/Dataclasses/PvpLinkshell.html">XIVAPI::Dataclasses::PvpLinkshell</a>
 
-        <a class="method-permalink" href="#glamour%3AXIVAPI%3A%3ADataclasses%3A%3AIDIconName%3F-instance-method">#</a>
+        <a class="method-permalink" href="#linkshell%3AXIVAPI%3A%3ADataclasses%3A%3APvpLinkshell-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>An <code><a href="../../XIVAPI/Dataclasses/IDIconName.html">IDIconName</a></code> class containing information about the piece of Gear currently being used as a glamour for this piece of Gear.</p></div>
+        <div class="doc"><p>A <code><a href="../../XIVAPI/Dataclasses/PvpLinkshell.html">PvpLinkshell</a></code> class representing the Linkshell information for the PvP Team.</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/character/character_gear.cr#L24" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/pvp_team/pvp_team_response.cr#L19" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="glamour=(_glamour:::Union(IDIconName,Nil))-instance-method">
+    <div class="entry-detail" id="linkshell=(_linkshell:PvpLinkshell)-instance-method">
       <div class="signature">
         
-        def <strong>glamour=</strong>(_glamour : ::Union(<a href="../../XIVAPI/Dataclasses/IDIconName.html">IDIconName</a>, Nil))
+        def <strong>linkshell=</strong>(_linkshell : <a href="../../XIVAPI/Dataclasses/PvpLinkshell.html">PvpLinkshell</a>)
 
-        <a class="method-permalink" href="#glamour%3D%28_glamour%3A%3A%3AUnion%28IDIconName%2CNil%29%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="item:XIVAPI::Dataclasses::Gear-instance-method">
-      <div class="signature">
-        
-        def <strong>item</strong> : <a href="../../XIVAPI/Dataclasses/Gear.html">XIVAPI::Dataclasses::Gear</a>
-
-        <a class="method-permalink" href="#item%3AXIVAPI%3A%3ADataclasses%3A%3AGear-instance-method">#</a>
-      </div>
-      
-        <div class="doc"><p>A <code>GearItem</code> class that contains the details about the item that is equipped.</p></div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/character/character_gear.cr#L26" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="item=(_item:Gear)-instance-method">
-      <div class="signature">
-        
-        def <strong>item=</strong>(_item : <a href="../../XIVAPI/Dataclasses/Gear.html">Gear</a>)
-
-        <a class="method-permalink" href="#item%3D%28_item%3AGear%29-instance-method">#</a>
+        <a class="method-permalink" href="#linkshell%3D%28_linkshell%3APvpLinkshell%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -791,30 +702,31 @@ This class wraps the <code><a href="../../XIVAPI/Dataclasses/Gear.html">Gear</a>
       </div>
     </div>
   
-    <div class="entry-detail" id="materia:Array(XIVAPI::Dataclasses::IDIconNameUrl)-instance-method">
+    <div class="entry-detail" id="pvp_team:XIVAPI::Dataclasses::PvpTeam?-instance-method">
       <div class="signature">
         
-        def <strong>materia</strong> : Array(<a href="../../XIVAPI/Dataclasses/IDIconNameUrl.html">XIVAPI::Dataclasses::IDIconNameUrl</a>)
+        def <strong>pvp_team</strong> : <a href="../../XIVAPI/Dataclasses/PvpTeam.html">XIVAPI::Dataclasses::PvpTeam</a>?
 
-        <a class="method-permalink" href="#materia%3AArray%28XIVAPI%3A%3ADataclasses%3A%3AIDIconNameUrl%29-instance-method">#</a>
+        <a class="method-permalink" href="#pvp_team%3AXIVAPI%3A%3ADataclasses%3A%3APvpTeam%3F-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>An Array of <code><a href="../../XIVAPI/Dataclasses/IDIconName.html">IDIconName</a></code> classs that corresponds to the list of Materia currently melded to the Equipped Gear.</p></div>
+        <div class="doc"><p>A <code><a href="../../XIVAPI/Dataclasses/PvpTeam.html">PvpTeam</a></code> class that contains the data on the PvP Team.
+Nil in most cases, cannot figure out how to get it to not be nil.</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/character/character_gear.cr#L28" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/pvp_team/pvp_team_response.cr#L22" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="materia=(_materia:Array(IDIconNameUrl))-instance-method">
+    <div class="entry-detail" id="pvp_team=(_pvp_team:::Union(PvpTeam,Nil))-instance-method">
       <div class="signature">
         
-        def <strong>materia=</strong>(_materia : Array(<a href="../../XIVAPI/Dataclasses/IDIconNameUrl.html">IDIconNameUrl</a>))
+        def <strong>pvp_team=</strong>(_pvp_team : ::Union(<a href="../../XIVAPI/Dataclasses/PvpTeam.html">PvpTeam</a>, Nil))
 
-        <a class="method-permalink" href="#materia%3D%28_materia%3AArray%28IDIconNameUrl%29%29-instance-method">#</a>
+        <a class="method-permalink" href="#pvp_team%3D%28_pvp_team%3A%3A%3AUnion%28PvpTeam%2CNil%29%29-instance-method">#</a>
       </div>
       
       <br/>
