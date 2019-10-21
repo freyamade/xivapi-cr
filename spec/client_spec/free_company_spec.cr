@@ -41,7 +41,6 @@ describe XIVAPI::Client do
 
       # Check that the non-requested details are nil
       free_company_response.free_company_members.should be_nil
-      free_company_response.info.free_company_members.should be_nil
     end
 
     it "reads a FreeCompany properly, also requesting the members" do
@@ -54,7 +53,6 @@ describe XIVAPI::Client do
 
       # Check that the non-requested details are nil
       free_company_response.free_company_members.should_not be_nil
-      free_company_response.info.free_company_members.should_not be_nil
     end
   end
 end
