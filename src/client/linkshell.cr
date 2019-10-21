@@ -23,11 +23,11 @@ module XIVAPI
     end
 
     # Retrieve the details of the Linkshell with the given Lodestone ID.
-    def linkshell(id : String) : Dataclasses::Linkshell
+    def linkshell(id : String) : Dataclasses::LinkshellResponse
       endpoint = "linkshell/#{id}"
       response = request endpoint, {"data" => "LS"}
       begin
-        return Dataclasses::Linkshell.from_json response
+        return Dataclasses::LinkshellResponse.from_json response
       rescue
         raise Exceptions::XIVAPIException.new(Dataclasses::Exception.from_json response)
       end

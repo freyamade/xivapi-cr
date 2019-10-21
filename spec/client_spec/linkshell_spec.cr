@@ -27,7 +27,6 @@ describe XIVAPI::Client do
 
       # Ensure we get a meaningful response
       linkshell_response.linkshell.should_not be_nil
-      linkshell_response.info.linkshell.should_not be_nil
     end
   end
 end
