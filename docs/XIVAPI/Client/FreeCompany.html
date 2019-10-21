@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.28.0">
+<meta name="generator" content="Crystal Docs 0.31.1">
 
 
 <link href="../../css/style.css" rel="stylesheet" type="text/css">
@@ -516,7 +516,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/client/free_company.cr#L4" target="_blank">
+      <a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/client/free_company.cr#L4" target="_blank">
         client/free_company.cr
       </a>
     
@@ -535,14 +535,14 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#free_company%28id%3AString%2Cmembers%3ABool%3Dfalse%29%3ADataclasses%3A%3AFreeCompanyResponse-instance-method" class="signature"><strong>#free_company</strong>(id : String, members : Bool = <span class="n">false</span>) : Dataclasses::FreeCompanyResponse</a>
+        <a href="#free_company(id:String,members:Bool=false):Dataclasses::FreeCompanyResponse-instance-method" class="signature"><strong>#free_company</strong>(id : String, members : Bool = <span class="n">false</span>) : Dataclasses::FreeCompanyResponse</a>
         
           <div class="summary"><p>Retrieve the details of the FreeCompany with the given Lodestone ID.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#free_company_search%28name%3AString%2Cserver%3AString%3D%26quot%3B%26quot%3B%2Cpage%3AUInt32%3D1%29%3AXIVAPI%3A%3ADataclasses%3A%3APage%28Dataclasses%3A%3AFreeCompanyProfile%29-instance-method" class="signature"><strong>#free_company_search</strong>(name : String, server : String = <span class="s">&quot;&quot;</span>, page : UInt32 = <span class="n">1</span>) : XIVAPI::Dataclasses::Page(Dataclasses::FreeCompanyProfile)</a>
+        <a href="#free_company_search(name:String,server:String=&quot;&quot;,page:UInt32=1):XIVAPI::Dataclasses::Page(Dataclasses::FreeCompanyProfile)-instance-method" class="signature"><strong>#free_company_search</strong>(name : String, server : String = <span class="s">&quot;&quot;</span>, page : UInt32 = <span class="n">1</span>) : XIVAPI::Dataclasses::Page(Dataclasses::FreeCompanyProfile)</a>
         
           <div class="summary"><p>Search the Lodestone API for Free Companies with a given name.</p></div>
         
@@ -570,16 +570,19 @@
         
         def <strong>free_company</strong>(id : String, members : Bool = <span class="n">false</span>) : <a href="../../XIVAPI/Dataclasses/FreeCompanyResponse.html">Dataclasses::FreeCompanyResponse</a>
 
-        <a class="method-permalink" href="#free_company%28id%3AString%2Cmembers%3ABool%3Dfalse%29%3ADataclasses%3A%3AFreeCompanyResponse-instance-method">#</a>
+        <a class="method-permalink" href="#free_company(id:String,members:Bool=false):Dataclasses::FreeCompanyResponse-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Retrieve the details of the FreeCompany with the given Lodestone ID.
-If the Members Array is also needed, then it can be requested using the <code>members</code> flag by setting it to true.</p></div>
+        <div class="doc">
+          
+          <p>Retrieve the details of the FreeCompany with the given Lodestone ID.
+If the Members Array is also needed, then it can be requested using the <code>members</code> flag by setting it to true.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/client/free_company.cr#L27" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/client/free_company.cr#L27" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -589,16 +592,19 @@ If the Members Array is also needed, then it can be requested using the <code>me
         
         def <strong>free_company_search</strong>(name : String, server : String = <span class="s">&quot;&quot;</span>, page : UInt32 = <span class="n">1</span>) : <a href="../../XIVAPI/Dataclasses/Page.html">XIVAPI::Dataclasses::Page</a>(<a href="../../XIVAPI/Dataclasses/FreeCompanyProfile.html">Dataclasses::FreeCompanyProfile</a>)
 
-        <a class="method-permalink" href="#free_company_search%28name%3AString%2Cserver%3AString%3D%26quot%3B%26quot%3B%2Cpage%3AUInt32%3D1%29%3AXIVAPI%3A%3ADataclasses%3A%3APage%28Dataclasses%3A%3AFreeCompanyProfile%29-instance-method">#</a>
+        <a class="method-permalink" href="#free_company_search(name:String,server:String=&quot;&quot;,page:UInt32=1):XIVAPI::Dataclasses::Page(Dataclasses::FreeCompanyProfile)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Search the Lodestone API for Free Companies with a given name.
-Optionally, search specific servers.</p></div>
+        <div class="doc">
+          
+          <p>Search the Lodestone API for Free Companies with a given name.
+Optionally, search specific servers.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/client/free_company.cr#L9" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/client/free_company.cr#L9" target="_blank">View source</a>]
         
       </div>
     </div>

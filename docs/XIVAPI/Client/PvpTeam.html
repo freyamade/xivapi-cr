@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.28.0">
+<meta name="generator" content="Crystal Docs 0.31.1">
 
 
 <link href="../../css/style.css" rel="stylesheet" type="text/css">
@@ -516,7 +516,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/client/pvp_team.cr#L4" target="_blank">
+      <a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/client/pvp_team.cr#L4" target="_blank">
         client/pvp_team.cr
       </a>
     
@@ -535,14 +535,14 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#pvp_team%28id%3AString%29%3ADataclasses%3A%3APvpTeamResponse-instance-method" class="signature"><strong>#pvp_team</strong>(id : String) : Dataclasses::PvpTeamResponse</a>
+        <a href="#pvp_team(id:String):Dataclasses::PvpTeamResponse-instance-method" class="signature"><strong>#pvp_team</strong>(id : String) : Dataclasses::PvpTeamResponse</a>
         
           <div class="summary"><p>Retrieve the details of the PvpTeam with the given Lodestone ID.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#pvp_team_search%28name%3AString%2Cserver%3AString%3D%26quot%3B%26quot%3B%2Cpage%3AUInt32%3D1%29%3AXIVAPI%3A%3ADataclasses%3A%3APage%28Dataclasses%3A%3APvpTeamProfile%29-instance-method" class="signature"><strong>#pvp_team_search</strong>(name : String, server : String = <span class="s">&quot;&quot;</span>, page : UInt32 = <span class="n">1</span>) : XIVAPI::Dataclasses::Page(Dataclasses::PvpTeamProfile)</a>
+        <a href="#pvp_team_search(name:String,server:String=&quot;&quot;,page:UInt32=1):XIVAPI::Dataclasses::Page(Dataclasses::PvpTeamProfile)-instance-method" class="signature"><strong>#pvp_team_search</strong>(name : String, server : String = <span class="s">&quot;&quot;</span>, page : UInt32 = <span class="n">1</span>) : XIVAPI::Dataclasses::Page(Dataclasses::PvpTeamProfile)</a>
         
           <div class="summary"><p>Search the Lodestone API for PvP Teams with a given name.</p></div>
         
@@ -570,15 +570,18 @@
         
         def <strong>pvp_team</strong>(id : String) : <a href="../../XIVAPI/Dataclasses/PvpTeamResponse.html">Dataclasses::PvpTeamResponse</a>
 
-        <a class="method-permalink" href="#pvp_team%28id%3AString%29%3ADataclasses%3A%3APvpTeamResponse-instance-method">#</a>
+        <a class="method-permalink" href="#pvp_team(id:String):Dataclasses::PvpTeamResponse-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Retrieve the details of the PvpTeam with the given Lodestone ID.</p></div>
+        <div class="doc">
+          
+          <p>Retrieve the details of the PvpTeam with the given Lodestone ID.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/client/pvp_team.cr#L27" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/client/pvp_team.cr#L27" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -588,18 +591,21 @@
         
         def <strong>pvp_team_search</strong>(name : String, server : String = <span class="s">&quot;&quot;</span>, page : UInt32 = <span class="n">1</span>) : <a href="../../XIVAPI/Dataclasses/Page.html">XIVAPI::Dataclasses::Page</a>(<a href="../../XIVAPI/Dataclasses/PvpTeamProfile.html">Dataclasses::PvpTeamProfile</a>)
 
-        <a class="method-permalink" href="#pvp_team_search%28name%3AString%2Cserver%3AString%3D%26quot%3B%26quot%3B%2Cpage%3AUInt32%3D1%29%3AXIVAPI%3A%3ADataclasses%3A%3APage%28Dataclasses%3A%3APvpTeamProfile%29-instance-method">#</a>
+        <a class="method-permalink" href="#pvp_team_search(name:String,server:String=&quot;&quot;,page:UInt32=1):XIVAPI::Dataclasses::Page(Dataclasses::PvpTeamProfile)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Search the Lodestone API for PvP Teams with a given name.
+        <div class="doc">
+          
+          <p>Search the Lodestone API for PvP Teams with a given name.
 Optionally, search specific servers.</p>
 
-<p><span class="flag purple">NOTE</span>  This method isn't fully tested, since any requests we made to the endpoint returned no results.</p></div>
+<p><span class="flag purple">NOTE</span>  This method isn't fully tested, since any requests we made to the endpoint returned no results.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/client/pvp_team.cr#L10" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/client/pvp_team.cr#L10" target="_blank">View source</a>]
         
       </div>
     </div>

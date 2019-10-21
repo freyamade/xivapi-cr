@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.28.0">
+<meta name="generator" content="Crystal Docs 0.31.1">
 
 
 <link href="../../css/style.css" rel="stylesheet" type="text/css">
@@ -515,7 +515,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/other/lore.cr#L26" target="_blank">
+      <a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/dataclasses/other/lore.cr#L26" target="_blank">
         dataclasses/other/lore.cr
       </a>
     
@@ -530,7 +530,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28__temp_857%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_857 : JSON::PullParser)</a>
+        <a href="#new(__temp_857:JSON::PullParser)-class-method" class="signature"><strong>.new</strong>(__temp_857 : JSON::PullParser)</a>
         
       </li>
     
@@ -544,67 +544,67 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#context%3AString-instance-method" class="signature"><strong>#context</strong> : String</a>
+        <a href="#context:String-instance-method" class="signature"><strong>#context</strong> : String</a>
         
           <div class="summary"><p>A String identifying the context that the piece of text was found in.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#context%3D%28_context%3AString%29-instance-method" class="signature"><strong>#context=</strong>(_context : String)</a>
+        <a href="#context=(_context:String)-instance-method" class="signature"><strong>#context=</strong>(_context : String)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#data%3AXIVAPI%3A%3ADataclasses%3A%3ALoreData%3F-instance-method" class="signature"><strong>#data</strong> : XIVAPI::Dataclasses::LoreData?</a>
+        <a href="#data:XIVAPI::Dataclasses::LoreData?-instance-method" class="signature"><strong>#data</strong> : XIVAPI::Dataclasses::LoreData?</a>
         
           <div class="summary"><p>Extra data about the piece of Lore, tying it to another endpoint in the API.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#data%3D%28_data%3A%3A%3AUnion%28LoreData%2CNil%29%29-instance-method" class="signature"><strong>#data=</strong>(_data : ::Union(LoreData, Nil))</a>
+        <a href="#data=(_data:::Union(LoreData,Nil))-instance-method" class="signature"><strong>#data=</strong>(_data : ::Union(LoreData, Nil))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#source%3AString-instance-method" class="signature"><strong>#source</strong> : String</a>
+        <a href="#source:String-instance-method" class="signature"><strong>#source</strong> : String</a>
         
           <div class="summary"><p>The name of the source of the piece of Lore.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#source%3D%28_source%3AString%29-instance-method" class="signature"><strong>#source=</strong>(_source : String)</a>
+        <a href="#source=(_source:String)-instance-method" class="signature"><strong>#source=</strong>(_source : String)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#source_id%3AUInt64-instance-method" class="signature"><strong>#source_id</strong> : UInt64</a>
+        <a href="#source_id:UInt64-instance-method" class="signature"><strong>#source_id</strong> : UInt64</a>
         
           <div class="summary"><p>The ID of the source.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#source_id%3D%28_source_id%3AUInt64%29-instance-method" class="signature"><strong>#source_id=</strong>(_source_id : UInt64)</a>
+        <a href="#source_id=(_source_id:UInt64)-instance-method" class="signature"><strong>#source_id=</strong>(_source_id : UInt64)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#text%3AString-instance-method" class="signature"><strong>#text</strong> : String</a>
+        <a href="#text:String-instance-method" class="signature"><strong>#text</strong> : String</a>
         
           <div class="summary"><p>The text of the Lore item.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#text%3D%28_text%3AString%29-instance-method" class="signature"><strong>#text=</strong>(_text : String)</a>
+        <a href="#text=(_text:String)-instance-method" class="signature"><strong>#text=</strong>(_text : String)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method" class="signature"><strong>#to_json</strong>(json : JSON::Builder)</a>
+        <a href="#to_json(json:JSON::Builder)-instance-method" class="signature"><strong>#to_json</strong>(json : JSON::Builder)</a>
         
       </li>
     
@@ -646,7 +646,7 @@
         
         def self.<strong>new</strong>(__temp_857 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28__temp_857%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new(__temp_857:JSON::PullParser)-class-method">#</a>
       </div>
       
       <br/>
@@ -667,15 +667,18 @@
         
         def <strong>context</strong> : String
 
-        <a class="method-permalink" href="#context%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#context:String-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>A String identifying the context that the piece of text was found in.</p></div>
+        <div class="doc">
+          
+          <p>A String identifying the context that the piece of text was found in.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/other/lore.cr#L36" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/dataclasses/other/lore.cr#L36" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -685,7 +688,7 @@
         
         def <strong>context=</strong>(_context : String)
 
-        <a class="method-permalink" href="#context%3D%28_context%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#context=(_context:String)-instance-method">#</a>
       </div>
       
       <br/>
@@ -699,15 +702,18 @@
         
         def <strong>data</strong> : <a href="../../XIVAPI/Dataclasses/LoreData.html">XIVAPI::Dataclasses::LoreData</a>?
 
-        <a class="method-permalink" href="#data%3AXIVAPI%3A%3ADataclasses%3A%3ALoreData%3F-instance-method">#</a>
+        <a class="method-permalink" href="#data:XIVAPI::Dataclasses::LoreData?-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Extra data about the piece of Lore, tying it to another endpoint in the API.</p></div>
+        <div class="doc">
+          
+          <p>Extra data about the piece of Lore, tying it to another endpoint in the API.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/other/lore.cr#L38" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/dataclasses/other/lore.cr#L38" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -717,7 +723,7 @@
         
         def <strong>data=</strong>(_data : ::Union(<a href="../../XIVAPI/Dataclasses/LoreData.html">LoreData</a>, Nil))
 
-        <a class="method-permalink" href="#data%3D%28_data%3A%3A%3AUnion%28LoreData%2CNil%29%29-instance-method">#</a>
+        <a class="method-permalink" href="#data=(_data:::Union(LoreData,Nil))-instance-method">#</a>
       </div>
       
       <br/>
@@ -731,15 +737,18 @@
         
         def <strong>source</strong> : String
 
-        <a class="method-permalink" href="#source%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#source:String-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>The name of the source of the piece of Lore.</p></div>
+        <div class="doc">
+          
+          <p>The name of the source of the piece of Lore.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/other/lore.cr#L40" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/dataclasses/other/lore.cr#L40" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -749,7 +758,7 @@
         
         def <strong>source=</strong>(_source : String)
 
-        <a class="method-permalink" href="#source%3D%28_source%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#source=(_source:String)-instance-method">#</a>
       </div>
       
       <br/>
@@ -763,15 +772,18 @@
         
         def <strong>source_id</strong> : UInt64
 
-        <a class="method-permalink" href="#source_id%3AUInt64-instance-method">#</a>
+        <a class="method-permalink" href="#source_id:UInt64-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>The ID of the source.</p></div>
+        <div class="doc">
+          
+          <p>The ID of the source.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/other/lore.cr#L42" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/dataclasses/other/lore.cr#L42" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -781,7 +793,7 @@
         
         def <strong>source_id=</strong>(_source_id : UInt64)
 
-        <a class="method-permalink" href="#source_id%3D%28_source_id%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#source_id=(_source_id:UInt64)-instance-method">#</a>
       </div>
       
       <br/>
@@ -795,15 +807,18 @@
         
         def <strong>text</strong> : String
 
-        <a class="method-permalink" href="#text%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#text:String-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>The text of the Lore item.</p></div>
+        <div class="doc">
+          
+          <p>The text of the Lore item.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/other/lore.cr#L44" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/dataclasses/other/lore.cr#L44" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -813,7 +828,7 @@
         
         def <strong>text=</strong>(_text : String)
 
-        <a class="method-permalink" href="#text%3D%28_text%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#text=(_text:String)-instance-method">#</a>
       </div>
       
       <br/>
@@ -827,7 +842,7 @@
         
         def <strong>to_json</strong>(json : JSON::Builder)
 
-        <a class="method-permalink" href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method">#</a>
+        <a class="method-permalink" href="#to_json(json:JSON::Builder)-instance-method">#</a>
       </div>
       
       <br/>

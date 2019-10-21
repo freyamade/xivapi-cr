@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.28.0">
+<meta name="generator" content="Crystal Docs 0.31.1">
 
 
 <link href="../../css/style.css" rel="stylesheet" type="text/css">
@@ -515,7 +515,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/other/info.cr#L30" target="_blank">
+      <a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/dataclasses/other/info.cr#L30" target="_blank">
         dataclasses/other/info.cr
       </a>
     
@@ -530,7 +530,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28__temp_334%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_334 : JSON::PullParser)</a>
+        <a href="#new(__temp_334:JSON::PullParser)-class-method" class="signature"><strong>.new</strong>(__temp_334 : JSON::PullParser)</a>
         
       </li>
     
@@ -544,55 +544,55 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#is_active%3ABool-instance-method" class="signature"><strong>#is_active</strong> : Bool</a>
+        <a href="#is_active:Bool-instance-method" class="signature"><strong>#is_active</strong> : Bool</a>
         
           <div class="summary"><p>A flag stating whether or not the item in question is in the API.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#is_active%3D%28_is_active%3ABool%29-instance-method" class="signature"><strong>#is_active=</strong>(_is_active : Bool)</a>
+        <a href="#is_active=(_is_active:Bool)-instance-method" class="signature"><strong>#is_active=</strong>(_is_active : Bool)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#priority%3AUInt64-instance-method" class="signature"><strong>#priority</strong> : UInt64</a>
+        <a href="#priority:UInt64-instance-method" class="signature"><strong>#priority</strong> : UInt64</a>
         
           <div class="summary"><p>The value of the priority of the item.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#priority%3D%28_priority%3AUInt64%29-instance-method" class="signature"><strong>#priority=</strong>(_priority : UInt64)</a>
+        <a href="#priority=(_priority:UInt64)-instance-method" class="signature"><strong>#priority=</strong>(_priority : UInt64)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#state%3AXIVAPI%3A%3AInfoStates-instance-method" class="signature"><strong>#state</strong> : XIVAPI::InfoStates</a>
+        <a href="#state:XIVAPI::InfoStates-instance-method" class="signature"><strong>#state</strong> : XIVAPI::InfoStates</a>
         
           <div class="summary"><p>The current state of the item.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#state%3D%28_state%3AInfoStates%29-instance-method" class="signature"><strong>#state=</strong>(_state : InfoStates)</a>
+        <a href="#state=(_state:InfoStates)-instance-method" class="signature"><strong>#state=</strong>(_state : InfoStates)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method" class="signature"><strong>#to_json</strong>(json : JSON::Builder)</a>
+        <a href="#to_json(json:JSON::Builder)-instance-method" class="signature"><strong>#to_json</strong>(json : JSON::Builder)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#updated%3ATime-instance-method" class="signature"><strong>#updated</strong> : Time</a>
+        <a href="#updated:Time-instance-method" class="signature"><strong>#updated</strong> : Time</a>
         
           <div class="summary"><p>the time the data was last updated at</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#updated%3D%28_updated%3ATime%29-instance-method" class="signature"><strong>#updated=</strong>(_updated : Time)</a>
+        <a href="#updated=(_updated:Time)-instance-method" class="signature"><strong>#updated=</strong>(_updated : Time)</a>
         
       </li>
     
@@ -634,7 +634,7 @@
         
         def self.<strong>new</strong>(__temp_334 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28__temp_334%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new(__temp_334:JSON::PullParser)-class-method">#</a>
       </div>
       
       <br/>
@@ -655,15 +655,18 @@
         
         def <strong>is_active</strong> : Bool
 
-        <a class="method-permalink" href="#is_active%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#is_active:Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>A flag stating whether or not the item in question is in the API.</p></div>
+        <div class="doc">
+          
+          <p>A flag stating whether or not the item in question is in the API.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/other/info.cr#L39" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/dataclasses/other/info.cr#L39" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -673,7 +676,7 @@
         
         def <strong>is_active=</strong>(_is_active : Bool)
 
-        <a class="method-permalink" href="#is_active%3D%28_is_active%3ABool%29-instance-method">#</a>
+        <a class="method-permalink" href="#is_active=(_is_active:Bool)-instance-method">#</a>
       </div>
       
       <br/>
@@ -687,15 +690,18 @@
         
         def <strong>priority</strong> : UInt64
 
-        <a class="method-permalink" href="#priority%3AUInt64-instance-method">#</a>
+        <a class="method-permalink" href="#priority:UInt64-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>The value of the priority of the item.</p></div>
+        <div class="doc">
+          
+          <p>The value of the priority of the item.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/other/info.cr#L41" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/dataclasses/other/info.cr#L41" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -705,7 +711,7 @@
         
         def <strong>priority=</strong>(_priority : UInt64)
 
-        <a class="method-permalink" href="#priority%3D%28_priority%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#priority=(_priority:UInt64)-instance-method">#</a>
       </div>
       
       <br/>
@@ -719,16 +725,19 @@
         
         def <strong>state</strong> : <a href="../../XIVAPI/InfoStates.html">XIVAPI::InfoStates</a>
 
-        <a class="method-permalink" href="#state%3AXIVAPI%3A%3AInfoStates-instance-method">#</a>
+        <a class="method-permalink" href="#state:XIVAPI::InfoStates-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>The current state of the item.
-Uses the <code><a href="../../XIVAPI/InfoStates.html">InfoStates</a></code> enum.</p></div>
+        <div class="doc">
+          
+          <p>The current state of the item.
+Uses the <code><a href="../../XIVAPI/InfoStates.html">InfoStates</a></code> enum.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/other/info.cr#L44" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/dataclasses/other/info.cr#L44" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -738,7 +747,7 @@ Uses the <code><a href="../../XIVAPI/InfoStates.html">InfoStates</a></code> enum
         
         def <strong>state=</strong>(_state : <a href="../../XIVAPI/InfoStates.html">InfoStates</a>)
 
-        <a class="method-permalink" href="#state%3D%28_state%3AInfoStates%29-instance-method">#</a>
+        <a class="method-permalink" href="#state=(_state:InfoStates)-instance-method">#</a>
       </div>
       
       <br/>
@@ -752,7 +761,7 @@ Uses the <code><a href="../../XIVAPI/InfoStates.html">InfoStates</a></code> enum
         
         def <strong>to_json</strong>(json : JSON::Builder)
 
-        <a class="method-permalink" href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method">#</a>
+        <a class="method-permalink" href="#to_json(json:JSON::Builder)-instance-method">#</a>
       </div>
       
       <br/>
@@ -766,15 +775,18 @@ Uses the <code><a href="../../XIVAPI/InfoStates.html">InfoStates</a></code> enum
         
         def <strong>updated</strong> : Time
 
-        <a class="method-permalink" href="#updated%3ATime-instance-method">#</a>
+        <a class="method-permalink" href="#updated:Time-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>the time the data was last updated at</p></div>
+        <div class="doc">
+          
+          <p>the time the data was last updated at</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/other/info.cr#L46" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/dataclasses/other/info.cr#L46" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -784,7 +796,7 @@ Uses the <code><a href="../../XIVAPI/InfoStates.html">InfoStates</a></code> enum
         
         def <strong>updated=</strong>(_updated : Time)
 
-        <a class="method-permalink" href="#updated%3D%28_updated%3ATime%29-instance-method">#</a>
+        <a class="method-permalink" href="#updated=(_updated:Time)-instance-method">#</a>
       </div>
       
       <br/>
