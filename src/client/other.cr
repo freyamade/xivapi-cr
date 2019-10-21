@@ -159,7 +159,7 @@ module XIVAPI
         "limit" => limit.to_s,
         "ids" => ids.join(",")
       }
-      response = request endpoint params
+      response = request endpoint, params
       begin
         return Dataclasses::Page(Dataclasses::IDIconNameUrl).from_json response
       rescue
@@ -170,7 +170,7 @@ module XIVAPI
     # Retrieve a JSON::Any object of the game data with the given ID
     def read_game_data(index : String, id : Int32) : JSON::Any
       endpoint = "#{index}/#{id}"
-      request endpoint
+      JSON.parse(request endpoint)
     end
 
     # Retrieve an Array of all of the available content that is accessible in the API.

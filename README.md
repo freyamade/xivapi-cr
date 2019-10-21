@@ -481,11 +481,33 @@ Setting the `include_data` parameter to true will make the response also contain
 XIVAPI::Client.new().content
 ```
 
-***NOTE:*** The other Game-Data methods are not currently available, we need to figure out the best way to implement them.
-
 Retrieve an Array of all of the various types of Game Content that are available from the API.
 
 [XIVAPI Docs](https://xivapi.com/docs/Game-Data#content)
+
+```crystal
+XIVAPI::Client.new().list_game_data(
+  index: "",
+  page: Int32 = 1,
+  limit: Int32 = 100,
+  ids: [20]
+)
+```
+
+Retrieve a page of the ID, Icon, Name and URL of all mentioned item IDs, retrieves all items if no id is specified
+
+[XIVAPI Docs](https://xivapi.com/docs/Game-Data#lists)
+
+```crystal
+XIVAPI::Client.new().read_game_data(
+  index: "",
+  id: 1
+)
+```
+
+Retrieve a JSON::Any object of the game data with the given ID
+
+[XIVAPI Docs](https://xivapi.com/docs/Game-Data#data)
 
 #### `patch_list`
 ```crystal
