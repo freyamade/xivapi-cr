@@ -70,12 +70,11 @@ This class can be instantiated as follows;
 
 ```crystal
 require "xivapi-cr"
-client = XIVAPI::Client.new "api_key", "language", poll_rate: 5, staging: true
+client = XIVAPI::Client.new "api_key", "language", staging: true
 ```
 
 All parameters are optional.
 The `language` parameter must be a [supported language](https://xivapi.com/docs/Common-Features#language) for the API.
-`poll_rate` is the number of seconds the Client will wait when attempting to poll cached responses (currently unused).
 `staging` is a flag stating whether you want to interact with the stage API (if true) or the live API (if false).
 
 To add API methods to the Client class, you can import the needed files. For example, importing `xivapi-cr/client/character` will add the character methods to the Client class.
