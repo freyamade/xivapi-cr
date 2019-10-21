@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.28.0">
+<meta name="generator" content="Crystal Docs 0.31.1">
 
 
 <link href="../../css/style.css" rel="stylesheet" type="text/css">
@@ -515,7 +515,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/character/achievements.cr#L7" target="_blank">
+      <a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/dataclasses/character/achievements.cr#L7" target="_blank">
         dataclasses/character/achievements.cr
       </a>
     
@@ -530,7 +530,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28__temp_80%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_80 : JSON::PullParser)</a>
+        <a href="#new(__temp_80:JSON::PullParser)-class-method" class="signature"><strong>.new</strong>(__temp_80 : JSON::PullParser)</a>
         
       </li>
     
@@ -544,43 +544,43 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#list%3AArray%28XIVAPI%3A%3ADataclasses%3A%3AAchievement%29-instance-method" class="signature"><strong>#list</strong> : Array(XIVAPI::Dataclasses::Achievement)</a>
+        <a href="#list:Array(XIVAPI::Dataclasses::Achievement)-instance-method" class="signature"><strong>#list</strong> : Array(XIVAPI::Dataclasses::Achievement)</a>
         
           <div class="summary"><p>A list of <code><a href="../../XIVAPI/Dataclasses/Achievement.html">Achievement</a></code> classs that have been achieved by the Character</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#list%3D%28_list%3AArray%28Achievement%29%29-instance-method" class="signature"><strong>#list=</strong>(_list : Array(Achievement))</a>
+        <a href="#list=(_list:Array(Achievement))-instance-method" class="signature"><strong>#list=</strong>(_list : Array(Achievement))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#parse_date%3ATime-instance-method" class="signature"><strong>#parse_date</strong> : Time</a>
+        <a href="#parse_date:Time-instance-method" class="signature"><strong>#parse_date</strong> : Time</a>
         
           <div class="summary"><p>The timestamp of the last parse of the Achievement list for the Character</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#parse_date%3D%28_parse_date%3ATime%29-instance-method" class="signature"><strong>#parse_date=</strong>(_parse_date : Time)</a>
+        <a href="#parse_date=(_parse_date:Time)-instance-method" class="signature"><strong>#parse_date=</strong>(_parse_date : Time)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#points%3AUInt64-instance-method" class="signature"><strong>#points</strong> : UInt64</a>
+        <a href="#points:UInt64-instance-method" class="signature"><strong>#points</strong> : UInt64</a>
         
           <div class="summary"><p>The total number of Achievement points the Character has</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#points%3D%28_points%3AUInt64%29-instance-method" class="signature"><strong>#points=</strong>(_points : UInt64)</a>
+        <a href="#points=(_points:UInt64)-instance-method" class="signature"><strong>#points=</strong>(_points : UInt64)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method" class="signature"><strong>#to_json</strong>(json : JSON::Builder)</a>
+        <a href="#to_json(json:JSON::Builder)-instance-method" class="signature"><strong>#to_json</strong>(json : JSON::Builder)</a>
         
       </li>
     
@@ -622,7 +622,7 @@
         
         def self.<strong>new</strong>(__temp_80 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28__temp_80%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new(__temp_80:JSON::PullParser)-class-method">#</a>
       </div>
       
       <br/>
@@ -643,15 +643,18 @@
         
         def <strong>list</strong> : Array(<a href="../../XIVAPI/Dataclasses/Achievement.html">XIVAPI::Dataclasses::Achievement</a>)
 
-        <a class="method-permalink" href="#list%3AArray%28XIVAPI%3A%3ADataclasses%3A%3AAchievement%29-instance-method">#</a>
+        <a class="method-permalink" href="#list:Array(XIVAPI::Dataclasses::Achievement)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>A list of <code><a href="../../XIVAPI/Dataclasses/Achievement.html">Achievement</a></code> classs that have been achieved by the Character</p></div>
+        <div class="doc">
+          
+          <p>A list of <code><a href="../../XIVAPI/Dataclasses/Achievement.html">Achievement</a></code> classs that have been achieved by the Character</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/character/achievements.cr#L15" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/dataclasses/character/achievements.cr#L15" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -661,7 +664,7 @@
         
         def <strong>list=</strong>(_list : Array(<a href="../../XIVAPI/Dataclasses/Achievement.html">Achievement</a>))
 
-        <a class="method-permalink" href="#list%3D%28_list%3AArray%28Achievement%29%29-instance-method">#</a>
+        <a class="method-permalink" href="#list=(_list:Array(Achievement))-instance-method">#</a>
       </div>
       
       <br/>
@@ -675,15 +678,18 @@
         
         def <strong>parse_date</strong> : Time
 
-        <a class="method-permalink" href="#parse_date%3ATime-instance-method">#</a>
+        <a class="method-permalink" href="#parse_date:Time-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>The timestamp of the last parse of the Achievement list for the Character</p></div>
+        <div class="doc">
+          
+          <p>The timestamp of the last parse of the Achievement list for the Character</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/character/achievements.cr#L17" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/dataclasses/character/achievements.cr#L17" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -693,7 +699,7 @@
         
         def <strong>parse_date=</strong>(_parse_date : Time)
 
-        <a class="method-permalink" href="#parse_date%3D%28_parse_date%3ATime%29-instance-method">#</a>
+        <a class="method-permalink" href="#parse_date=(_parse_date:Time)-instance-method">#</a>
       </div>
       
       <br/>
@@ -707,15 +713,18 @@
         
         def <strong>points</strong> : UInt64
 
-        <a class="method-permalink" href="#points%3AUInt64-instance-method">#</a>
+        <a class="method-permalink" href="#points:UInt64-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>The total number of Achievement points the Character has</p></div>
+        <div class="doc">
+          
+          <p>The total number of Achievement points the Character has</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/character/achievements.cr#L19" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/dataclasses/character/achievements.cr#L19" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -725,7 +734,7 @@
         
         def <strong>points=</strong>(_points : UInt64)
 
-        <a class="method-permalink" href="#points%3D%28_points%3AUInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#points=(_points:UInt64)-instance-method">#</a>
       </div>
       
       <br/>
@@ -739,7 +748,7 @@
         
         def <strong>to_json</strong>(json : JSON::Builder)
 
-        <a class="method-permalink" href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method">#</a>
+        <a class="method-permalink" href="#to_json(json:JSON::Builder)-instance-method">#</a>
       </div>
       
       <br/>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.28.0">
+<meta name="generator" content="Crystal Docs 0.31.1">
 
 
 <link href="../../css/style.css" rel="stylesheet" type="text/css">
@@ -498,7 +498,7 @@
   <h2>Overview</h2>
 
   <p>Dataclass for the response from the Lodestone Deep Dungeon endpoints.
-Contains a single <code><a href="../../XIVAPI/Dataclasses/DeepDungeonResponse.html#results%3AArray%28XIVAPI%3A%3ADataclasses%3A%3ADeepDungeon%29-instance-method">#results</a></code> key which is the array of <code><a href="../../XIVAPI/Dataclasses/DeepDungeon.html">DeepDungeon</a></code> records.</p>
+Contains a single <code><a href="../../XIVAPI/Dataclasses/DeepDungeonResponse.html#results:Array(XIVAPI::Dataclasses::DeepDungeon)-instance-method">#results</a></code> key which is the array of <code><a href="../../XIVAPI/Dataclasses/DeepDungeon.html">DeepDungeon</a></code> records.</p>
 
 
 
@@ -516,7 +516,7 @@ Contains a single <code><a href="../../XIVAPI/Dataclasses/DeepDungeonResponse.ht
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/lodestone/deep_dungeon_response.cr#L8" target="_blank">
+      <a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/dataclasses/lodestone/deep_dungeon_response.cr#L8" target="_blank">
         dataclasses/lodestone/deep_dungeon_response.cr
       </a>
     
@@ -531,7 +531,7 @@ Contains a single <code><a href="../../XIVAPI/Dataclasses/DeepDungeonResponse.ht
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28__temp_680%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_680 : JSON::PullParser)</a>
+        <a href="#new(__temp_680:JSON::PullParser)-class-method" class="signature"><strong>.new</strong>(__temp_680 : JSON::PullParser)</a>
         
       </li>
     
@@ -545,19 +545,19 @@ Contains a single <code><a href="../../XIVAPI/Dataclasses/DeepDungeonResponse.ht
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#results%3AArray%28XIVAPI%3A%3ADataclasses%3A%3ADeepDungeon%29-instance-method" class="signature"><strong>#results</strong> : Array(XIVAPI::Dataclasses::DeepDungeon)</a>
+        <a href="#results:Array(XIVAPI::Dataclasses::DeepDungeon)-instance-method" class="signature"><strong>#results</strong> : Array(XIVAPI::Dataclasses::DeepDungeon)</a>
         
           <div class="summary"><p>The Array of Deep Dungeon results.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#results%3D%28_results%3AArray%28DeepDungeon%29%29-instance-method" class="signature"><strong>#results=</strong>(_results : Array(DeepDungeon))</a>
+        <a href="#results=(_results:Array(DeepDungeon))-instance-method" class="signature"><strong>#results=</strong>(_results : Array(DeepDungeon))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method" class="signature"><strong>#to_json</strong>(json : JSON::Builder)</a>
+        <a href="#to_json(json:JSON::Builder)-instance-method" class="signature"><strong>#to_json</strong>(json : JSON::Builder)</a>
         
       </li>
     
@@ -599,7 +599,7 @@ Contains a single <code><a href="../../XIVAPI/Dataclasses/DeepDungeonResponse.ht
         
         def self.<strong>new</strong>(__temp_680 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28__temp_680%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new(__temp_680:JSON::PullParser)-class-method">#</a>
       </div>
       
       <br/>
@@ -620,15 +620,18 @@ Contains a single <code><a href="../../XIVAPI/Dataclasses/DeepDungeonResponse.ht
         
         def <strong>results</strong> : Array(<a href="../../XIVAPI/Dataclasses/DeepDungeon.html">XIVAPI::Dataclasses::DeepDungeon</a>)
 
-        <a class="method-permalink" href="#results%3AArray%28XIVAPI%3A%3ADataclasses%3A%3ADeepDungeon%29-instance-method">#</a>
+        <a class="method-permalink" href="#results:Array(XIVAPI::Dataclasses::DeepDungeon)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>The Array of Deep Dungeon results.</p></div>
+        <div class="doc">
+          
+          <p>The Array of Deep Dungeon results.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/lodestone/deep_dungeon_response.cr#L13" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/dataclasses/lodestone/deep_dungeon_response.cr#L13" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -638,7 +641,7 @@ Contains a single <code><a href="../../XIVAPI/Dataclasses/DeepDungeonResponse.ht
         
         def <strong>results=</strong>(_results : Array(<a href="../../XIVAPI/Dataclasses/DeepDungeon.html">DeepDungeon</a>))
 
-        <a class="method-permalink" href="#results%3D%28_results%3AArray%28DeepDungeon%29%29-instance-method">#</a>
+        <a class="method-permalink" href="#results=(_results:Array(DeepDungeon))-instance-method">#</a>
       </div>
       
       <br/>
@@ -652,7 +655,7 @@ Contains a single <code><a href="../../XIVAPI/Dataclasses/DeepDungeonResponse.ht
         
         def <strong>to_json</strong>(json : JSON::Builder)
 
-        <a class="method-permalink" href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method">#</a>
+        <a class="method-permalink" href="#to_json(json:JSON::Builder)-instance-method">#</a>
       </div>
       
       <br/>

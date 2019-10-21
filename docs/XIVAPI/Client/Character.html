@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.28.0">
+<meta name="generator" content="Crystal Docs 0.31.1">
 
 
 <link href="../../css/style.css" rel="stylesheet" type="text/css">
@@ -516,7 +516,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/client/character.cr#L4" target="_blank">
+      <a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/client/character.cr#L4" target="_blank">
         client/character.cr
       </a>
     
@@ -551,28 +551,28 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#character%28id%3AUInt64%2Cdata%3AEnumerable%28String%29%3D%5B%5DofString%29%3ADataclasses%3A%3ACharacterResponse-instance-method" class="signature"><strong>#character</strong>(id : UInt64, data : Enumerable(String) = <span class="o">[]</span> <span class="k">of</span> <span class="t">String</span>) : Dataclasses::CharacterResponse</a>
+        <a href="#character(id:UInt64,data:Enumerable(String)=[]ofString):Dataclasses::CharacterResponse-instance-method" class="signature"><strong>#character</strong>(id : UInt64, data : Enumerable(String) = <span class="o">[]</span> <span class="k">of</span> <span class="t">String</span>) : Dataclasses::CharacterResponse</a>
         
           <div class="summary"><p>Retrieve the details of the Character with the given Lodestone ID.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#character_search%28name%3AString%2Cserver%3AString%3D%26quot%3B%26quot%3B%2Cpage%3AUInt32%3D1%29%3AXIVAPI%3A%3ADataclasses%3A%3APage%28Dataclasses%3A%3ACharacterSummary%29-instance-method" class="signature"><strong>#character_search</strong>(name : String, server : String = <span class="s">&quot;&quot;</span>, page : UInt32 = <span class="n">1</span>) : XIVAPI::Dataclasses::Page(Dataclasses::CharacterSummary)</a>
+        <a href="#character_search(name:String,server:String=&quot;&quot;,page:UInt32=1):XIVAPI::Dataclasses::Page(Dataclasses::CharacterSummary)-instance-method" class="signature"><strong>#character_search</strong>(name : String, server : String = <span class="s">&quot;&quot;</span>, page : UInt32 = <span class="n">1</span>) : XIVAPI::Dataclasses::Page(Dataclasses::CharacterSummary)</a>
         
           <div class="summary"><p>Search the lodestone API for characters with a given name.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#character_update%28id%3AUInt64%29%3AInt32-instance-method" class="signature"><strong>#character_update</strong>(id : UInt64) : Int32</a>
+        <a href="#character_update(id:UInt64):Int32-instance-method" class="signature"><strong>#character_update</strong>(id : UInt64) : Int32</a>
         
           <div class="summary"><p>Send a request to update the Character with the given ID.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#character_verification%28id%3AUInt64%2Ctoken%3AString%3D%26quot%3B%26quot%3B%29%3ADataclasses%3A%3ACharacterVerification-instance-method" class="signature"><strong>#character_verification</strong>(id : UInt64, token : String = <span class="s">&quot;&quot;</span>) : Dataclasses::CharacterVerification</a>
+        <a href="#character_verification(id:UInt64,token:String=&quot;&quot;):Dataclasses::CharacterVerification-instance-method" class="signature"><strong>#character_verification</strong>(id : UInt64, token : String = <span class="s">&quot;&quot;</span>) : Dataclasses::CharacterVerification</a>
         
           <div class="summary"><p>Verify the Character using a token.</p></div>
         
@@ -600,16 +600,19 @@
         
         def <strong>character</strong>(id : UInt64, data : Enumerable(String) = <span class="o">[]</span> <span class="k">of</span> <span class="t">String</span>) : <a href="../../XIVAPI/Dataclasses/CharacterResponse.html">Dataclasses::CharacterResponse</a>
 
-        <a class="method-permalink" href="#character%28id%3AUInt64%2Cdata%3AEnumerable%28String%29%3D%5B%5DofString%29%3ADataclasses%3A%3ACharacterResponse-instance-method">#</a>
+        <a class="method-permalink" href="#character(id:UInt64,data:Enumerable(String)=[]ofString):Dataclasses::CharacterResponse-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Retrieve the details of the Character with the given Lodestone ID.
-Any data fields that are requested will be mapped against the <code><a href="../../XIVAPI/Client/Character.html#CHARACTER_DATA_VALUES">CHARACTER_DATA_VALUES</a></code> variable to ensure only allowed values are sent.</p></div>
+        <div class="doc">
+          
+          <p>Retrieve the details of the Character with the given Lodestone ID.
+Any data fields that are requested will be mapped against the <code><a href="../../XIVAPI/Client/Character.html#CHARACTER_DATA_VALUES">CHARACTER_DATA_VALUES</a></code> variable to ensure only allowed values are sent.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/client/character.cr#L30" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/client/character.cr#L30" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -619,16 +622,19 @@ Any data fields that are requested will be mapped against the <code><a href="../
         
         def <strong>character_search</strong>(name : String, server : String = <span class="s">&quot;&quot;</span>, page : UInt32 = <span class="n">1</span>) : <a href="../../XIVAPI/Dataclasses/Page.html">XIVAPI::Dataclasses::Page</a>(<a href="../../XIVAPI/Dataclasses/CharacterSummary.html">Dataclasses::CharacterSummary</a>)
 
-        <a class="method-permalink" href="#character_search%28name%3AString%2Cserver%3AString%3D%26quot%3B%26quot%3B%2Cpage%3AUInt32%3D1%29%3AXIVAPI%3A%3ADataclasses%3A%3APage%28Dataclasses%3A%3ACharacterSummary%29-instance-method">#</a>
+        <a class="method-permalink" href="#character_search(name:String,server:String=&quot;&quot;,page:UInt32=1):XIVAPI::Dataclasses::Page(Dataclasses::CharacterSummary)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Search the lodestone API for characters with a given name.
-Optionally, search specific servers, add request extra fields.</p></div>
+        <div class="doc">
+          
+          <p>Search the lodestone API for characters with a given name.
+Optionally, search specific servers, add request extra fields.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/client/character.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/client/character.cr#L12" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -638,16 +644,19 @@ Optionally, search specific servers, add request extra fields.</p></div>
         
         def <strong>character_update</strong>(id : UInt64) : Int32
 
-        <a class="method-permalink" href="#character_update%28id%3AUInt64%29%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#character_update(id:UInt64):Int32-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Send a request to update the Character with the given ID.
-A response of 0 indicates that the Character cannot be updated at this time, and a response of 1 indicates a successful request.</p></div>
+        <div class="doc">
+          
+          <p>Send a request to update the Character with the given ID.
+A response of 0 indicates that the Character cannot be updated at this time, and a response of 1 indicates a successful request.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/client/character.cr#L56" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/client/character.cr#L56" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -657,16 +666,19 @@ A response of 0 indicates that the Character cannot be updated at this time, and
         
         def <strong>character_verification</strong>(id : UInt64, token : String = <span class="s">&quot;&quot;</span>) : <a href="../../XIVAPI/Dataclasses/CharacterVerification.html">Dataclasses::CharacterVerification</a>
 
-        <a class="method-permalink" href="#character_verification%28id%3AUInt64%2Ctoken%3AString%3D%26quot%3B%26quot%3B%29%3ADataclasses%3A%3ACharacterVerification-instance-method">#</a>
+        <a class="method-permalink" href="#character_verification(id:UInt64,token:String=&quot;&quot;):Dataclasses::CharacterVerification-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Verify the Character using a token.
-This method returns the Character's Bio and a <code>pass</code> flag that states if the supplied token was found in their bio</p></div>
+        <div class="doc">
+          
+          <p>Verify the Character using a token.
+This method returns the Character's Bio and a <code>pass</code> flag that states if the supplied token was found in their bio</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/client/character.cr#L44" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/client/character.cr#L44" target="_blank">View source</a>]
         
       </div>
     </div>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.28.0">
+<meta name="generator" content="Crystal Docs 0.31.1">
 
 
 <link href="../../css/style.css" rel="stylesheet" type="text/css">
@@ -516,7 +516,7 @@ This class will be used to generate custom exception instances.</p>
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/other/exception.cr#L7" target="_blank">
+      <a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/dataclasses/other/exception.cr#L7" target="_blank">
         dataclasses/other/exception.cr
       </a>
     
@@ -531,7 +531,7 @@ This class will be used to generate custom exception instances.</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28__temp_27%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_27 : JSON::PullParser)</a>
+        <a href="#new(__temp_27:JSON::PullParser)-class-method" class="signature"><strong>.new</strong>(__temp_27 : JSON::PullParser)</a>
         
       </li>
     
@@ -545,79 +545,79 @@ This class will be used to generate custom exception instances.</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#debug%3AJSON%3A%3AAny-instance-method" class="signature"><strong>#debug</strong> : JSON::Any</a>
+        <a href="#debug:JSON::Any-instance-method" class="signature"><strong>#debug</strong> : JSON::Any</a>
         
           <div class="summary"><p>Extra arbitrary data that helps the API devs understand bugs.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#debug%3D%28_debug%3AJSON%3A%3AAny%29-instance-method" class="signature"><strong>#debug=</strong>(_debug : JSON::Any)</a>
+        <a href="#debug=(_debug:JSON::Any)-instance-method" class="signature"><strong>#debug=</strong>(_debug : JSON::Any)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#error%3ABool-instance-method" class="signature"><strong>#error</strong> : Bool</a>
+        <a href="#error:Bool-instance-method" class="signature"><strong>#error</strong> : Bool</a>
         
           <div class="summary"><p>A flag stating if the exception was an error or not.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#error%3D%28_error%3ABool%29-instance-method" class="signature"><strong>#error=</strong>(_error : Bool)</a>
+        <a href="#error=(_error:Bool)-instance-method" class="signature"><strong>#error=</strong>(_error : Bool)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#exception_type%3AString-instance-method" class="signature"><strong>#exception_type</strong> : String</a>
+        <a href="#exception_type:String-instance-method" class="signature"><strong>#exception_type</strong> : String</a>
         
           <div class="summary"><p>The name of the exception that was thrown.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#exception_type%3D%28_exception_type%3AString%29-instance-method" class="signature"><strong>#exception_type=</strong>(_exception_type : String)</a>
+        <a href="#exception_type=(_exception_type:String)-instance-method" class="signature"><strong>#exception_type=</strong>(_exception_type : String)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#hash%3AString-instance-method" class="signature"><strong>#hash</strong> : String</a>
+        <a href="#hash:String-instance-method" class="signature"><strong>#hash</strong> : String</a>
         
           <div class="summary"><p>A sha1 trackable hash of the exception.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#hash%3D%28_hash%3AString%29-instance-method" class="signature"><strong>#hash=</strong>(_hash : String)</a>
+        <a href="#hash=(_hash:String)-instance-method" class="signature"><strong>#hash=</strong>(_hash : String)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#message%3AString-instance-method" class="signature"><strong>#message</strong> : String</a>
+        <a href="#message:String-instance-method" class="signature"><strong>#message</strong> : String</a>
         
           <div class="summary"><p>The exception message from the API.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#message%3D%28_message%3AString%29-instance-method" class="signature"><strong>#message=</strong>(_message : String)</a>
+        <a href="#message=(_message:String)-instance-method" class="signature"><strong>#message=</strong>(_message : String)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#subject%3AString-instance-method" class="signature"><strong>#subject</strong> : String</a>
+        <a href="#subject:String-instance-method" class="signature"><strong>#subject</strong> : String</a>
         
           <div class="summary"><p>String indicating the type of exception that was received.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#subject%3D%28_subject%3AString%29-instance-method" class="signature"><strong>#subject=</strong>(_subject : String)</a>
+        <a href="#subject=(_subject:String)-instance-method" class="signature"><strong>#subject=</strong>(_subject : String)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method" class="signature"><strong>#to_json</strong>(json : JSON::Builder)</a>
+        <a href="#to_json(json:JSON::Builder)-instance-method" class="signature"><strong>#to_json</strong>(json : JSON::Builder)</a>
         
       </li>
     
@@ -659,7 +659,7 @@ This class will be used to generate custom exception instances.</p>
         
         def self.<strong>new</strong>(__temp_27 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28__temp_27%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new(__temp_27:JSON::PullParser)-class-method">#</a>
       </div>
       
       <br/>
@@ -680,16 +680,19 @@ This class will be used to generate custom exception instances.</p>
         
         def <strong>debug</strong> : JSON::Any
 
-        <a class="method-permalink" href="#debug%3AJSON%3A%3AAny-instance-method">#</a>
+        <a class="method-permalink" href="#debug:JSON::Any-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Extra arbitrary data that helps the API devs understand bugs.
-Do not code against this classure as it can change at any time.</p></div>
+        <div class="doc">
+          
+          <p>Extra arbitrary data that helps the API devs understand bugs.
+Do not code against this classure as it can change at any time.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/other/exception.cr#L30" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/dataclasses/other/exception.cr#L30" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -699,7 +702,7 @@ Do not code against this classure as it can change at any time.</p></div>
         
         def <strong>debug=</strong>(_debug : JSON::Any)
 
-        <a class="method-permalink" href="#debug%3D%28_debug%3AJSON%3A%3AAny%29-instance-method">#</a>
+        <a class="method-permalink" href="#debug=(_debug:JSON::Any)-instance-method">#</a>
       </div>
       
       <br/>
@@ -713,15 +716,18 @@ Do not code against this classure as it can change at any time.</p></div>
         
         def <strong>error</strong> : Bool
 
-        <a class="method-permalink" href="#error%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#error:Bool-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>A flag stating if the exception was an error or not.</p></div>
+        <div class="doc">
+          
+          <p>A flag stating if the exception was an error or not.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/other/exception.cr#L19" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/dataclasses/other/exception.cr#L19" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -731,7 +737,7 @@ Do not code against this classure as it can change at any time.</p></div>
         
         def <strong>error=</strong>(_error : Bool)
 
-        <a class="method-permalink" href="#error%3D%28_error%3ABool%29-instance-method">#</a>
+        <a class="method-permalink" href="#error=(_error:Bool)-instance-method">#</a>
       </div>
       
       <br/>
@@ -745,15 +751,18 @@ Do not code against this classure as it can change at any time.</p></div>
         
         def <strong>exception_type</strong> : String
 
-        <a class="method-permalink" href="#exception_type%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#exception_type:String-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>The name of the exception that was thrown.</p></div>
+        <div class="doc">
+          
+          <p>The name of the exception that was thrown.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/other/exception.cr#L27" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/dataclasses/other/exception.cr#L27" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -763,7 +772,7 @@ Do not code against this classure as it can change at any time.</p></div>
         
         def <strong>exception_type=</strong>(_exception_type : String)
 
-        <a class="method-permalink" href="#exception_type%3D%28_exception_type%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#exception_type=(_exception_type:String)-instance-method">#</a>
       </div>
       
       <br/>
@@ -777,15 +786,18 @@ Do not code against this classure as it can change at any time.</p></div>
         
         def <strong>hash</strong> : String
 
-        <a class="method-permalink" href="#hash%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#hash:String-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>A sha1 trackable hash of the exception.</p></div>
+        <div class="doc">
+          
+          <p>A sha1 trackable hash of the exception.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/other/exception.cr#L25" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/dataclasses/other/exception.cr#L25" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -795,7 +807,7 @@ Do not code against this classure as it can change at any time.</p></div>
         
         def <strong>hash=</strong>(_hash : String)
 
-        <a class="method-permalink" href="#hash%3D%28_hash%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#hash=(_hash:String)-instance-method">#</a>
       </div>
       
       <br/>
@@ -809,15 +821,18 @@ Do not code against this classure as it can change at any time.</p></div>
         
         def <strong>message</strong> : String
 
-        <a class="method-permalink" href="#message%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#message:String-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>The exception message from the API.</p></div>
+        <div class="doc">
+          
+          <p>The exception message from the API.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/other/exception.cr#L23" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/dataclasses/other/exception.cr#L23" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -827,7 +842,7 @@ Do not code against this classure as it can change at any time.</p></div>
         
         def <strong>message=</strong>(_message : String)
 
-        <a class="method-permalink" href="#message%3D%28_message%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#message=(_message:String)-instance-method">#</a>
       </div>
       
       <br/>
@@ -841,15 +856,18 @@ Do not code against this classure as it can change at any time.</p></div>
         
         def <strong>subject</strong> : String
 
-        <a class="method-permalink" href="#subject%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#subject:String-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>String indicating the type of exception that was received.</p></div>
+        <div class="doc">
+          
+          <p>String indicating the type of exception that was received.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/other/exception.cr#L21" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/dataclasses/other/exception.cr#L21" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -859,7 +877,7 @@ Do not code against this classure as it can change at any time.</p></div>
         
         def <strong>subject=</strong>(_subject : String)
 
-        <a class="method-permalink" href="#subject%3D%28_subject%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#subject=(_subject:String)-instance-method">#</a>
       </div>
       
       <br/>
@@ -873,7 +891,7 @@ Do not code against this classure as it can change at any time.</p></div>
         
         def <strong>to_json</strong>(json : JSON::Builder)
 
-        <a class="method-permalink" href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method">#</a>
+        <a class="method-permalink" href="#to_json(json:JSON::Builder)-instance-method">#</a>
       </div>
       
       <br/>
