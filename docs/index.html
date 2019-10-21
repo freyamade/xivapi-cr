@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.28.0">
+<meta name="generator" content="Crystal Docs 0.31.1">
 
 
 <link href="css/style.css" rel="stylesheet" type="text/css">
@@ -888,11 +888,29 @@ Setting the <code>include_data</code> parameter to true will make the response a
 
 <pre><code class="language-crystal"><span class="t">XIVAPI</span><span class="t">::</span><span class="t">Client</span>.<span class="k">new</span>().content</code></pre>
 
-<p>*<strong>NOTE:</strong>* The other Game-Data methods are not currently available, we need to figure out the best way to implement them.</p>
-
 <p>Retrieve an Array of all of the various types of Game Content that are available from the API.</p>
 
 <p><a href="https://xivapi.com/docs/Game-Data#content" target="_blank">XIVAPI Docs</a></p>
+
+<pre><code class="language-crystal"><span class="t">XIVAPI</span><span class="t">::</span><span class="t">Client</span>.<span class="k">new</span>().list_game_data(
+  index: <span class="s">&quot;&quot;</span>,
+  page: <span class="t">Int32</span> <span class="o">=</span> <span class="n">1</span>,
+  limit: <span class="t">Int32</span> <span class="o">=</span> <span class="n">100</span>,
+  ids: [<span class="n">20</span>]
+)</code></pre>
+
+<p>Retrieve a page of the ID, Icon, Name and URL of all mentioned item IDs, retrieves all items if no id is specified</p>
+
+<p><a href="https://xivapi.com/docs/Game-Data#lists" target="_blank">XIVAPI Docs</a></p>
+
+<pre><code class="language-crystal"><span class="t">XIVAPI</span><span class="t">::</span><span class="t">Client</span>.<span class="k">new</span>().read_game_data(
+  index: <span class="s">&quot;&quot;</span>,
+  id: <span class="n">1</span>
+)</code></pre>
+
+<p>Retrieve a JSON::Any object of the game data with the given ID</p>
+
+<p><a href="https://xivapi.com/docs/Game-Data#data" target="_blank">XIVAPI Docs</a></p>
 
 <h4><code>patch_list</code></h4>
 

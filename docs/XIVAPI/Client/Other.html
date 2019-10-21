@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.28.0">
+<meta name="generator" content="Crystal Docs 0.31.1">
 
 
 <link href="../../css/style.css" rel="stylesheet" type="text/css">
@@ -516,7 +516,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/client/other.cr#L4" target="_blank">
+      <a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/client/other.cr#L4" target="_blank">
         client/other.cr
       </a>
     
@@ -572,28 +572,42 @@ The default is <code>asc</code>, and providing an invalid value to the search me
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#content%3AArray%28String%29-instance-method" class="signature"><strong>#content</strong> : Array(String)</a>
+        <a href="#content:Array(String)-instance-method" class="signature"><strong>#content</strong> : Array(String)</a>
         
           <div class="summary"><p>Retrieve an Array of all of the available content that is accessible in the API.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#lore%28string%3AString%3D%26quot%3B%26quot%3B%2Cstring_algo%3AString%3D%26quot%3Bwildcard%26quot%3B%2Cstring_column%3AString%3D%26quot%3B%26quot%3B%2Cfilters%3AArray%28String%29%3D%5B%5DofString%2Cindexes%3AArray%28String%29%3D%5B%5DofString%2Csort_field%3AString%3D%26quot%3B%26quot%3B%2Csort_order%3AString%3D%26quot%3Basc%26quot%3B%2Cpage%3AInt32%3D1%2Climit%3AInt32%3D50%2Cinclude_data%3ABool%3Dfalse%29%3AXIVAPI%3A%3ADataclasses%3A%3APage%28Dataclasses%3A%3ALore%29-instance-method" class="signature"><strong>#lore</strong>(string : String = <span class="s">&quot;&quot;</span>, string_algo : String = <span class="s">&quot;wildcard&quot;</span>, string_column : String = <span class="s">&quot;&quot;</span>, filters : Array(String) = <span class="o">[]</span> <span class="k">of</span> <span class="t">String</span>, indexes : Array(String) = <span class="o">[]</span> <span class="k">of</span> <span class="t">String</span>, sort_field : String = <span class="s">&quot;&quot;</span>, sort_order : String = <span class="s">&quot;asc&quot;</span>, page : Int32 = <span class="n">1</span>, limit : Int32 = <span class="n">50</span>, include_data : Bool = <span class="n">false</span>) : XIVAPI::Dataclasses::Page(Dataclasses::Lore)</a>
+        <a href="#list_game_data(index:String,page:Int32=1,limit:Int32=100,ids:Array(Int32)=[]ofInt32):XIVAPI::Dataclasses::Page(Dataclasses::IDIconNameUrl)-instance-method" class="signature"><strong>#list_game_data</strong>(index : String, page : Int32 = <span class="n">1</span>, limit : Int32 = <span class="n">100</span>, ids : Array(Int32) = <span class="o">[]</span> <span class="k">of</span> <span class="t">Int32</span>) : XIVAPI::Dataclasses::Page(Dataclasses::IDIconNameUrl)</a>
+        
+          <div class="summary"><p>List ids of game data of a specific category</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#lore(string:String=&quot;&quot;,string_algo:String=&quot;wildcard&quot;,string_column:String=&quot;&quot;,filters:Array(String)=[]ofString,indexes:Array(String)=[]ofString,sort_field:String=&quot;&quot;,sort_order:String=&quot;asc&quot;,page:Int32=1,limit:Int32=50,include_data:Bool=false):XIVAPI::Dataclasses::Page(Dataclasses::Lore)-instance-method" class="signature"><strong>#lore</strong>(string : String = <span class="s">&quot;&quot;</span>, string_algo : String = <span class="s">&quot;wildcard&quot;</span>, string_column : String = <span class="s">&quot;&quot;</span>, filters : Array(String) = <span class="o">[]</span> <span class="k">of</span> <span class="t">String</span>, indexes : Array(String) = <span class="o">[]</span> <span class="k">of</span> <span class="t">String</span>, sort_field : String = <span class="s">&quot;&quot;</span>, sort_order : String = <span class="s">&quot;asc&quot;</span>, page : Int32 = <span class="n">1</span>, limit : Int32 = <span class="n">50</span>, include_data : Bool = <span class="n">false</span>) : XIVAPI::Dataclasses::Page(Dataclasses::Lore)</a>
         
           <div class="summary"><p>Search the API for Lore entries.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#patch_list%3AArray%28Dataclasses%3A%3APatch%29-instance-method" class="signature"><strong>#patch_list</strong> : Array(Dataclasses::Patch)</a>
+        <a href="#patch_list:Array(Dataclasses::Patch)-instance-method" class="signature"><strong>#patch_list</strong> : Array(Dataclasses::Patch)</a>
         
           <div class="summary"><p>Retrieve an Array of <code>Patch</code> structs, providing data on each game patch XIV has had.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#search%28string%3AString%3D%26quot%3B%26quot%3B%2Cstring_algo%3AString%3D%26quot%3Bwildcard%26quot%3B%2Cstring_column%3AString%3D%26quot%3B%26quot%3B%2Cfilters%3AArray%28String%29%3D%5B%5DofString%2Cindexes%3AArray%28String%29%3D%5B%5DofString%2Csort_field%3AString%3D%26quot%3B%26quot%3B%2Csort_order%3AString%3D%26quot%3Basc%26quot%3B%2Cpage%3AInt32%3D1%2Climit%3AInt32%3D50%29%3AXIVAPI%3A%3ADataclasses%3A%3APage%28Dataclasses%3A%3ASearchResult%29-instance-method" class="signature"><strong>#search</strong>(string : String = <span class="s">&quot;&quot;</span>, string_algo : String = <span class="s">&quot;wildcard&quot;</span>, string_column : String = <span class="s">&quot;&quot;</span>, filters : Array(String) = <span class="o">[]</span> <span class="k">of</span> <span class="t">String</span>, indexes : Array(String) = <span class="o">[]</span> <span class="k">of</span> <span class="t">String</span>, sort_field : String = <span class="s">&quot;&quot;</span>, sort_order : String = <span class="s">&quot;asc&quot;</span>, page : Int32 = <span class="n">1</span>, limit : Int32 = <span class="n">50</span>) : XIVAPI::Dataclasses::Page(Dataclasses::SearchResult)</a>
+        <a href="#read_game_data(index:String,id:Int32):JSON::Any-instance-method" class="signature"><strong>#read_game_data</strong>(index : String, id : Int32) : JSON::Any</a>
+        
+          <div class="summary"><p>Retrieve a JSON::Any object of the game data with the given ID</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#search(string:String=&quot;&quot;,string_algo:String=&quot;wildcard&quot;,string_column:String=&quot;&quot;,filters:Array(String)=[]ofString,indexes:Array(String)=[]ofString,sort_field:String=&quot;&quot;,sort_order:String=&quot;asc&quot;,page:Int32=1,limit:Int32=50):XIVAPI::Dataclasses::Page(Dataclasses::SearchResult)-instance-method" class="signature"><strong>#search</strong>(string : String = <span class="s">&quot;&quot;</span>, string_algo : String = <span class="s">&quot;wildcard&quot;</span>, string_column : String = <span class="s">&quot;&quot;</span>, filters : Array(String) = <span class="o">[]</span> <span class="k">of</span> <span class="t">String</span>, indexes : Array(String) = <span class="o">[]</span> <span class="k">of</span> <span class="t">String</span>, sort_field : String = <span class="s">&quot;&quot;</span>, sort_order : String = <span class="s">&quot;asc&quot;</span>, page : Int32 = <span class="n">1</span>, limit : Int32 = <span class="n">50</span>) : XIVAPI::Dataclasses::Page(Dataclasses::SearchResult)</a>
         
           <div class="summary"><p>Search the API for anything you need.</p></div>
         
@@ -621,15 +635,39 @@ The default is <code>asc</code>, and providing an invalid value to the search me
         
         def <strong>content</strong> : Array(String)
 
-        <a class="method-permalink" href="#content%3AArray%28String%29-instance-method">#</a>
+        <a class="method-permalink" href="#content:Array(String)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Retrieve an Array of all of the available content that is accessible in the API.</p></div>
+        <div class="doc">
+          
+          <p>Retrieve an Array of all of the available content that is accessible in the API.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/client/other.cr#L155" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/client/other.cr#L177" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="list_game_data(index:String,page:Int32=1,limit:Int32=100,ids:Array(Int32)=[]ofInt32):XIVAPI::Dataclasses::Page(Dataclasses::IDIconNameUrl)-instance-method">
+      <div class="signature">
+        
+        def <strong>list_game_data</strong>(index : String, page : Int32 = <span class="n">1</span>, limit : Int32 = <span class="n">100</span>, ids : Array(Int32) = <span class="o">[]</span> <span class="k">of</span> <span class="t">Int32</span>) : <a href="../../XIVAPI/Dataclasses/Page.html">XIVAPI::Dataclasses::Page</a>(<a href="../../XIVAPI/Dataclasses/IDIconNameUrl.html">Dataclasses::IDIconNameUrl</a>)
+
+        <a class="method-permalink" href="#list_game_data(index:String,page:Int32=1,limit:Int32=100,ids:Array(Int32)=[]ofInt32):XIVAPI::Dataclasses::Page(Dataclasses::IDIconNameUrl)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>List ids of game data of a specific category</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/client/other.cr#L155" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -639,15 +677,18 @@ The default is <code>asc</code>, and providing an invalid value to the search me
         
         def <strong>lore</strong>(string : String = <span class="s">&quot;&quot;</span>, string_algo : String = <span class="s">&quot;wildcard&quot;</span>, string_column : String = <span class="s">&quot;&quot;</span>, filters : Array(String) = <span class="o">[]</span> <span class="k">of</span> <span class="t">String</span>, indexes : Array(String) = <span class="o">[]</span> <span class="k">of</span> <span class="t">String</span>, sort_field : String = <span class="s">&quot;&quot;</span>, sort_order : String = <span class="s">&quot;asc&quot;</span>, page : Int32 = <span class="n">1</span>, limit : Int32 = <span class="n">50</span>, include_data : Bool = <span class="n">false</span>) : <a href="../../XIVAPI/Dataclasses/Page.html">XIVAPI::Dataclasses::Page</a>(<a href="../../XIVAPI/Dataclasses/Lore.html">Dataclasses::Lore</a>)
 
-        <a class="method-permalink" href="#lore%28string%3AString%3D%26quot%3B%26quot%3B%2Cstring_algo%3AString%3D%26quot%3Bwildcard%26quot%3B%2Cstring_column%3AString%3D%26quot%3B%26quot%3B%2Cfilters%3AArray%28String%29%3D%5B%5DofString%2Cindexes%3AArray%28String%29%3D%5B%5DofString%2Csort_field%3AString%3D%26quot%3B%26quot%3B%2Csort_order%3AString%3D%26quot%3Basc%26quot%3B%2Cpage%3AInt32%3D1%2Climit%3AInt32%3D50%2Cinclude_data%3ABool%3Dfalse%29%3AXIVAPI%3A%3ADataclasses%3A%3APage%28Dataclasses%3A%3ALore%29-instance-method">#</a>
+        <a class="method-permalink" href="#lore(string:String=&quot;&quot;,string_algo:String=&quot;wildcard&quot;,string_column:String=&quot;&quot;,filters:Array(String)=[]ofString,indexes:Array(String)=[]ofString,sort_field:String=&quot;&quot;,sort_order:String=&quot;asc&quot;,page:Int32=1,limit:Int32=50,include_data:Bool=false):XIVAPI::Dataclasses::Page(Dataclasses::Lore)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Search the API for Lore entries.</p></div>
+        <div class="doc">
+          
+          <p>Search the API for Lore entries.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/client/other.cr#L125" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/client/other.cr#L125" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -657,15 +698,39 @@ The default is <code>asc</code>, and providing an invalid value to the search me
         
         def <strong>patch_list</strong> : Array(<a href="../../XIVAPI/Dataclasses/Patch.html">Dataclasses::Patch</a>)
 
-        <a class="method-permalink" href="#patch_list%3AArray%28Dataclasses%3A%3APatch%29-instance-method">#</a>
+        <a class="method-permalink" href="#patch_list:Array(Dataclasses::Patch)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Retrieve an Array of <code>Patch</code> structs, providing data on each game patch XIV has had.</p></div>
+        <div class="doc">
+          
+          <p>Retrieve an Array of <code>Patch</code> structs, providing data on each game patch XIV has had.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/client/other.cr#L166" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/client/other.cr#L188" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="read_game_data(index:String,id:Int32):JSON::Any-instance-method">
+      <div class="signature">
+        
+        def <strong>read_game_data</strong>(index : String, id : Int32) : JSON::Any
+
+        <a class="method-permalink" href="#read_game_data(index:String,id:Int32):JSON::Any-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Retrieve a JSON::Any object of the game data with the given ID</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/client/other.cr#L171" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -675,15 +740,18 @@ The default is <code>asc</code>, and providing an invalid value to the search me
         
         def <strong>search</strong>(string : String = <span class="s">&quot;&quot;</span>, string_algo : String = <span class="s">&quot;wildcard&quot;</span>, string_column : String = <span class="s">&quot;&quot;</span>, filters : Array(String) = <span class="o">[]</span> <span class="k">of</span> <span class="t">String</span>, indexes : Array(String) = <span class="o">[]</span> <span class="k">of</span> <span class="t">String</span>, sort_field : String = <span class="s">&quot;&quot;</span>, sort_order : String = <span class="s">&quot;asc&quot;</span>, page : Int32 = <span class="n">1</span>, limit : Int32 = <span class="n">50</span>) : <a href="../../XIVAPI/Dataclasses/Page.html">XIVAPI::Dataclasses::Page</a>(<a href="../../XIVAPI/Dataclasses/SearchResult.html">Dataclasses::SearchResult</a>)
 
-        <a class="method-permalink" href="#search%28string%3AString%3D%26quot%3B%26quot%3B%2Cstring_algo%3AString%3D%26quot%3Bwildcard%26quot%3B%2Cstring_column%3AString%3D%26quot%3B%26quot%3B%2Cfilters%3AArray%28String%29%3D%5B%5DofString%2Cindexes%3AArray%28String%29%3D%5B%5DofString%2Csort_field%3AString%3D%26quot%3B%26quot%3B%2Csort_order%3AString%3D%26quot%3Basc%26quot%3B%2Cpage%3AInt32%3D1%2Climit%3AInt32%3D50%29%3AXIVAPI%3A%3ADataclasses%3A%3APage%28Dataclasses%3A%3ASearchResult%29-instance-method">#</a>
+        <a class="method-permalink" href="#search(string:String=&quot;&quot;,string_algo:String=&quot;wildcard&quot;,string_column:String=&quot;&quot;,filters:Array(String)=[]ofString,indexes:Array(String)=[]ofString,sort_field:String=&quot;&quot;,sort_order:String=&quot;asc&quot;,page:Int32=1,limit:Int32=50):XIVAPI::Dataclasses::Page(Dataclasses::SearchResult)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Search the API for anything you need.</p></div>
+        <div class="doc">
+          
+          <p>Search the API for anything you need.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/client/other.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/client/other.cr#L101" target="_blank">View source</a>]
         
       </div>
     </div>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.28.0">
+<meta name="generator" content="Crystal Docs 0.31.1">
 
 
 <link href="../../css/style.css" rel="stylesheet" type="text/css">
@@ -516,7 +516,7 @@ The Page class is a generic, so that we can use it for all kinds of endpoints.</
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/other/page.cr#L8" target="_blank">
+      <a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/dataclasses/other/page.cr#L8" target="_blank">
         dataclasses/other/page.cr
       </a>
     
@@ -531,7 +531,7 @@ The Page class is a generic, so that we can use it for all kinds of endpoints.</
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28__temp_887%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_887 : JSON::PullParser)</a>
+        <a href="#new(__temp_887:JSON::PullParser)-class-method" class="signature"><strong>.new</strong>(__temp_887 : JSON::PullParser)</a>
         
       </li>
     
@@ -552,7 +552,7 @@ The Page class is a generic, so that we can use it for all kinds of endpoints.</
       </li>
     
       <li class="entry-summary">
-        <a href="#pagination%3D%28_pagination%3APagination%29-instance-method" class="signature"><strong>#pagination=</strong>(_pagination : Pagination)</a>
+        <a href="#pagination=(_pagination:Pagination)-instance-method" class="signature"><strong>#pagination=</strong>(_pagination : Pagination)</a>
         
       </li>
     
@@ -564,12 +564,12 @@ The Page class is a generic, so that we can use it for all kinds of endpoints.</
       </li>
     
       <li class="entry-summary">
-        <a href="#results%3D%28_results%3AArray%28T%29%29-instance-method" class="signature"><strong>#results=</strong>(_results : Array(T))</a>
+        <a href="#results=(_results:Array(T))-instance-method" class="signature"><strong>#results=</strong>(_results : Array(T))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method" class="signature"><strong>#to_json</strong>(json : JSON::Builder)</a>
+        <a href="#to_json(json:JSON::Builder)-instance-method" class="signature"><strong>#to_json</strong>(json : JSON::Builder)</a>
         
       </li>
     
@@ -611,7 +611,7 @@ The Page class is a generic, so that we can use it for all kinds of endpoints.</
         
         def self.<strong>new</strong>(__temp_887 : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28__temp_887%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new(__temp_887:JSON::PullParser)-class-method">#</a>
       </div>
       
       <br/>
@@ -635,12 +635,15 @@ The Page class is a generic, so that we can use it for all kinds of endpoints.</
         <a class="method-permalink" href="#pagination-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>An <code><a href="../../XIVAPI/Dataclasses/Pagination.html">Pagination</a></code> class containing the pagination info for the request.</p></div>
+        <div class="doc">
+          
+          <p>An <code><a href="../../XIVAPI/Dataclasses/Pagination.html">Pagination</a></code> class containing the pagination info for the request.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/other/page.cr#L15" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/dataclasses/other/page.cr#L15" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -650,7 +653,7 @@ The Page class is a generic, so that we can use it for all kinds of endpoints.</
         
         def <strong>pagination=</strong>(_pagination : <a href="../../XIVAPI/Dataclasses/Pagination.html">Pagination</a>)
 
-        <a class="method-permalink" href="#pagination%3D%28_pagination%3APagination%29-instance-method">#</a>
+        <a class="method-permalink" href="#pagination=(_pagination:Pagination)-instance-method">#</a>
       </div>
       
       <br/>
@@ -667,13 +670,16 @@ The Page class is a generic, so that we can use it for all kinds of endpoints.</
         <a class="method-permalink" href="#results-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>An Array of classs for the results from the API.
-The Array will be of the classs of the generic type.</p></div>
+        <div class="doc">
+          
+          <p>An Array of classs for the results from the API.
+The Array will be of the classs of the generic type.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/dataclasses/other/page.cr#L18" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/dataclasses/other/page.cr#L18" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -683,7 +689,7 @@ The Array will be of the classs of the generic type.</p></div>
         
         def <strong>results=</strong>(_results : Array(T))
 
-        <a class="method-permalink" href="#results%3D%28_results%3AArray%28T%29%29-instance-method">#</a>
+        <a class="method-permalink" href="#results=(_results:Array(T))-instance-method">#</a>
       </div>
       
       <br/>
@@ -697,7 +703,7 @@ The Array will be of the classs of the generic type.</p></div>
         
         def <strong>to_json</strong>(json : JSON::Builder)
 
-        <a class="method-permalink" href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method">#</a>
+        <a class="method-permalink" href="#to_json(json:JSON::Builder)-instance-method">#</a>
       </div>
       
       <br/>

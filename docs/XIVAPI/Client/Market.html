@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.28.0">
+<meta name="generator" content="Crystal Docs 0.31.1">
 
 
 <link href="../../css/style.css" rel="stylesheet" type="text/css">
@@ -516,7 +516,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/client/market.cr#L4" target="_blank">
+      <a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/client/market.cr#L4" target="_blank">
         client/market.cr
       </a>
     
@@ -535,35 +535,35 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#market%28item_id%3AUInt64%2Cserver%3AString%2Cmax_history%3AInt32%3D50%29%3ADataclasses%3A%3AMarketItem-instance-method" class="signature"><strong>#market</strong>(item_id : UInt64, server : String, max_history : Int32 = <span class="n">50</span>) : Dataclasses::MarketItem</a>
+        <a href="#market(item_id:UInt64,server:String,max_history:Int32=50):Dataclasses::MarketItem-instance-method" class="signature"><strong>#market</strong>(item_id : UInt64, server : String, max_history : Int32 = <span class="n">50</span>) : Dataclasses::MarketItem</a>
         
           <div class="summary"><p>Retrieve the details of a specific item on a specific server.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#market%28item_id%3AUInt64%2Cservers%3AArray%28String%29%3D%5B%5DofString%2Cdatacenter%3AString%3D%26quot%3B%26quot%3B%2Cmax_history%3AInt32%3D50%29%3AHash%28String%2CDataclasses%3A%3AMarketItem%29-instance-method" class="signature"><strong>#market</strong>(item_id : UInt64, servers : Array(String) = <span class="o">[]</span> <span class="k">of</span> <span class="t">String</span>, datacenter : String = <span class="s">&quot;&quot;</span>, max_history : Int32 = <span class="n">50</span>) : Hash(String, Dataclasses::MarketItem)</a>
+        <a href="#market(item_id:UInt64,servers:Array(String)=[]ofString,datacenter:String=&quot;&quot;,max_history:Int32=50):Hash(String,Dataclasses::MarketItem)-instance-method" class="signature"><strong>#market</strong>(item_id : UInt64, servers : Array(String) = <span class="o">[]</span> <span class="k">of</span> <span class="t">String</span>, datacenter : String = <span class="s">&quot;&quot;</span>, max_history : Int32 = <span class="n">50</span>) : Hash(String, Dataclasses::MarketItem)</a>
         
           <div class="summary"><p>Retrieve the details of a specific item on multiple servers.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#market%28item_ids%3AArray%28UInt64%29%2Cservers%3AArray%28String%29%3D%5B%5DofString%2Cdatacenter%3AString%3D%26quot%3B%26quot%3B%2Cmax_history%3AInt32%3D50%29%3AArray%28Hash%28String%2CDataclasses%3A%3AMarketItem%29%29-instance-method" class="signature"><strong>#market</strong>(item_ids : Array(UInt64), servers : Array(String) = <span class="o">[]</span> <span class="k">of</span> <span class="t">String</span>, datacenter : String = <span class="s">&quot;&quot;</span>, max_history : Int32 = <span class="n">50</span>) : Array(Hash(String, Dataclasses::MarketItem))</a>
+        <a href="#market(item_ids:Array(UInt64),servers:Array(String)=[]ofString,datacenter:String=&quot;&quot;,max_history:Int32=50):Array(Hash(String,Dataclasses::MarketItem))-instance-method" class="signature"><strong>#market</strong>(item_ids : Array(UInt64), servers : Array(String) = <span class="o">[]</span> <span class="k">of</span> <span class="t">String</span>, datacenter : String = <span class="s">&quot;&quot;</span>, max_history : Int32 = <span class="n">50</span>) : Array(Hash(String, Dataclasses::MarketItem))</a>
         
           <div class="summary"><p>Retrieve the details of an array of items on multiple servers.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#market_search_categories%3AArray%28Dataclasses%3A%3AMarketCategory%29-instance-method" class="signature"><strong>#market_search_categories</strong> : Array(Dataclasses::MarketCategory)</a>
+        <a href="#market_search_categories:Array(Dataclasses::MarketCategory)-instance-method" class="signature"><strong>#market_search_categories</strong> : Array(Dataclasses::MarketCategory)</a>
         
           <div class="summary"><p>Retrieve a list of item categories that can be used for searching on the Market Board.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#sellable_item_ids%3AArray%28UInt64%29-instance-method" class="signature"><strong>#sellable_item_ids</strong> : Array(UInt64)</a>
+        <a href="#sellable_item_ids:Array(UInt64)-instance-method" class="signature"><strong>#sellable_item_ids</strong> : Array(UInt64)</a>
         
           <div class="summary"><p>Retrieve a list of item ids that are sellable on the Market Board.</p></div>
         
@@ -591,16 +591,19 @@
         
         def <strong>market</strong>(item_id : UInt64, server : String, max_history : Int32 = <span class="n">50</span>) : <a href="../../XIVAPI/Dataclasses/MarketItem.html">Dataclasses::MarketItem</a>
 
-        <a class="method-permalink" href="#market%28item_id%3AUInt64%2Cserver%3AString%2Cmax_history%3AInt32%3D50%29%3ADataclasses%3A%3AMarketItem-instance-method">#</a>
+        <a class="method-permalink" href="#market(item_id:UInt64,server:String,max_history:Int32=50):Dataclasses::MarketItem-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Retrieve the details of a specific item on a specific server.
-Specify a <code>max_history</code> to limit the number of historic records returned for the item, defaults to 50.</p></div>
+        <div class="doc">
+          
+          <p>Retrieve the details of a specific item on a specific server.
+Specify a <code>max_history</code> to limit the number of historic records returned for the item, defaults to 50.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/client/market.cr#L9" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/client/market.cr#L9" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -610,19 +613,22 @@ Specify a <code>max_history</code> to limit the number of historic records retur
         
         def <strong>market</strong>(item_id : UInt64, servers : Array(String) = <span class="o">[]</span> <span class="k">of</span> <span class="t">String</span>, datacenter : String = <span class="s">&quot;&quot;</span>, max_history : Int32 = <span class="n">50</span>) : Hash(String, <a href="../../XIVAPI/Dataclasses/MarketItem.html">Dataclasses::MarketItem</a>)
 
-        <a class="method-permalink" href="#market%28item_id%3AUInt64%2Cservers%3AArray%28String%29%3D%5B%5DofString%2Cdatacenter%3AString%3D%26quot%3B%26quot%3B%2Cmax_history%3AInt32%3D50%29%3AHash%28String%2CDataclasses%3A%3AMarketItem%29-instance-method">#</a>
+        <a class="method-permalink" href="#market(item_id:UInt64,servers:Array(String)=[]ofString,datacenter:String=&quot;&quot;,max_history:Int32=50):Hash(String,Dataclasses::MarketItem)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Retrieve the details of a specific item on multiple servers.
+        <div class="doc">
+          
+          <p>Retrieve the details of a specific item on multiple servers.
 Specify a <code>max_history</code> to limit the number of historic records returned for the item, defaults to 50.
 If datacenter is specified, it takes priority over the servers array, and will return data for all of the servers in the chosen datacenter.</p>
 
-<p>The response from this method is a Hash of server name to the item's details.</p></div>
+<p>The response from this method is a Hash of server name to the item's details.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/client/market.cr#L25" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/client/market.cr#L25" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -632,20 +638,23 @@ If datacenter is specified, it takes priority over the servers array, and will r
         
         def <strong>market</strong>(item_ids : Array(UInt64), servers : Array(String) = <span class="o">[]</span> <span class="k">of</span> <span class="t">String</span>, datacenter : String = <span class="s">&quot;&quot;</span>, max_history : Int32 = <span class="n">50</span>) : Array(Hash(String, <a href="../../XIVAPI/Dataclasses/MarketItem.html">Dataclasses::MarketItem</a>))
 
-        <a class="method-permalink" href="#market%28item_ids%3AArray%28UInt64%29%2Cservers%3AArray%28String%29%3D%5B%5DofString%2Cdatacenter%3AString%3D%26quot%3B%26quot%3B%2Cmax_history%3AInt32%3D50%29%3AArray%28Hash%28String%2CDataclasses%3A%3AMarketItem%29%29-instance-method">#</a>
+        <a class="method-permalink" href="#market(item_ids:Array(UInt64),servers:Array(String)=[]ofString,datacenter:String=&quot;&quot;,max_history:Int32=50):Array(Hash(String,Dataclasses::MarketItem))-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Retrieve the details of an array of items on multiple servers.
+        <div class="doc">
+          
+          <p>Retrieve the details of an array of items on multiple servers.
 Specify a <code>max_history</code> to limit the number of historic records returned for the item, defaults to 50.
 If datacenter is specified, it takes priority over the servers array, and will return data for all of the servers in the chosen datacenter.</p>
 
 <p>The response from this method is an Array of Hashes from server names to item details.
-The items in the array match the items in the array of item ids.</p></div>
+The items in the array match the items in the array of item ids.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/client/market.cr#L46" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/client/market.cr#L46" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -655,15 +664,18 @@ The items in the array match the items in the array of item ids.</p></div>
         
         def <strong>market_search_categories</strong> : Array(<a href="../../XIVAPI/Dataclasses/MarketCategory.html">Dataclasses::MarketCategory</a>)
 
-        <a class="method-permalink" href="#market_search_categories%3AArray%28Dataclasses%3A%3AMarketCategory%29-instance-method">#</a>
+        <a class="method-permalink" href="#market_search_categories:Array(Dataclasses::MarketCategory)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Retrieve a list of item categories that can be used for searching on the Market Board.</p></div>
+        <div class="doc">
+          
+          <p>Retrieve a list of item categories that can be used for searching on the Market Board.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/client/market.cr#L74" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/client/market.cr#L74" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -673,15 +685,18 @@ The items in the array match the items in the array of item ids.</p></div>
         
         def <strong>sellable_item_ids</strong> : Array(UInt64)
 
-        <a class="method-permalink" href="#sellable_item_ids%3AArray%28UInt64%29-instance-method">#</a>
+        <a class="method-permalink" href="#sellable_item_ids:Array(UInt64)-instance-method">#</a>
       </div>
       
-        <div class="doc"><p>Retrieve a list of item ids that are sellable on the Market Board.</p></div>
+        <div class="doc">
+          
+          <p>Retrieve a list of item ids that are sellable on the Market Board.</p>
+        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/freyamade/xivapi-cr/blob/6d39175cfcec6b1d1fa4a465c4a854806319546b/src/client/market.cr#L63" target="_blank">View source</a>]
+          [<a href="https://github.com/freyamade/xivapi-cr/blob/7b9a6283532b82c83b7bc8b1702b4de0cc6faf32/src/client/market.cr#L63" target="_blank">View source</a>]
         
       </div>
     </div>
