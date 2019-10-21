@@ -50,18 +50,6 @@ module XIVAPI
         raise Exceptions::XIVAPIException.new(Dataclasses::Exception.from_json response)
       end
     end
-
-    # Send a request to update the Character with the given ID.
-    # A response of 0 indicates that the Character cannot be updated at this time, and a response of 1 indicates a successful request.
-    def character_update(id : UInt64) : Int32
-      endpoint = "character/#{id}/update"
-      response = request endpoint
-      begin
-        return response.to_i
-      rescue
-        raise Exceptions::XIVAPIException.new(Dataclasses::Exception.from_json response)
-      end
-    end
   end
 
   # When this file is required, include the Character module to have access to the commands

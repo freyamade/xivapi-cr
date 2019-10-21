@@ -63,11 +63,5 @@ describe XIVAPI::Client do
       verification = client.character_verification CHARACTER_ID
       verification.id.should eq CHARACTER_ID
     end
-
-    it "can update a Character" do
-      client = XIVAPI::Client.new
-      updated = client.character_update CHARACTER_ID
-      [0_i32, 1_i32].includes?(updated).should be_true
-    end
   end
 end

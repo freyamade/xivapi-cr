@@ -122,17 +122,6 @@ If the token parameter is passed, then the response struct will have the `pass` 
 
 [XIVAPI Docs](https://xivapi.com/docs/Character#verification)
 
-#### `character_update`
-```crystal
-XIVAPI::Client.new().character_update(id: 123456)
-```
-Send a request to update the details in XIVAPI for the chosen character.
-The response from this method will be either a 1 or 0, representing success or failure respectively.
-
-According to the XIVAPI Docs, you can only run this method for a given character once every 12 hours.
-
-[XIVAPI Docs](https://xivapi.com/docs/Character#update)
-
 ### Free Company
 ```crystal
 require "xivapi-cr/client/free_company"
