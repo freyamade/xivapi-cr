@@ -13,7 +13,7 @@ describe XIVAPI::Client do
       page = client.character_search CHARACTER_NAME
       character = page.results[0]
       character.name.should eq CHARACTER_NAME
-      character.server.should eq CHARACTER_SERVER
+      character.server.should contain CHARACTER_SERVER
     end
 
     it "successfully raises an exception if an invalid search is sent" do
@@ -37,31 +37,20 @@ describe XIVAPI::Client do
 
       # Check that the Character returned is the right one
       character_response.character.name.should eq CHARACTER_NAME
-      character_response.character.server.should eq CHARACTER_SERVER
+      character_response.character.server.should contain CHARACTER_SERVER
 
       # Ensure the extra requested data is not nil
       character_response.achievements.should_not be_nil
       character_response.free_company.should_not be_nil
       character_response.free_company_members.should_not be_nil
-      character_response.info.achievements.should_not be_nil
-      character_response.info.free_company.should_not be_nil
-      character_response.info.free_company_members.should_not be_nil
-      character_response.info.friends.should_not be_nil
-
-      # Special handling for the Friends part since I keep my Friends private
-      if character_response.info.friends.not_nil!.state.private?
-        character_response.friends.should be_nil
-      else
-        character_response.friends.should_not be_nil
-      end
 
       # PvpTeam never seems to work for me so idk
     end
 
     it "can verify a Character" do
       client = XIVAPI::Client.new
-      verification = client.character_verification CHARACTER_ID
-      verification.id.should eq CHARACTER_ID
+      verification = client.character_verification CHARACTER_ID, ""
+      verification.should eq true
     end
   end
 end

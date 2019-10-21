@@ -16,7 +16,7 @@ module XIVAPI
         active_class_job: {type: ClassJob, key: "ActiveClassJob"},
         avatar: {type: String, key: "Avatar"},
         bio: {type: String, key: "Bio"},
-        class_jobs: {type: Hash(String, ClassJob), key: "ClassJobs"},
+        class_jobs: {type: Array(ClassJob), key: "ClassJobs"},
         free_company_id: {type: String?, key: "FreeCompanyId"},
         gear_set: {type: GearSet, key: "GearSet"},
         gender: {type: UInt8, key: "Gender"},
@@ -33,7 +33,6 @@ module XIVAPI
         mounts_total: {type: UInt64, key: "MountsTotal"},
         name: {type: String, key: "Name"},
         nameday: {type: String, key: "Nameday"},
-        parse_date: {type: Time, key: "ParseDate", converter: Time::EpochConverter},
         portrait: {type: String, key: "Portrait"},
         pvp_team_id: {type: UInt64?, key: "PvPTeamId"},
         race: {type: IDNameUrl, key: "Race"},
@@ -49,8 +48,7 @@ module XIVAPI
       getter avatar
       # The Lodestone bio of the Character.
       getter bio
-      # A Hash of strings to `ClassJob` classs for all of the Classes and Jobs the Character currently has unlocked.
-      # The keys in this Hash are in the format `#{class_id}_#{job_id}`.
+      # An array of `ClassJob` classes for all of the Classes and Jobs the Character currently has unlocked.
       getter class_jobs
       # The Lodestone ID of the Character's current Free Company
       getter free_company_id
@@ -84,8 +82,6 @@ module XIVAPI
       getter name
       # The Character's nameday
       getter nameday
-      # Timestamp representing the last time the Character's data was pulled from the Lodestone into XIVAPI.
-      getter parse_date
       # URL for the Character's portrait.
       # The portrait is a full body image, whereas the avatar is only a headshot of the Character.
       getter portrait

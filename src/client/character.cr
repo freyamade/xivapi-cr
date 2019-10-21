@@ -40,15 +40,9 @@ module XIVAPI
     end
 
     # Verify the Character using a token.
-    # This method returns the Character's Bio and a `pass` flag that states if the supplied token was found in their bio
-    def character_verification(id : UInt64, token : String = "") : Dataclasses::CharacterVerification
-      endpoint = "character/#{id}/verification"
-      response = request endpoint, {"token" => token}
-      begin
-        return Dataclasses::CharacterVerification.from_json response
-      rescue
-        raise Exceptions::XIVAPIException.new(Dataclasses::Exception.from_json response)
-      end
+    # This method checks that the given token is in the requested User's Bio
+    def character_verification(id : UInt64, token : String) : Bool
+      return character(id).character.bio.includes? token
     end
   end
 
