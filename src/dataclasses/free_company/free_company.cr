@@ -19,7 +19,6 @@ module XIVAPI
         grand_company: {type: String, key: "GrandCompany"},
         id: {type: String, key: "ID"},
         name: {type: String, key: "Name"},
-        parse_date: {type: Time, key: "ParseDate", converter: Time::EpochConverter},
         rank: {type: UInt8, key: "Rank"},
         ranking: {type: FreeCompanyRanking, key: "Ranking"},
         recruitment: {type: String, key: "Recruitment"},
@@ -47,8 +46,6 @@ module XIVAPI
       getter id
       # The Free Company's name
       getter name
-      # Timestamp representing the last time the Free Company's data was pulled from the Lodestone into XIVAPI.
-      getter parse_date
       # Integer rank of the Free Company
       getter rank
       # A `FreeCompanyRanking` class containing the Free Company's rankings.

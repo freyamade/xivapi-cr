@@ -15,10 +15,9 @@ module XIVAPI
     @api_key : String
     @staging : Bool = false
     @language : String = "en"
-    @poll_rate : UInt32
     @url : String = API_URL
 
-    def initialize(@api_key : String = "", language : String = "en", @poll_rate : UInt32 = 5, staging : Bool = false)
+    def initialize(@api_key : String = "", language : String = "en", staging : Bool = false)
       # Use the setter method for language to ensure it's in the array of allowed languages
       self.staging = staging
       self.language = language
@@ -62,7 +61,5 @@ module XIVAPI
     getter staging
     # The current language being used as the default for the requests
     getter language
-    # The rate at which to poll cached requests
-    property poll_rate
   end
 end

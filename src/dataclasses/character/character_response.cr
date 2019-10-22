@@ -1,7 +1,6 @@
 require "json"
 require "./achievements"
 require "./character"
-require "./character_info"
 require "./character_summary"
 require "../free_company"
 require "../pvp_team"
@@ -18,7 +17,6 @@ module XIVAPI
         free_company: {type: FreeCompany?, key: "FreeCompany"},
         free_company_members: {type: Array(CharacterSummary)?, key: "FreeCompanyMembers"},
         friends: {type: Array(CharacterSummary)?, key: "Friends"},
-        info: {type: CharacterInfo, key: "Info"},
         pvp_team: {type: PvpTeam?, key: "PvPTeam"}
       )
       # An `Achievements` class containing all of the Character's Achievements data.
@@ -35,8 +33,6 @@ module XIVAPI
       # An Array of `CharacterSummary` classs with details about the Character's friends.
       # Will be `nil` unless the Friends List data (FR) is requested.
       getter friends
-      # An `Info` class that gives information about the statuses of requested data.
-      getter info
       # A `PvpTeam` class representing the Character's PVP Team.
       # Will be `nil` unless the PVP Team data (PVP) is requested, or if it is not yet in the system.
       getter pvp_team

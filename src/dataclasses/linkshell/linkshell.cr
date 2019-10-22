@@ -1,6 +1,7 @@
 require "json"
-require "./linkshell_info"
 require "../character/character_summary"
+require "../other/pagination"
+require "../utils/name"
 
 module XIVAPI
   module Dataclasses
@@ -8,13 +9,15 @@ module XIVAPI
     class Linkshell
       # define a JSON mapping to create instances of this class
       JSON.mapping(
-        linkshell: {type: Array(CharacterSummary), key: "Linkshell"},
-        info: {type: LinkshellInfo, key: "Info"},
+        id: {type: String, key: "ID"},
+        pagination: {type: Pagination, key: "Pagination"},
+        profile: {type: Name, key: "Profile"},
+        results: {type: Array(CharacterSummary), key: "Results"},
       )
+      # The ID of the Linkshell
+      getter id
       # An Array of `CharacterSummary`instances representing the Characters in the Linkshell.
-      getter linkshell
-      # An `Info` class with details about the request.
-      getter info
+      getter results
     end
   end
 end
