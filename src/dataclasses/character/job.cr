@@ -5,28 +5,26 @@ module XIVAPI
   module Dataclasses
     # Dataclass containing data about a Class or Job
     class Job
-      # define a JSON mapping to create instances of this class
-      JSON.mapping(
-        abbreviation: {type: String, key: "Abbreviation"},
-        class_job_category: {type: IDName?, key: "ClassJobCategory"},
-        id: {type: UInt64, key: "ID"},
-        icon: {type: String, key: "Icon"},
-        name: {type: String, key: "Name"},
-        url: {type: String, key: "Url"},
-      )
+      include JSON::Serializable
       # The abbreviated name of the Class or Job.
-      getter abbreviation
+      @[JSON::Field(key: "Abbreviation")]
+      getter abbreviation : String
       # An `IDName` class representing the category of the Class or Job.
       # Sometimes it is not sent, in which case the field will be nil.
-      getter class_job_category
+      @[JSON::Field(key: "ClassJobCategory")]
+      getter class_job_category : IDName?
       # The XIVAPI ID of the Class or Job.
-      getter id
+      @[JSON::Field(key: "ID")]
+      getter id : UInt64
       # URL to the icon for the Class or Job.
-      getter url
+      @[JSON::Field(key: "Url")]
+      getter url : String
       # The full name of the Class or Job.
-      getter name
+      @[JSON::Field(key: "Name")]
+      getter name : String
       # URL for the XIVAPI page for the Class or Job.
-      getter url
+      @[JSON::Field(key: "Url")]
+      getter url : String
     end
   end
 end

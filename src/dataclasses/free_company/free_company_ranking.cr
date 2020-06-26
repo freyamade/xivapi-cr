@@ -4,15 +4,13 @@ module XIVAPI
   module Dataclasses
     # A class for the ranking data for a Free Company.
     class FreeCompanyRanking
-      # define a JSON mapping to create instances of this class
-      JSON.mapping(
-        monthly: {type: String, key: "Monthly", converter: String::RawConverter},
-        weekly: {type: String, key: "Weekly", converter: String::RawConverter},
-      )
+      include JSON::Serializable
       # The rank for the month for the Free Company.
-      getter monthly
+      @[JSON::Field(key: "Monthly", converter: String::RawConverter)]
+      getter monthly : String
       # The rank for the week for the Free Company.
-      getter weekly
+      @[JSON::Field(key: "Weekly", converter: String::RawConverter)]
+      getter weekly : String
     end
   end
 end

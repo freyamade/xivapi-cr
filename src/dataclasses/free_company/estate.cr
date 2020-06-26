@@ -4,18 +4,16 @@ module XIVAPI
   module Dataclasses
     # Dataclass containing details about a Free Company Estate.
     class Estate
-      # define a JSON mapping to create instances of this class
-      JSON.mapping(
-        greeting: {type: String, key: "Greeting"},
-        name: {type: String, key: "Name"},
-        plot: {type: String, key: "Plot"},
-      )
+      include JSON::Serializable
       # The greeting message for the Estate.
-      getter greeting
+      @[JSON::Field(key: "Greeting")]
+      getter greeting : String
       # The Estate's name.
-      getter name
+      @[JSON::Field(key: "Name")]
+      getter name : String
       # The Estate's plot details.
-      getter plot
+      @[JSON::Field(key: "Plot")]
+      getter plot : String
     end
   end
 end

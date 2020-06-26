@@ -8,27 +8,26 @@ module XIVAPI
     # Dataclass for a set of gears
     class GearSet
       # define a JSON mapping to create instances of this class
-      JSON.mapping(
-        attributes: {type: Array(GearSetAttribute), key: "Attributes"},
-        cls: {type: Job, key: "Class"},
-        gear: {type: Equipment, key: "Gear"},
-        gear_key: {type: String, key: "GearKey"},
-        job: {type: Job, key: "Job"},
-        level: {type: UInt64, key: "Level"},
-      )
+      include JSON::Serializable
       # An array of `GearSetAttribute` classs indicating the various attribute values for the GearSet.
-      getter attributes
+      @[JSON::Field(key: "Attributes")]
+      getter attributes : Array(GearSetAttribute)
       # A `Job` class indicating the Class for the GearSet
-      getter cls
+      @[JSON::Field(key: "Class")]
+      getter cls : Job?
       # An `Equipment` class for the GearSet, indicating what piece of Gear is equipped in each slot on the Character.
-      getter gear
+      @[JSON::Field(key: "Gear")]
+      getter gear : Equipment
       # A string in the form "#{class_id}_#{job_id}" that corresponds with the key for the ClassJob hash in the Character class.
-      getter gear_key
+      @[JSON::Field(key: "GearKey")]
+      getter gear_key : String
       # A `Job` class indicating the Job for the GearSet.
-      getter job
+      @[JSON::Field(key: "Job")]
+      getter job : Job?
       # The level of the GearSet.
       # This is not IL, I'm unsure as to what it refers to.
-      getter level
+      @[JSON::Field(key: "Level")]
+      getter level : UInt64?
     end
   end
 end

@@ -1,7 +1,7 @@
 require "../spec_helper"
 
 # Some Character detail constants that will be handy for the tests
-CHARACTER_NAME   = "Erika Vaincannet"
+CHARACTER_NAME   = "Erika Yukiko"
 CHARACTER_SERVER = "Lich"
 CHARACTER_ID     = 22909725_u64
 
@@ -42,13 +42,15 @@ describe "XIVAPI::Client::Character" do
     character_response.achievements.should_not be_nil
     character_response.free_company.should_not be_nil
     character_response.free_company_members.should_not be_nil
-
+    character_response.minions.should_not be_nil
+    character_response.mounts.should_not be_nil
+    character_response.character.active_class_job.should_not be_nil
     # PvpTeam never seems to work for me so idk
   end
 
   it "can verify a Character" do
     client = XIVAPI::Client.new
-    verification = client.character_verification CHARACTER_ID, ""
+    verification = client.character_verification CHARACTER_ID, "-"
     verification.should eq true
   end
 end

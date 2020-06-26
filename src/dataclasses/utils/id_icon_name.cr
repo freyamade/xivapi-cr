@@ -5,18 +5,16 @@ module XIVAPI
     # A class for a simple combination of ID, icon and name.
     # Used throughout the library in places that need this simple mapping.
     class IDIconName
-      # define a JSON mapping to create instances of this class
-      JSON.mapping(
-        id: {type: UInt64, key: "ID"},
-        icon: {type: String, key: "Icon"},
-        name: {type: String, key: "Name"},
-      )
+      include JSON::Serializable
       # The ID of the item.
-      getter id
+      @[JSON::Field(key: "ID")]
+      getter id : UInt64
       # URL to the icon of the item.
-      getter icon
+      @[JSON::Field(key: "Icon")]
+      getter icon : String
       # The name of item.
-      getter name
+      @[JSON::Field(key: "Name")]
+      getter name : String
     end
   end
 end

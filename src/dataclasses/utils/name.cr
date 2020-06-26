@@ -4,20 +4,15 @@ module XIVAPI
   module Dataclasses
     # Dataclass for data that just contains a Name value.
     class Name
-      # define a JSON mapping to create instances of this class
-      JSON.mapping(
-        name: {type: String, key: "Name"},
-      )
+      include JSON::Serializable
       # The name associated with the data.
-      getter name
+      @[JSON::Field(key: "Name")]
+      getter name : String
     end
 
     # Dataclass for data that just contains a Name value, but with a lowercase 'n' for the key name.
     class NameLowcase
-      # define a JSON mapping to create instances of this class
-      JSON.mapping(
-        name: String,
-      )
+      include JSON::Serializable
       # The name associated with the data.
       getter name
     end

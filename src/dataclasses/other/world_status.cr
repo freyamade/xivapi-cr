@@ -4,15 +4,13 @@ module XIVAPI
   module Dataclasses
     # Dataclass for world status data
     class WorldStatus
-      # define a JSON mapping to create instances of this class
-      JSON.mapping(
-        status: {type: String, key: "Status"},
-        title: {type: String, key: "Title"},
-      )
+      include JSON::Serializable
       # String containing the current status of the world
-      getter status
+      @[JSON::Field(key: "Status")]
+      getter status : String
       # Name of the world
-      getter title
+      @[JSON::Field(key: "Title")]
+      getter title : String
     end
   end
 end
