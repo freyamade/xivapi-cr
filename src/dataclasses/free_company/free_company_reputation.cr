@@ -12,7 +12,8 @@ module XIVAPI
       @[JSON::Field(key: "Progress")]
       getter progress : UInt64
       # The current reputation rank with the Grand Company.
-      getter reputation
+      @[JSON::Field(key: "Rank")]
+      getter rank : String
     end
   end
 end
