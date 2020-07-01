@@ -5,29 +5,27 @@ module XIVAPI
     # Dataclass for Exceptions returned from the API.
     # This class will be used to generate custom exception instances.
     class Exception
-      # define a JSON mapping to create instances of this class
-      JSON.mapping(
-        error: {type: Bool, key: "Error"},
-        subject: {type: String, key: "Subject"},
-        message: {type: String, key: "Message"},
-        hash: {type: String, key: "Hash"},
-        exception_type: {type: String, key: "Ex"},
-        debug: {type: JSON::Any, key: "Debug"},
-      )
+      include JSON::Serializable
 
       # A flag stating if the exception was an error or not.
-      getter error
+      @[JSON::Field(key: "Error")]
+      getter error : Bool
       # String indicating the type of exception that was received.
-      getter subject
+      @[JSON::Field(key: "Subject")]
+      getter subject : String
       # The exception message from the API.
-      getter message
+      @[JSON::Field(key: "Message")]
+      getter message : String
       # A sha1 trackable hash of the exception.
-      getter hash
+      @[JSON::Field(key: "Hash")]
+      getter hash : String
       # The name of the exception that was thrown.
-      getter exception_type
+      @[JSON::Field(key: "Ex")]
+      getter exception_type : String
       # Extra arbitrary data that helps the API devs understand bugs.
       # Do not code against this classure as it can change at any time.
-      getter debug
+      @[JSON::Field(key: "Debug")]
+      getter debug : JSON::Any
     end
   end
 end

@@ -7,15 +7,13 @@ module XIVAPI
     # Dataclass containing information about a Character's Grand Company.
     # Contains details about the Company itself as well as the Character's Rank within the Company.
     class GrandCompanyCharacterData
-      # define a JSON mapping to create instances of this class
-      JSON.mapping(
-        company: {type: IDNameUrl, key: "Company"},
-        rank: {type: IDIconNameUrl, key: "Rank"},
-      )
+      include JSON::Serializable
       # An `IDNameUrl` class containing information about the Grand Company.
-      getter company
+      @[JSON::Field(key: "Company")]
+      getter company : IDNameUrl
       # An `IDIconNameUrl` class containing information about the Character's rank within the Grand Company.
-      getter rank
+      @[JSON::Field(key: "Rank")]
+      getter rank : IDIconNameUrl
     end
   end
 end

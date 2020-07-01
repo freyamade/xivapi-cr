@@ -6,50 +6,49 @@ module XIVAPI
     # Dataclass that maps an `CharacterGear` class to each possible equipment slot for a Character.
     class Equipment
       # define a JSON mapping to create instances of this class
-      JSON.mapping(
-        body: {type: CharacterGear?, key: "Body"},
-        bracelets: {type: CharacterGear?, key: "Bracelets"},
-        earrings: {type: CharacterGear?, key: "Earrings"},
-        feet: {type: CharacterGear?, key: "Feet"},
-        hands: {type: CharacterGear?, key: "Hands"},
-        head: {type: CharacterGear?, key: "Head"},
-        legs: {type: CharacterGear?, key: "Legs"},
-        main_hand: {type: CharacterGear?, key: "MainHand"},
-        necklace: {type: CharacterGear?, key: "Necklace"},
-        off_hand: {type: CharacterGear?, key: "OffHand"},
-        ring1: {type: CharacterGear?, key: "Ring1"},
-        ring2: {type: CharacterGear?, key: "Ring2"},
-        soul_crystal: {type: CharacterGear?, key: "SoulCrystal"},
-        waist: {type: CharacterGear?, key: "Waist"},
-      )
+      include JSON::Serializable
       # The `CharacterGear` that is currently equipped in the body slot.
-      getter body
+      @[JSON::Field(key: "Body")]
+      getter body : CharacterGear?
       # The `CharacterGear` that is currently equipped in the bracelets slot.
-      getter bracelets
+      @[JSON::Field(key: "Bracelets")]
+      getter bracelets : CharacterGear?
       # The `CharacterGear` that is currently equipped in the earrings slot.
-      getter earrings
+      @[JSON::Field(key: "Earrings")]
+      getter earrings : CharacterGear?
       # The `CharacterGear` that is currently equipped in the feet slot.
-      getter feet
+      @[JSON::Field(key: "Feet")]
+      getter feet : CharacterGear?
       # The `CharacterGear` that is currently equipped in the hands slot.
-      getter hands
+      @[JSON::Field(key: "Hands")]
+      getter hands : CharacterGear?
       # The `CharacterGear` that is currently equipped in the head slot.
-      getter head
+      @[JSON::Field(key: "Head")]
+      getter head : CharacterGear?
       # The `CharacterGear` that is currently equipped in the legs slot.
-      getter legs
+      @[JSON::Field(key: "Legs")]
+      getter legs : CharacterGear?
       # The `CharacterGear` that is currently equipped in the main hand slot.
-      getter main_hand
+      @[JSON::Field(key: "MainHand")]
+      getter main_hand : CharacterGear?
       # The `CharacterGear` that is currently equipped in the necklace slot.
-      getter necklace
+      @[JSON::Field(key: "Necklace")]
+      getter necklace : CharacterGear?
       # The `CharacterGear` that is currently equipped in the off hand slot.
-      getter off_hand
+      @[JSON::Field(key: "OffHand")]
+      getter off_hand : CharacterGear?
       # The `CharacterGear` that is currently equipped in the ring1 slot.
-      getter ring1
+      @[JSON::Field(key: "Ring1")]
+      getter ring1 : CharacterGear?
       # The `CharacterGear` that is currently equipped in the ring2 slot.
-      getter ring2
+      @[JSON::Field(key: "Ring2")]
+      getter ring2 : CharacterGear?
       # The `CharacterGear` that is currently equipped in the soul crystal slot.
-      getter soul_crystal
+      @[JSON::Field(key: "SoulCrystal")]
+      getter soul_crystal : CharacterGear?
       # The `CharacterGear` that is currently equipped in the waist slot.
-      getter waist
+      @[JSON::Field(key: "Waist")]
+      getter waist : CharacterGear?
     end
   end
 end

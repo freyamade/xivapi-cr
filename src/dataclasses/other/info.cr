@@ -29,21 +29,20 @@ module XIVAPI
     # Dataclass for the availability of a certain piece of data
     class Info
       # define a JSON mapping to create instances of this class
-      JSON.mapping(
-        is_active: {type: Bool, key: "IsActive"},
-        priority: {type: UInt64, key: "Priority"},
-        state: {type: InfoStates, key: "State"},
-        updated: {type: Time, key: "Updated", converter: Time::EpochConverter}
-      )
+      include JSON::Serializable
       # A flag stating whether or not the item in question is in the API.
-      getter is_active
+      @[JSON::Field(key: "IsActive")]
+      getter is_active : Bool
       # The value of the priority of the item.
-      getter priority
+      @[JSON::Field(key: "Priority")]
+      getter priority : UInt64
       # The current state of the item.
       # Uses the `InfoStates` enum.
-      getter state
+      @[JSON::Field(key: "State")]
+      getter state : InfoStates
       # the time the data was last updated at
-      getter updated
+      @[JSON::Field(key: "Updated", converter: Time::EpochConverter)]
+      getter updated : Time
     end
   end
 end

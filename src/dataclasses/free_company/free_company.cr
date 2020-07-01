@@ -8,58 +8,58 @@ module XIVAPI
   module Dataclasses
     # Dataclass containing the information about a Free Company.
     class FreeCompany
-      # define a JSON mapping to create instances of this class
-      JSON.mapping(
-        active: {type: String, key: "Active"},
-        active_member_count: {type: UInt64, key: "ActiveMemberCount"},
-        crest: {type: Array(String), key: "Crest"},
-        estate: {type: Estate, key: "Estate"},
-        focus: {type: Array(FreeCompanySeeking), key: "Focus"},
-        formed: {type: Time, key: "Formed", converter: Time::EpochConverter},
-        grand_company: {type: String, key: "GrandCompany"},
-        id: {type: String, key: "ID"},
-        name: {type: String, key: "Name"},
-        rank: {type: UInt8, key: "Rank"},
-        ranking: {type: FreeCompanyRanking, key: "Ranking"},
-        recruitment: {type: String, key: "Recruitment"},
-        reputation: {type: Array(FreeCompanyReputation), key: "Reputation"},
-        seeking: {type: Array(FreeCompanySeeking), key: "Seeking"},
-        server: {type: String, key: "Server"},
-        slogan: {type: String, key: "Slogan"},
-        tag: {type: String, key: "Tag"}
-      )
+      include JSON::Serializable
       # A string indicating the active times of the Free Company.
-      getter active
+      @[JSON::Field(key: "Active")]
+      getter active : String
       # The number of active members in the Free Company.
-      getter active_member_count
+      @[JSON::Field(key: "ActiveMemberCount")]
+      getter active_member_count : UInt64
       # An array of URLs to the images that make up the crest for the Free Company.
-      getter crest
+      @[JSON::Field(key: "Crest")]
+      getter crest : Array(String)
       # An `Estate` class containing details about the Free Company's Estate.
-      getter estate
+      @[JSON::Field(key: "Estate")]
+      getter estate : Estate
       # An Array of `FreeCompanySeeking` classs indicating what the focuses of the Free Company are.
-      getter focus
+      @[JSON::Field(key: "Focus")]
+      getter focus : Array(FreeCompanySeeking)
       # Timestamp of when the Free Company formed.
-      getter formed
+      @[JSON::Field(key: "Formed", converter: Time::EpochConverter)]
+      getter formed : Time
       # The name of the Free Company's presiding Grand Company
-      getter grand_company
+      @[JSON::Field(key: "GrandCompany")]
+      getter grand_company : String
       # The Lodestone ID of the Free Company
-      getter id
+      @[JSON::Field(key: "ID")]
+      getter id : String
       # The Free Company's name
-      getter name
+      @[JSON::Field(key: "Name")]
+      getter name : String
       # Integer rank of the Free Company
-      getter rank
+      @[JSON::Field(key: "Rank")]
+      getter rank : UInt8
       # A `FreeCompanyRanking` class containing the Free Company's rankings.
-      getter ranking
+      @[JSON::Field(key: "Ranking")]
+      getter ranking : FreeCompanyRanking
       # A string representing the recruitment status of the Free Company.
-      getter recruitment
-      # An Array of `FreeCompanyReputation` classs indicating the Free Company's reputation scores with the Grand Companies.
-      getter reputation
-      # An array of `FreeCompanySeeking` classs indicating what the Free Company is currently seeking in terms of players.
-      getter seeking
+      @[JSON::Field(key: "Recruitment")]
+      getter recruitment : String
+      # An Array of `FreeCompanyReputation` classes indicating the Free Company's reputation scores with the Grand Companies.
+      @[JSON::Field(key: "Reputation")]
+      getter reputation : Array(FreeCompanyReputation)
+      # An array of `FreeCompanySeeking` classes indicating what the Free Company is currently seeking in terms of players.
+      @[JSON::Field(key: "Seeking")]
+      getter seeking : Array(FreeCompanySeeking)
+      # Server the Free Company is in
+      @[JSON::Field(key: "Server")]
+      getter server : String
       # The Free Company's slogan.
-      getter slogan
+      @[JSON::Field(key: "Slogan")]
+      getter slogan : String
       # The Free Company's tag.
-      getter tag
+      @[JSON::Field(key: "Tag")]
+      getter tag : String
     end
   end
 end

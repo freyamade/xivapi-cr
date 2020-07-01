@@ -7,33 +7,32 @@ module XIVAPI
     # This is an abstract level class about the item itself, unrelated to any Character's owned copies of the item.
     class Gear
       # define a JSON mapping to create instances of this class
-      JSON.mapping(
-        class_job_category: {type: IDName, key: "ClassJobCategory"},
-        equip_level: {type: UInt64, key: "LevelEquip"},
-        id: {type: UInt64, key: "ID"},
-        icon: {type: String, key: "Icon"},
-        item_level: {type: UInt64, key: "LevelItem"},
-        name: {type: String, key: "Name"},
-        rarity: {type: UInt64, key: "Rarity"},
-        ui_category: {type: IDName, key: "ItemUICategory"},
-      )
+      include JSON::Serializable
       # An `IDName` class representing the class or job that is required for the Gear.
-      getter class_job_category
+      @[JSON::Field(key: "ClassJobCategory")]
+      getter class_job_category : IDName
       # The minimum level that is required to equip the Gear.
-      getter equip_level
+      @[JSON::Field(key: "LevelEquip")]
+      getter equip_level : UInt64
       # The Lodestone ID of the Gear.
-      getter id
+      @[JSON::Field(key: "ID")]
+      getter id : UInt64
       # A URL to the icon for the Gear.
-      getter icon
+      @[JSON::Field(key: "Icon")]
+      getter icon : String
       # The item level (IL) for the Gear.
-      getter item_level
+      @[JSON::Field(key: "LevelItem")]
+      getter item_level : UInt64
       # The name of the Gear.
-      getter name
+      @[JSON::Field(key: "Name")]
+      getter name : String
       # The rarity value of the Gear
-      getter rarity
+      @[JSON::Field(key: "Rarity")]
+      getter rarity : UInt64
       # An `IDName` class representing the UI Category for the Gear.
       # The UI Category represents what type of Gear the item is, i.e. Body for a piece of body armour.
-      getter ui_category
+      @[JSON::Field(key: "ItemUICategory")]
+      getter ui_category : IDName
     end
   end
 end

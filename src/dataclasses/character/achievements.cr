@@ -5,15 +5,13 @@ module XIVAPI
   module Dataclasses
     # Dataclass for a list of all Achievements earned by a Character, plus some metadata about the list itself.
     class Achievements
-      # define a JSON mapping to create instances of this class
-      JSON.mapping(
-        list: {type: Array(Achievement), key: "List"},
-        points: {type: UInt64, key: "Points"}
-      )
+      include JSON::Serializable
       # A list of `Achievement` classs that have been achieved by the Character
-      getter list
+      @[JSON::Field(key: "List")]
+      getter list : Array(Achievement)
       # The total number of Achievement points the Character has
-      getter points
+      @[JSON::Field(key: "Points")]
+      getter points : UInt64
     end
   end
 end

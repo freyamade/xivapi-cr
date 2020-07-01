@@ -4,24 +4,22 @@ module XIVAPI
   module Dataclasses
     # Dataclass for an Achievement
     class Achievement
-      # define a JSON mapping to create instances of this class
-      JSON.mapping(
-        date: {type: Time, key: "Date", converter: Time::EpochConverter},
-        id: {type: UInt64, key: "ID"},
-        icon: {type: String, key: "Icon"},
-        name: {type: String, key: "Name"},
-        points: {type: UInt64, key: "Points"},
-      )
+      include JSON::Serializable
       # The timestamp of when the Achievement was achieved by the Character
-      getter date
+      @[JSON::Field(key: "Date", converter: Time::EpochConverter)]
+      getter date : Time
       # Lodestone ID of the achievement
-      getter id
+      @[JSON::Field(key: "ID")]
+      getter id : UInt64
       # URL of the Achievement's Icon
-      getter icon
+      @[JSON::Field(key: "Icon")]
+      getter icon : String
       # Name of the Achievement
-      getter name
+      @[JSON::Field(key: "Name")]
+      getter name : String
       # The number of points the Achievement is worth
-      getter points
+      @[JSON::Field(key: "Points")]
+      getter points : UInt64
     end
   end
 end

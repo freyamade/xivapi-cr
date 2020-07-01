@@ -4,18 +4,16 @@ module XIVAPI
   module Dataclasses
     # Dataclass for the data returned from a Linkshell search.
     class LinkshellSearch
-      # define a JSON mapping to create instances of this class
-      JSON.mapping(
-        id: {type: String, key: "ID"},
-        name: {type: String, key: "Name"},
-        server: {type: String, key: "Server"},
-      )
+      include JSON::Serializable
       # The ID of the Linkshell.
-      getter id
+      @[JSON::Field(key: "ID")]
+      getter id : String
       # The name of the Linkshell.
-      getter name
+      @[JSON::Field(key: "Name")]
+      getter name : String
       # The server that the Linkshell is on.
-      getter server
+      @[JSON::Field(key: "Server")]
+      getter server : String
     end
   end
 end

@@ -4,30 +4,28 @@ module XIVAPI
   module Dataclasses
     # A class representing a PvP Team.
     class PvpTeam
-      # define a JSON mapping to create instances of this class
-      JSON.mapping(
-        avatar: {type: String, key: "Avatar"},
-        feast_matches: {type: UInt64, key: "FeastMatches"},
-        id: {type: UInt64, key: "ID"},
-        name: {type: String, key: "Name"},
-        rank: {type: String, key: "Rank"},
-        rank_icon: {type: String, key: "RankIcon"},
-        server: {type: String, key: "Server"},
-      )
+      include JSON::Serializable
       # URL for the avatar for the PvP Team.
-      getter avatar
+      @[JSON::Field(key: "Avatar")]
+      getter avatar : String
       # The number of feast matches that the PvP Team have played.
-      getter feast_matches
+      @[JSON::Field(key: "FeastMatches")]
+      getter feast_matches : UInt64
       # The ID of the PvP Team.
-      getter id
+      @[JSON::Field(key: "ID")]
+      getter id : UInt64
       # The name of the PvP Team.
-      getter name
+      @[JSON::Field(key: "Name")]
+      getter name : String
       # The rank of the PvP Team.
-      getter rank
+      @[JSON::Field(key: "Rank")]
+      getter rank : String
       # URL to the icon of the Pvp Team's rank.
-      getter rank_icon
+      @[JSON::Field(key: "RankIcon")]
+      getter rank_icon : String
       # The name of the server that the PvP Team is on.
-      getter server
+      @[JSON::Field(key: "Server")]
+      getter server : String
     end
   end
 end

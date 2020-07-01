@@ -4,18 +4,16 @@ module XIVAPI
   module Dataclasses
     # A class representing the items in the focus or seeking list of a Free Company.
     class FreeCompanySeeking
-      # define a JSON mapping to create instances of this class
-      JSON.mapping(
-        icon: {type: String, key: "Icon"},
-        name: {type: String, key: "Name"},
-        status: {type: Bool, key: "Status"}
-      )
+      include JSON::Serializable
       # URL of the icon for the focus item.
-      getter icon
+      @[JSON::Field(key: "Icon")]
+      getter icon : String
       # The name of the focus item.
-      getter name
+      @[JSON::Field(key: "Name")]
+      getter name : String
       # A flag stating whether or not the Free Company is focusing on the item.
-      getter status
+      @[JSON::Field(key: "Status")]
+      getter status : Bool
     end
   end
 end

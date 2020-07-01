@@ -5,7 +5,7 @@ module XIVAPI
     # In this file, add methods for retrieving Character data
 
     # A Set of Strings representing the fields that can be requested using the Character endpoint
-    CHARACTER_DATA_VALUES = Set{"AC", "FR", "FC", "FCM", "PVP"}
+    CHARACTER_DATA_VALUES = Set{"AC", "FR", "FC", "FCM", "PVP", "MIMO", "CJ"}
 
     # Search the lodestone API for characters with a given name.
     # Optionally, search specific servers, add request extra fields.

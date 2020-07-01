@@ -11,93 +11,91 @@ module XIVAPI
   module Dataclasses
     # Dataclass containing a Character's data.
     class Character
-      # define a JSON mapping to create instances of this class
-      JSON.mapping(
-        active_class_job: {type: ClassJob, key: "ActiveClassJob"},
-        avatar: {type: String, key: "Avatar"},
-        bio: {type: String, key: "Bio"},
-        class_jobs: {type: Array(ClassJob), key: "ClassJobs"},
-        free_company_id: {type: String?, key: "FreeCompanyId"},
-        gear_set: {type: GearSet, key: "GearSet"},
-        gender: {type: UInt8, key: "Gender"},
-        grand_company: {type: GrandCompanyCharacterData?, key: "GrandCompany"},
-        guardian_deity: {type: GuardianDeity, key: "GuardianDeity"},
-        id: {type: UInt64, key: "ID"},
-        minions: {type: Array(MinionMount), key: "Minions"},
-        minions_count: {type: UInt64, key: "MinionsCount"},
-        minions_progress: {type: String, key: "MinionsProgress", converter: String::RawConverter},
-        minions_total: {type: UInt64, key: "MinionsTotal"},
-        mounts: {type: Array(MinionMount), key: "Mounts"},
-        mounts_count: {type: UInt64, key: "MountsCount"},
-        mounts_progress: {type: String, key: "MountsProgress", converter: String::RawConverter},
-        mounts_total: {type: UInt64, key: "MountsTotal"},
-        name: {type: String, key: "Name"},
-        nameday: {type: String, key: "Nameday"},
-        portrait: {type: String, key: "Portrait"},
-        pvp_team_id: {type: UInt64?, key: "PvPTeamId"},
-        race: {type: IDNameUrl, key: "Race"},
-        server: {type: String, key: "Server"},
-        title: {type: IDIconNameUrl?, key: "Title"},
-        town: {type: IDIconNameUrl, key: "Town"},
-        tribe: {type: IDNameUrl, key: "Tribe"},
-      )
+      include JSON::Serializable
       # A `ClassJob` class representing the Class or Job the Character currently is at the time of the previous XIVAPI update.
-      getter active_class_job
+      @[JSON::Field(key: "ActiveClassJob")]
+      getter active_class_job : ClassJob?
       # URL to the avatar for the Character.
       # The avatar is a headshot of the Character, whereas the portrait is a full body image.
-      getter avatar
+      @[JSON::Field(key: "Avatar")]
+      getter avatar : String
       # The Lodestone bio of the Character.
-      getter bio
+      @[JSON::Field(key: "Bio")]
+      getter bio : String
       # An array of `ClassJob` classes for all of the Classes and Jobs the Character currently has unlocked.
-      getter class_jobs
+      @[JSON::Field(key: "ClassJobs")]
+      getter class_jobs : Array(ClassJob)
       # The Lodestone ID of the Character's current Free Company
-      getter free_company_id
+      @[JSON::Field(key: "FreeCompanyId")]
+      getter free_company_id : String?
       # A `GearSet` class representing the Character's currently equipped Gear Set.
-      getter gear_set
+      @[JSON::Field(key: "GearSet")]
+      getter gear_set : GearSet
       # An integer specifying the Character's gender. 1 is Male, 2 is Female.
-      getter gender
+      @[JSON::Field(key: "Gender")]
+      getter gender : UInt8
       # A `GrandCompanyCharacterData` class containing the Character's Grand Company information.
-      getter grand_company
+      @[JSON::Field(key: "GrandCompany")]
+      getter grand_company : GrandCompanyCharacterData?
       # A `GuardianDeity` class containing the Character's Guardian Deity information.
-      getter guardian_deity
+      @[JSON::Field(key: "GuardianDeity")]
+      getter guardian_deity : GuardianDeity
       # The Lodestone ID of the Character.
-      getter id
+      @[JSON::Field(key: "ID")]
+      getter id : UInt64
       # An Array of `MinionMount` classs representing the Minions owned by the Character.
-      getter minions
+      @[JSON::Field(key: "Minions")]
+      getter minions : Array(MinionMount)
       # An integer value for the number of Minions currently owned by the Character.
-      getter minions_count
+      @[JSON::Field(key: "MinionsCount")]
+      getter minions_count : UInt64
       # A string value indicating the percentage of the total number of Minions that the Character currently owns.
-      getter minions_progress
+      @[JSON::Field(key: "MinionsProgress", converter: String::RawConverter)]
+      getter minions_progress : String
       # An integer representing the total number of Minions currently in XIVAPI.
-      getter minions_total
+      @[JSON::Field(key: "MinionsTotal")]
+      getter minions_total : UInt64
       # An Array of `MinionMount` classs representing the Mounts owned by the Character.
-      getter mounts
+      @[JSON::Field(key: "Mounts")]
+      getter mounts : Array(MinionMount)
       # An integer value for the number of Mounts currently owned by the Character.
-      getter mounts_count
+      @[JSON::Field(key: "MountsCount")]
+      getter mounts_count : UInt64
       # A string value indicating the percentage of the total number of Mounts that the Character currently owns.
-      getter mounts_progress
+      @[JSON::Field(key: "MountsProgress", converter: String::RawConverter)]
+      getter mounts_progress : String
       # An integer representing the total number of Mounts currently in XIVAPI.
-      getter mounts_total
+      @[JSON::Field(key: "MountsTotal")]
+      getter mounts_total : UInt64
       # The Character's name
-      getter name
+      @[JSON::Field(key: "Name")]
+      getter name : String
       # The Character's nameday
-      getter nameday
+      @[JSON::Field(key: "Nameday")]
+      getter nameday : String
       # URL for the Character's portrait.
       # The portrait is a full body image, whereas the avatar is only a headshot of the Character.
-      getter portrait
+      @[JSON::Field(key: "Portrait")]
+      getter portrait : String
       # The Lodestone ID of the Character's PVP Team
-      getter pvp_team_id
+      @[JSON::Field(key: "PvPTeamId")]
+      getter pvp_team_id : UInt64?
       # An `IDNameUrl` class containing the Character's racial information.
-      getter race
+      @[JSON::Field(key: "Race")]
+      getter race : IDNameUrl
       # The Server that the Character is currently in.
-      getter server
+      @[JSON::Field(key: "Server")]
+      getter server : String
       # An `IDIconNameUrl` class containing the details about the Character's current title.
-      getter title
+      @[JSON::Field(key: "Title")]
+      getter title : IDIconNameUrl?
       # An `IDIconNameUrl` class containing the details about the Character's starting town.
-      getter town
+      @[JSON::Field(key: "Town")]
+      getter town : IDIconNameUrl
       # An `IDNameUrl` class containing the details about the Character's race clan.
       # An Icon field is returned from the API but we've found this to normally be null so we have removed it.
-      getter tribe
+      @[JSON::Field(key: "Tribe")]
+      getter tribe : IDNameUrl
     end
   end
 end

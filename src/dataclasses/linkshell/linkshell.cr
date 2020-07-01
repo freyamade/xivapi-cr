@@ -7,17 +7,13 @@ module XIVAPI
   module Dataclasses
     # Dataclass for the details of a Linkshell.
     class Linkshell
-      # define a JSON mapping to create instances of this class
-      JSON.mapping(
-        id: {type: String, key: "ID"},
-        pagination: {type: Pagination, key: "Pagination"},
-        profile: {type: Name, key: "Profile"},
-        results: {type: Array(CharacterSummary), key: "Results"},
-      )
+      include JSON::Serializable
       # The ID of the Linkshell
-      getter id
+      @[JSON::Field(key: "ID")]
+      getter id : String
       # An Array of `CharacterSummary`instances representing the Characters in the Linkshell.
-      getter results
+      @[JSON::Field(key: "Results")]
+      getter results : Array(CharacterSummary)
     end
   end
 end

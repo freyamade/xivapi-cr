@@ -4,18 +4,16 @@ module XIVAPI
   module Dataclasses
     # A class for the reputation data for a Free Company.
     class FreeCompanyReputation
-      # define a JSON mapping to create instances of this class
-      JSON.mapping(
-        name: {type: String, key: "Name"},
-        progress: {type: UInt64, key: "Progress"},
-        rank: {type: String, key: "Rank"},
-      )
+      include JSON::Serializable
       # The name of the Grand Company the reputation value is for.
-      getter name
+      @[JSON::Field(key: "Name")]
+      getter name : String
       # The progress value towards the next rank of reputation.
-      getter progress
+      @[JSON::Field(key: "Progress")]
+      getter progress : UInt64
       # The current reputation rank with the Grand Company.
-      getter reputation
+      @[JSON::Field(key: "Rank")]
+      getter rank : String
     end
   end
 end

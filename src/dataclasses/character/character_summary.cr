@@ -5,32 +5,30 @@ module XIVAPI
     # Dataclass containing minimal data about a Character.
     # This class is used during Character searches, as well as used to represent Character's in another Character's Friend List or Free Company Member List.
     class CharacterSummary
-      # define a JSON mapping to create instances of this class
-      JSON.mapping(
-        avatar: {type: String, key: "Avatar"},
-        feast_matches: {type: UInt64, key: "FeastMatches"},
-        id: {type: UInt64, key: "ID"},
-        name: {type: String, key: "Name"},
-        rank: {type: String?, key: "Rank", converter: String::RawConverter},
-        rank_icon: {type: String?, key: "RankIcon", converter: String::RawConverter},
-        server: {type: String, key: "Server"},
-      )
+      include JSON::Serializable
       # URL of the Character's Avatar.
-      getter avatar
+      @[JSON::Field(key: "Avatar")]
+      getter avatar : String
       # The number of feast matches the character has played.
-      getter feast_matches
+      @[JSON::Field(key: "FeastMatches")]
+      getter feast_matches : UInt64
       # The Lodestone ID of the character.
-      getter id
+      @[JSON::Field(key: "ID")]
+      getter id : UInt64
       # The Character's Name.
-      getter name
+      @[JSON::Field(key: "Name")]
+      getter name : String
       # Unsure what this is, it's null for the characters I could find.
       # It will be returned as a String if it's not nil.
-      getter rank
+      @[JSON::Field(key: "Rank", converter: String::RawConverter)]
+      getter rank : String?
       # Unsure what this is, it's null for the characters I could find.
       # It will be returned as a String if it's not nil.
-      getter rank_icon
+      @[JSON::Field(key: "RankIcon", converter: String::RawConverter)]
+      getter rank_icon : String?
       # The name of the Server the Character is currently on.
-      getter server
+      @[JSON::Field(key: "Server")]
+      getter server : String
     end
   end
 end

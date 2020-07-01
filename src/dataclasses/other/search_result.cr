@@ -5,31 +5,29 @@ module XIVAPI
   module Dataclasses
     # Dataclass for results from the `/search` endpoint
     class SearchResult
-      # define a JSON mapping to create instances of this class
-      JSON.mapping(
-        id: {type: UInt64, key: "ID"},
-        icon: {type: String, key: "Icon"},
-        name: {type: String, key: "Name"},
-        url: {type: String, key: "Url"},
-        url_type: {type: String, key: "UrlType"},
-        datatype: {type: String, key: "_"},
-        score: {type: String, key: "_Score", converter: String::RawConverter},
-      )
+      include JSON::Serializable
 
       # The ID of the item returned from the search results.
-      getter id
+      @[JSON::Field(key: "ID")]
+      getter id : UInt64
       # The URL of the icon for the item.
-      getter icon
+      @[JSON::Field(key: "Icon")]
+      getter icon : String
       # The name of the item.
-      getter name
+      @[JSON::Field(key: "Name")]
+      getter name : String
       # The URL to the XIVAPI page for the item.
-      getter url
+      @[JSON::Field(key: "Url")]
+      getter url : String
       # The type of the URL, without the ID.
-      getter url_type
+      @[JSON::Field(key: "UrlType")]
+      getter url_type : String
       # The name of the type of data that this item is.
-      getter datatype
+      @[JSON::Field(key: "_")]
+      getter datatype : String
       # The score of the item relative to the user's search query.
-      getter score
+      @[JSON::Field(key: "_Score", converter: String::RawConverter)]
+      getter score : String
     end
   end
 end

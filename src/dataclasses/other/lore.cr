@@ -1,47 +1,44 @@
 require "json"
+require "../utils/id_icon_name_url"
 
 module XIVAPI
   module Dataclasses
     # Dataclass for the Data column of the /lore endpoint data
     class LoreData
-      # define a JSON mapping to create instances of this class
-      JSON.mapping(
-        id: {type: UInt64, key: "ID"},
-        icon: {type: String?, key: "Icon"},
-        name: {type: String, key: "Name"},
-        url: {type: String, key: "Url"},
-      )
+      include JSON::Serializable
 
       # ID of the item the piece of Lore is referring to.
-      getter id
+      @[JSON::Field(key: "ID")]
+      getter id : UInt64
       # URL for the icon of the item.
-      getter icon
+      @[JSON::Field(key: "Icon")]
+      getter icon : String?
       # The name of the item in the language requested by the client.
-      getter name
+      @[JSON::Field(key: "Name")]
+      getter name : String
       # URL to the XIVAPI page for the item in question.
-      getter url
+      @[JSON::Field(key: "Url")]
+      getter url : String
     end
 
     # Dataclass for items returned from the /lore/ endpoint
     class Lore
-      # define a JSON mapping to create instances of this class
-      JSON.mapping(
-        context: {type: String, key: "Context"},
-        data: {type: LoreData?, key: "Data"},
-        source: {type: String, key: "Source"},
-        source_id: {type: UInt64, key: "SourceID"},
-        text: {type: String, key: "Text"},
-      )
+      include JSON::Serializable
       # A String identifying the context that the piece of text was found in.
-      getter context
+      @[JSON::Field(key: "Context")]
+      getter context : String
       # Extra data about the piece of Lore, tying it to another endpoint in the API.
-      getter data
+      @[JSON::Field(key: "Data")]
+      getter data : IDIconNameUrl?
       # The name of the source of the piece of Lore.
-      getter source
+      @[JSON::Field(key: "Source")]
+      getter source : String
       # The ID of the source.
-      getter source_id
+      @[JSON::Field(key: "SourceID")]
+      getter source_id : UInt64
       # The text of the Lore item.
-      getter text
+      @[JSON::Field(key: "Text")]
+      getter text : String
     end
   end
 end
